@@ -1,0 +1,256 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>无标题文档</title>
+<script type="text/javascript">
+$(function(){
+	$('.r_top p').click(function(){
+		$('.pathA').addClass('hide');
+		$('.r_top p').removeClass('active');
+		$(this).addClass('active');
+		$('.'+$(this).attr('value')).removeClass('hide');
+	});
+		$('.show_show').click(function (){
+			var val=$(this).find('input').attr('value');
+			var val2=1;
+			if(val==1){val2=0;}
+			var sub=$(this).attr('value');
+			if(sub!=''){
+				$('.'+sub).parent().removeClass('showShow'+val);
+				$('.'+sub).parent().addClass('showShow'+val2);
+				$('.'+sub).attr('value',val2);
+			}else{
+				$(this).removeClass('showShow'+val);
+				$(this).addClass('showShow'+val2);
+				$(this).find('input').attr('value',val2);
+			}
+			
+		});
+		$('.is_sale_chose').change(function(){
+			if($(this+':checked').length==1){
+				$('.is_sale_chose_val').attr('disabled',false);
+			}else{
+				$('.is_sale_chose_val').attr('disabled',true);
+			}
+		});
+		/*
+		$("#color").change(function(){
+			$(this).attr("class","text1 "+$(this).val());
+		});
+		$("#color").keyup(function(){
+			$(this).attr("class","text1 "+$(this).val());
+		});
+		*/
+});
+</script>
+</head>
+
+<body>
+<div class="status r_top">
+<?php $il=1; if(!empty($this->dbconfig['lang_arr'])){foreach($this->dbconfig['lang_arr'] as $lkey=>$lval){?>
+	<P class="<?php if($il==1){?>active<?php }?>" value="<?php echo $lkey;?>"><?php echo $lval;?></P>
+<?php $il++;}}?>
+</div>
+<div class="content">
+	<form name="theForm" id="demo" action="./index.php?a=product&m=edit_product&id=<?php echo $product[0]['goods_id'];?>" method="post" enctype='multipart/form-data'>
+	<input type="hidden" name="act" value="<?php echo $act;?>">
+<?php $il=1; if(!empty($this->dbconfig['lang_arr'])){foreach($this->dbconfig['lang_arr'] as $lkey=>$lval){?>
+	<div class="pathA <?php echo $lkey;?> <?php if($il!=1){echo 'hide';}?>">
+		<div class="leftA">
+			<div class="leftAlist" >
+				<span>PRODUCT NAME 产品名称</span>
+			</div>
+			<div class="leftAlist">
+				<input name="title[<?php echo $lkey;?>]" type="text" class="text" value="<?php if(!empty($pro[$lkey]['goods_name'])){echo $pro[$lkey]['goods_name'];}?>" />
+				<input name="iid[<?php echo $lkey;?>]" type="hidden" value="<?php echo $pro[$lkey]['goods_i8n_id'];?>" />
+			</div>
+			<div class="leftAlist" >
+				<span>YEAR & REGION 年份和产地</span>
+			</div>
+			<div class="leftAlist">
+				<input name="overview[<?php echo $lkey;?>]" type="text" class="text" value="<?php if(!empty($pro[$lkey]['goods_overview'])){echo $pro[$lkey]['goods_overview'];}?>" />
+			</div>
+		</div>
+	</div>
+<?php $il++;}}?>
+	<div class="pathB">
+		<div class="leftA">
+			<div class="leftAlist">
+				<input type="radio" name="cat_id" value="9"  <?php if($product[0]['cat_id']==9){echo "checked";}?> />
+				<span>RED 红葡萄酒</span>
+				<input type="radio" name="cat_id" value="10"  <?php if($product[0]['cat_id']==10){echo "checked";}?> />
+				<span>WHITE 白葡萄酒</span>
+				<input type="radio" name="cat_id" value="11"  <?php if($product[0]['cat_id']==11){echo "checked";}?> />
+				<span>SPARKLING 香槟</span>
+			</div>
+			<div class="leftAlist" >
+				<span>COLOR 颜色 #</span>
+				<input name="color" type="text" class="smallText" value="<?php if(!empty($product[0]['color'])){echo $product[0]['color'];}?>" >
+				<span>( Please enter the color code 请填写色号，例：000000)</span>
+			</div>
+			<div class="leftAlist" >
+				<span>PRICE 价格 ¥</span>
+				<input name="price" type="text" class="smallText" value="<?php if(!empty($product[0]['price'])){echo $product[0]['price'];}?>" >
+			</div>
+			<div class="leftAlist PPrice" >
+				<span>DISCOUNT 折扣 ¥</span>
+				<input name="sale_price" type="text" class="smallText" value="<?php if(!empty($product[0]['sale_price'])){echo $product[0]['sale_price'];}else{echo 0;}?>" >
+				
+				<div style="line-height:18px;position: absolute;top: 6px;left: 335px;" ><span>WEBSITE 网站</span></div>
+				<div style="margin: 0 0 0 60px;position: absolute;top: 5px;left: 240px;" class="show_show showShow showShow<?php if(!empty($product[0]['is_sale'])){echo $product[0]['is_sale'];}else{echo 0;}?>" value="is_sale" >
+					<input class="is_sale" type="hidden" name="is_sale" value="<?php if(!empty($product[0]['is_sale'])){echo $product[0]['is_sale'];}else{echo 0;}?>">
+				</div>
+				
+				<div style="line-height:18px;position: absolute;top: 6px;left: 460px;" ><span>EVENT 事件</span></div>
+				<div style="margin: 0 0 0 60px;position: absolute;top:5px;left:365px;" class="show_show showShow showShow<?php if(!empty($product[0]['is_sale_i'])){echo $product[0]['is_sale_i'];}else{echo 0;}?>" value="is_sale_i" >
+					<input class="is_sale_i" type="hidden" name="is_sale_i" value="<?php if(!empty($product[0]['is_sale_i'])){echo $product[0]['is_sale_i'];}else{echo 0;}?>">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<?php $il=1; if(!empty($this->dbconfig['lang_arr'])){foreach($this->dbconfig['lang_arr'] as $lkey=>$lval){?>
+	<div class="pathA <?php echo $lkey;?> <?php if($il!=1){echo 'hide';}?>">
+		<div class="leftA photo">
+			<div class="leftAlist" id="File">
+				<p>PRODUCT IMAGES 产品图片&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="button" class="add" value="+ NEW 添加" key="<?php echo $lkey;?>" /></p>
+			</div>
+            <?php if(!empty($imgs)){$i=1;foreach($imgs as $k=>$v){if($v['i8n']==$lkey&&$v['point']=='1'){?>
+			<div class="leftAlist r_detail PDelv" >
+				<div class="r_row">
+					<div class="r_title">[<?php echo $i;?>] Photo 图片</div>
+					<INPUT TYPE="file" NAME="file_url[<?php echo $v['img_id'];?>-<?php echo $lkey;?>-1]" id="f1" onclick="document.getElementById('edit_doc_<?php echo $lkey;?><?php echo $v['img_id'];?>').value=1">
+					( Suggested size 建议尺寸: 980 x 500 )
+					<input type="hidden" name="edit_doc[<?php echo $v['img_id'];?>-<?php echo $lkey;?>-1]" id="edit_doc_<?php echo $lkey;?><?php echo $v['img_id'];?>" value="0">
+					<input type="hidden" name="img_id[<?php echo $v['img_id'];?>-<?php echo $lkey;?>-1]" value="<?php echo $v['img_id'];?>">
+					<a href="javascript:void(0);" class="delv Delv">DELETE 删除</a>
+					<input type="hidden" name="acti[<?php echo $v['img_id'];?>-<?php echo $lkey;?>-1]" value="edit" />
+				</div>
+				<div class="r_row">
+				<!--
+					<div class="r_title">Sequence 排序</div>
+					<input type="text" class="r_text" name="order_by[<?php echo $v['img_id'];?>-<?php echo $lkey;?>-1]" value="<?php echo $v['order_by'];?>">
+					-->
+					<div class="r_title">&nbsp;</div>
+					<div class="r_title">&nbsp;</div>
+					<img src=".<?php if(!empty($v['original_src'])){echo $v['original_src'];}else{echo '/img/no_img.jpg';}?>" />
+				</div>
+			</div>
+			<?php $i++;}}}?>
+		</div>
+	</div>
+<?php $il++;}}?>
+<?php $il=1; if(!empty($this->dbconfig['lang_arr'])){foreach($this->dbconfig['lang_arr'] as $lkey=>$lval){?>
+	
+	<div class="pathA <?php echo $lkey;?> <?php if($il!=1){echo 'hide';}?>">
+		<div class="leftA food">
+			<div class="leftAlist" >
+				<span>PRODUCT COPY 产品详情</span>
+			</div>
+			<div class="leftAlist" >
+				<textarea id="TextArea<?php echo $lkey;?>" name="detail[<?php echo $lkey;?>][]"><?php if(!empty($pro[$lkey]['detail_arr'][0])){echo $pro[$lkey]['detail_arr'][0];}?></textarea>
+			</div>
+			<div class="leftAlist" >
+				<p>FOOD PAIRING RECOMMENDATIONS 建议搭配&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="button" class="add_food_pairing" value="+ NEW 添加" key="<?php echo $lkey;?>" /></p>
+			</div>
+	<?php if(!empty($pro[$lkey]['detail_arr'])){foreach($pro[$lkey]['detail_arr'] as $Fkey => $Fval){if($Fkey>0){?>
+		<?php if($Fkey%2==1){?>
+			<div class="leftAlist r_detail PDelv" >
+				<div class="r_row">
+					<div class="r_doubleTitle">[<?php echo (floor($Fkey/2)+1);?>] TYPES 食物类型</div>
+					<input type="text" class="foodText" name="detail[<?php echo $lkey;?>][]" value="<?php echo $Fval;?>">
+				</div>
+		<?php }else if($Fkey%2==0){?>
+				<div class="r_row">
+					<div class="r_doubleTitle">[<?php echo ($Fkey/2);?>] DISHES 菜品</div>
+					<textarea class="foodTextarea" name="detail[<?php echo $lkey;?>][]" ><?php echo $Fval;?></textarea>
+					<a href="javascript:void(0);" class="delf Delf">DELETE 删除</a>
+				</div>
+			</div>
+		<?php }?>
+	<?php }}}?>
+		</div>
+	</div>
+<?php $il++;}}?>
+	<div class="pathB">
+		<div class="leftA">
+			<div style="line-height:18px;position: absolute;" ><span>TOP 置顶</span></div>
+			<div style="margin: 0 0 0 60px;position: absolute;" class="show_show showShow showShow<?php if(!empty($product[0]['top'])){echo $product[0]['top'];}else{echo 0;}?>" value="you_show" >
+				<input class="you_show" type="hidden" name="top" value="<?php if(!empty($product[0]['top'])){echo $product[0]['top'];}else{echo 0;}?>">
+			</div>
+			<input name="" type="submit" id="submit" value="SUBMIT 提交" />
+		</div>
+	</div>
+	</form>	
+</div>
+	<script type="text/javascript">
+		$(function(){
+			/*图片的新增排序*/
+			var k='a';
+			var i=1;
+			var key;
+			var lang;
+			/*图片新增*/
+			$(".add").click(function(){
+				key=k+i;
+				lang=$(this).attr('key');
+				var addFile = '<div class="leftAlist r_detail PDelv" ><div class="r_row"><div class="r_title">Photo 图片</div><INPUT TYPE="file" NAME="file_url['+key+'-'+lang+'-1]" id="f1" onclick="document.getElementById(\'edit_doc_'+lang+''+key+'\').value=1">( Suggested size 建议尺寸: 980 x 500 )<input type="hidden" name="edit_doc['+key+'-'+lang+'-1]" id="edit_doc_'+lang+''+key+'" value="0"><input type="hidden" name="img_id['+key+'-'+lang+'-1]" value="'+key+'"><a href="javascript:void(0);" class="del Delv">DELETE 删除</a></div><div class="r_row"><div class="r_title">&nbsp;</div><div class="r_title">&nbsp;</div><img src="./img/no_img.jpg" /></div></div>';
+				$(this).parent().parent().parent().append(addFile);
+				i++;
+				reflashKey("photo");
+			});
+			/*新增图片的删除*/
+			$('.del').live('click',function(){
+				$(this).parent().parent().detach();
+				reflashKey("photo");
+			});
+			/*已存数据库的图片删除*/
+			$('.delv').live('click',function(){
+				$(this).next().attr('value','del');
+				$(this).parent().parent().hide();
+				reflashKey("photo");
+			});
+			
+			/*搭配菜肴的新增排序*/
+			var langF;
+			/*搭配菜肴新增*/
+			$(".add_food_pairing").click(function(){
+				langF=$(this).attr('key');
+				var addFile = '<div class="leftAlist r_detail PDelv" ><div class="r_row"><div class="r_doubleTitle">[] TYPES 食物类型</div><input type="text" class="foodText" name="detail['+langF+'][]" value=""></div><div class="r_row"><div class="r_doubleTitle">[] DISHES 菜品</div><textarea class="foodTextarea" name="detail['+langF+'][]" ></textarea><a href="javascript:void(0);" class="delf Delf">DELETE 删除</a></div></div>';
+				$(this).parent().parent().parent().append(addFile);
+				reflashKeyF("food");
+			});
+			/*搭配菜肴的删除*/
+			$('.delf').live('click',function(){
+				$(this).parent().parent().detach();
+				reflashKeyF("food");
+			});
+			
+		});
+		/*重排序方法*/
+		var reflashKey=function(obj){
+			$("."+obj+":visible").children().each(function(k,v){
+				if(k!=0){
+				//	alert($(this).eq(0).children().eq(0).html());
+					$(this).children().eq(0).children().eq(0).html("["+k+"] Photo 图片");
+				}
+			});
+		}
+		/*重排序方法*/
+		var reflashKeyF=function(obj){
+			$("."+obj+":visible").children().each(function(k,v){
+				if(k!=0){
+				//	alert($(this).eq(0).children().eq(0).html());
+					$(this).children().eq(0).children().eq(0).html("["+(k-2)+"] TYPES 食物类型");
+					$(this).children().eq(1).children().eq(0).html("["+(k-2)+"] DISHES 菜品");
+				}
+			});
+		}
+	</script>
+</body>
+</html>

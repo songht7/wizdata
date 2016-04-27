@@ -1,0 +1,55 @@
+<?php
+$totalPage=ceil($count/$pagesize);
+$space='3';
+$first='2';
+$last=$totalPage-1;
+$sl='';
+if($currentpage>1){
+    $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.($currentpage-1).'&pagesize='.$pagesize).'"><</a>';
+}
+if($totalPage<10){
+    for($i=1;$i<=$totalPage;$i++){
+        $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.$i.'&pagesize='.$pagesize).'"';
+        if($currentpage==$i){
+            $sl.='class="active"';
+        }
+        $sl.= '>'.$i.'</a>';
+    }
+}else{
+    if($currentpage>$space){
+        $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage=1&pagesize='.$pagesize).'">1</a><a >...</a>';
+    }else{
+        $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage=1&pagesize='.$pagesize).'"';
+        if($currentpage==1){
+            $sl.='class="active"';
+        }
+        $sl.= '>1</a>';
+    }
+    if(($currentpage-$space)>1){
+        $first=$currentpage-$space;
+    }
+    if(($currentpage+$space)<$totalPage){
+        $last=$currentpage+$space;
+    }
+    for($i=$first;$i<=$last;$i++){
+        $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.$i.'&pagesize='.$pagesize).'"';
+        if($currentpage==$i){
+            $sl.='class="active"';
+        }
+        $sl.= '>'.$i.'</a>';
+    }
+    if($currentpage<($totalPage-$space)){
+        $sl.= '<a >...</a><a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.$totalPage.'&pagesize='.$pagesize).'">'.$totalPage.'</a>';
+    }else{
+        $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.$totalPage.'&pagesize='.$pagesize).'"';
+        if($currentpage==$pagesize){
+            $sl.='class="active"';
+        }
+        $sl.= '>'.$totalPage.'</a>';
+    }
+}
+if($currentpage<$totalPage){
+    $sl.= '<a href="'.$this->url_rewrite('index.php?a='.$action.'&m=getList&currentpage='.($currentpage+1).'&pagesize='.$pagesize).'">></a>';
+}
+
+echo $sl;

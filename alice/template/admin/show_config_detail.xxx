@@ -1,0 +1,85 @@
+<?php
+$tempUrl = $this->tempUrl;
+
+$action = $this->temp['action'];
+$list = $this->temp['list'];
+$count = $this->temp['count'];
+$currentpage = $this->temp['currentpage'];
+$pagesize = $this->temp['pagesize'];
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php include_once "./template/" . $tempUrl . "/css/style.css.php"; ?>
+        <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript">
+            function post() {
+                $("#shadow").show();
+                //var a=$('.postElement[data-set=1]');
+                var formData = new FormData();
+                $('.postElement[data-set=1]').each(function (obj) {
+                    formData.append($(this).attr('name'), $(this).val());
+                });
+                var url = $("#demo").attr('action');
+                $.ajax({
+                    type: "POST",
+                    data: formData,
+                    url: url, //space图片上传接口
+                    contentType: false,
+                    processData: false,
+                    dataType: "json"
+                }).success(function (data) {
+                    $("#shadow").hide();
+                    if (data.error === 0) {
+                        location.href = '<?php echo $this->url_rewrite("index.php?a=" . $action . "&m=getList"); ?>';
+                        console.log(data.error);
+                    } else {
+                        alert(data.error_info);
+                        console.log(data.error);
+                        console.log(data.error_info);
+                    }
+                }).error(function (data) {
+                    $("#shadow").hide();
+                    alert(data);
+                    console.log(data);
+                });
+            }
+            $(function () {
+                $(".postElement").change(function () {
+                    $(this).attr("data-set", "1");
+                });
+            });
+        </script>
+        <title>无标题文档</title>
+    </head>
+
+    <body>
+        <div id="shadow" class="hide" ></div>
+        <div class="content">
+            <form name="theForm" id="demo" action="<?php echo $this->url_rewrite("./index.php?a=" . $action . "&m=edit_" . $action); ?>" method="post" enctype='multipart/form-data' onsubmit="post();
+                    return false;">
+                <div class="pathA">
+                    <div class="leftA">
+                        <?php
+                        if (!empty($list)) {
+                            foreach ($list as $k => $v) {
+                                ?>
+
+                                <div class="leftAlist" >
+                                    <div class="systemName"><?php echo $v['con_name']; ?></div>
+                                    <input type="text" name="<?php echo $v['con_name']; ?>" class="systemInput postElement" value="<?php echo $v['con_value']; ?>">
+                                        <div class="clear"></div>
+                                </div>
+                            <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                    <div class="leftA">
+                        <input name="" type="submit" id="submit" value="DONE 完成" />
+                    </div>
+                </div>
+            </form>	
+        </div>
+    </body>
+</html>

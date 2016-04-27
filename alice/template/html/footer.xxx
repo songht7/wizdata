@@ -1,0 +1,27 @@
+
+	<!-- footer -->
+		<footer>
+			<div class="inner">
+				<img src="template/html/images/gongshang.png" class="gs" alt="wizdata">
+				<div class="footRight">
+					<div class="fotMenu">
+						<a href="#">About</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#">Service</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#">Work</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#">Product</a>
+					</div>
+					<div id="CopyRight">
+						沪ICP备12060513号-1 © 2015 brandor.net All rights reserved.
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<a href="javascript:;" id="ScrollTop" class="icons"><span>ScrollTop</span></a>
+	</div>
+	<script src="template/html/script/base.js"></script>
+	<script src="template/html/script/jquery.lazyload.min.js"></script>
+	<script src="template/html/script/royalslider/jquery.royalslider.min.js"></script>
+	<script src="template/html/script/royalslider-config.js"></script>
+</body>
+</html>

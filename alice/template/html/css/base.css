@@ -1,0 +1,78 @@
+@charset "utf-8";
+@font-face { 
+  font-family: 'Helvetica-Bold';
+  src: url('./font/helvetica/HelveticaNeueLTPro-Bd.ttf') format('truetype');
+}
+@font-face { 
+  font-family: 'Helvetica-Light';
+  src: url('./font/helvetica/HelveticaNeueLTPro-Lt.ttf') format('truetype');
+}
+@font-face { 
+  font-family: 'Helvetica-Roman';
+  src: url('./font/helvetica/HelveticaNeueLTPro-Roman.ttf') format('truetype');
+}
+@font-face { 
+  font-family: 'Helvetica-Thin';
+  src: url('./font/helvetica/HelveticaNeueLTPro-Th.ttf') format('truetype');
+}
+body {background: #fff; color: #5C5C5C;font-family:'Helvetica',Arial,"Microsoft YaHei",微软雅黑,"宋体"; font-size: 14px; line-height: 18px; margin: 0; padding: 0;min-width:1300px;}
+h1, h2, h3, h4, h5, h6, p, form { margin: 0; padding: 0; font-weight: normal; font-size: 14px; }
+ul, li, menu, ol, dd, dl, dt { list-style: none outside none; margin: 0; padding: 0; }
+img, a { border: medium none; color: #5C5C5C; text-decoration: none; }
+em,i { font-style: normal; }
+table td {border-collapse: collapse;padding:0;margin:0}
+input[type=submit], input[type=button], button {cursor:pointer}
+.clearn, .clear { clear: both; height: 0; }
+.clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.hidden,.hide { display: none !important; visibility: hidden !important; }
+.text { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.sbSeo{position: absolute;top: -5000px;}
+.f_left{float:left}
+.hided{display: none}
+.inner{width:1024px;margin:0 auto;padding:0 10px;overflow: hidden;}
+
+.icons{background: url('../images/icon.png') no-repeat;overflow: hidden;}
+
+.formBox{position:relative}
+
+#Wrapper{position: relative;}
+
+header{background: #90C31F;padding: 18px 0 27px;position: relative;}
+header .inner{overflow: visible;width: 1280px}
+#Logo{float: left;width: 156px;height: 44px;display: block;line-height: 65px;}
+#Logo img{width: 100%;}
+.menuBox{float:right;position: relative;height: 40px}
+#MenuBtn{display: none;background: url("../images/mobile/Menu_normal@2x.png") no-repeat 50% 50%;width: 50px;height: 100%;text-indent: -99999px;}
+menu {overflow:hidden;float: right;display: block;}
+menu li{float:left;height: 44px;text-align: center;padding-left: 43px;line-height: 44px;}
+menu li a{font-family:'Helvetica-Bold',Arial;font-weight: bold; color: #fff;position: relative;display: block;height: 100%;}
+menu li a em{display: none;position: absolute;bottom:5px;left: 0;width: 100%;}
+menu li a em i{height: 1px;background: #fff;width: 35px;overflow: hidden;display: block;margin: 0 auto}
+menu li a.active em,menu li a:hover em{display: block;}
+header.isFix{z-index:100;width:100%;top:0;left:0;position:fixed;padding: 5px 0;border-bottom: 1px solid #fff;}
+header.isFix #Logo{width: 105px;}
+header.isFix li{height: 40px;line-height: 40px;}
+
+	.slidebox{position: relative;overflow: hidden;}
+	.slidebox ul{overflow:hidden;}
+	.slidebox ul li{float:left;}
+
+/* 400 500 */
+#Error{padding: 50px 0}
+.error{text-align: center;line-height: 30px;font-size: 24px;}
+.error span{padding:0 10px 0 0;}
+.error a{font-size: 16px;color: #542c14}
+/** input error **/
+.isError .error{font-size: 14px;color: #f40;padding: 0 10px;position: absolute;right: 10px;top: 8px;}
+
+/* Footer */
+footer{background:#9B9B9B;}
+footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflow: hidden;}
+.gs{float: left;}
+.footRight{float: right;width: 60%;text-align: right;}
+.fotMenu{padding-bottom: 10px}
+.fotMenu,.fotMenu a{color: #fff;}
+#CopyRight{color: #CDCDCD;font-size: 12px;}
+
+#ScrollTop{display: block;width: 48px;height: 48px;text-indent: -99999px;background-position: 0 0;position: fixed;right: 20px;bottom: 20px;z-index: 50px;}
+#ScrollTop:hover{background-position: 0 -68px;}

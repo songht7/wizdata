@@ -1,0 +1,22 @@
+<?php $tempUrl= $this->tempUrl;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php include_once "./template/".$tempUrl."/css/style.css.php";?>
+        <title><?php echo $this->shop_name;?></title>
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="logo1" >
+                <a href="javascript:void(0);" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=category&m=show_category_detail&id=14';parent.leftFrame.location.href = 'index.php?a=admin&m=main_left'" >
+                    <img src="/template/<?php echo $this->tempUrl;?>/images/logo.jpg" />
+                </a>
+            </div>
+            <div class="topMap">
+                <p onclick="javascript:parent.mainFrame.location.href = 'index.php?a=login&m=logOff'">SIGN OFF 签出</p>
+            </div>
+        </div>
+    </body>
+</html>

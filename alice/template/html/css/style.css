@@ -1,0 +1,152 @@
+.homePage{background: #9B9B9B}
+.pageBlock{min-height: 200px;position: relative;}
+.pageCont{padding: 95px 0}
+.pageTitle{font-size: 45px;font-family: "Helvetica-Bold",Arial;font-weight: bold;color: #fff;line-height: 60px;padding-bottom:60px;text-align: center;margin: 0 auto;letter-spacing: 1.5px;}
+.btns{width: 275px;height: 50px;line-height: 50px;font-family: 'Helvetica',Arial;font-weight: bold; text-align: center;color: #fff;background: #90C31F;font-size: 14px;display: inline-block;margin: 25px 0 0}
+.btns span{background: url("../images/icon.png") no-repeat right -157px;padding: 0 15px 0 0;letter-spacing: 0;}
+.btns:hover{background: #fff;color: #90c31f}
+.btns:hover span{background-position:right -210px}
+
+.page1{background: #EBEBEB;overflow: hidden;}
+	#full-width-slider {width: 100%;color: #000;}
+	.royalSlider > .rsContent {visibility:hidden;}
+	.fullWidth {margin: 0 auto;}
+	.pageBlock .royalSlider .rsArrow{position: absolute;right: -9999999px}
+	.wizInfo{position: absolute;top: 140px;z-index: 5;width: 100%;left: 0}
+	.wizInfo .inner{letter-spacing: 1.5px;text-align: center;font-family: 'Helvetica-Bold',Arial;font-size:48px;line-height: 60px; color: #fff}
+	.wizInfo .inner .ovs{font-family: 'Helvetica-Light',Arial}
+
+.page2{background: #FFFFFF}
+	.wizSay{width: 820px;margin: 0 auto;text-align: center;padding-bottom: 90px;}
+	h3.say{background: url("../images/quote.png") no-repeat 13px 0;width: 100%;font-family: "Helvetica-Bold",Arial;font-size: 32px;line-height: 25px;color:#5C5C5C;height: 55px}
+	.sayCont{font-family: "Helvetica-Light";font-size: 58px;line-height: 60px;color: #5C5C5C;}
+		.sayCont .quote{background: url("../images/quote_down.png") no-repeat right 65%;padding: 0 15px 0 25px;}
+		.sayCont .line{display: block;background: #5C5C5C;height: 2px;width: 285px;margin: 35px auto;overflow: hidden;}
+	.wizSay .ovs{color: #90C31F;font-size: 16px;line-height: 24px;font-family: "Helvetica-Roman",Arial;font-style: italic;width: 490px;margin: 0 auto}
+	.rowBlock{overflow: hidden;padding-bottom: 20px;}
+		.rbLeft,.rbRight{width: 45%;float: left;}
+		.rbRight{float: right;}
+		.rTxt{padding: 65px 0 0;}
+		.rowBlock h4{font-family:"Helvetica-Light",Arial;font-size: 45px;line-height: 41px;color: #5C5C5C;padding-bottom: 25px}
+		.rInfo{font-size: 16px;line-height: 26px;}
+		.rImg{display: block;margin: 0 auto}
+		.moblieImg{display: none;}
+.page3{background: #90C31F}
+	#KnowList{overflow: hidden;color: #fff;}
+	.listBlock{float: left;width: 320px;padding:0 10px 50px;height: 330px;}
+		.jobIcon{display: block;margin: 0 auto;margin-bottom: 18px;}
+		.job{font-family:"Helvetica-Bold",Arial;text-align: center;font-size: 18px;line-height: 22px;margin-bottom: 18px;position: relative;height: 60px;}
+		.job .line{width:150px;height: 1px;background: #fff;display: block;position: absolute;bottom: 0;left: 70px;}
+		.jobOvs{padding-left: 8px;}
+		.jobOvs li{list-style: disc outside none;}
+	.lb1 .job,.lb2 .job,.lb5 .job{line-height: 55px;}
+	.lb6 .jobOvs{margin-left: 60px;}
+	.lb4,.lb5,.lb6{padding-bottom: 0;}
+.page4{background: #5C5C5C}
+	.pageTitle.work p{font-size: 16px;line-height: 18px; font-family: "Helvetica-Roman",Arial;font-style: italic;display: block;width: 445px;margin: 0 auto;padding-top: 15px;}
+	.vdList{overflow: hidden;}
+	.vdList li{float: left;width: 320px;padding: 0 10px;color: #fff;}
+	.vdImg{display: block;margin-bottom: 20px;position: relative;width: 100%;height:180px;overflow: hidden; }
+		.vdImg span{position: absolute;top:0;left: 0;z-index: 1;display: block;width: 100%;height: 100%;background:url('../images/Video.png') no-repeat 50% 50%;}
+		.vdImg img{width: 100%;max-width: 100%;-o-transition: all 0.4s ease 0s;-moz-transition: all 0.4s ease 0s;transition: all 0.4s ease 0s;}
+		.vdImg:hover img{-webkit-transform: scale(1.04);-ms-transform: scale(1.04);transform: scale(1.04);}
+		.vdTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;}
+		.ovs{padding: 5px 0}
+		.vdLink{color:#90C31F;font-size: 12px;}
+		.videoBox .moreBtn{margin: 120px auto 0;display: block;width: 257px;line-height: 48px;height: 48px;font-size: 14px;}
+.page5{background: #9B9B9B}
+	.page5 .inner{overflow: visible}
+	.contactBox{float: left;width:565px;}
+		.contactTitle{font-size: 22px;line-height: 26px;text-align: left;padding-bottom:30px;}
+		.fmRow{width: 100%;margin: 0 0 23px;}
+		.iptBlock{padding: 0 22px;background: #cdcdcd;border: 1px solid #cdcdcd;position: relative;}
+		.iptBlock.isError{border: 1px solid #f40}
+		.iptTxt{width: 100%;padding: 15px 0;color: #9B9B9B;background: none;border:none;outline: none;}
+		.iptTxt.msgIpt{resize: none;height: 175px;}
+		.btns.sbmt{width: 167px;line-height: 43px;height: 43px;margin:0;}
+	.mapBox{float: right;width: 445px;position: relative;}
+	.map{background: url("../images/CONTACT_map.png") no-repeat;width: 471px;height: 268px;position: relative;right: -30px;text-indent: -9999999px;margin: 40px 0 0}
+	.contactInfor{overflow: hidden;}
+	.contactInfor li{float: left;text-align: center;color: #fff;padding: 60px 12px 0;background: url("../images/CONTACT_location.png") no-repeat 50% 25px;font-size: 12px;}
+	.contactInfor li p{font-size: 12px;}
+	.contactInfor li a{color: #fff}
+	.contactInfor li.infor2{background-image:url("../images/CONTACT_phone.png");}
+	.contactInfor li.infor3{background-image:url("../images/CONTACT_mail.png");}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  body{width: 100%;min-width: 100px;font-size: 62.5%;}
+  .inner{width: 96%;padding: 0 2%}
+	header .inner{overflow: visible;width: 100%;padding: 0}
+	header .inner #Logo{margin-left: 5px}
+
+	#MenuBtn{display: block;position: relative;padding: 21px 0 27px;top: -17px}
+	header.isFix #MenuBtn{padding: 5px 0;top: -5px}
+	#MenuBtn.on{background:url("../images/mobile/Menu_press@2x.png") no-repeat 50% 50% #5C5C5C}
+	menu{position: absolute;z-index: 1000;width: 100%;top: 100%;left: 0;display: none}
+	menu li{float:none;background: #5C5C5C;padding: 0;border-bottom: 1px solid #90C31F}
+
+	.pageCont{padding: 20px 0;}
+	
+	.wizInfo{top: 50px;}
+	.wizInfo .inner{font-size: 2.2em;line-height: 28px;}
+
+	.wizSay{width: auto;padding-bottom: 45px}
+	.say{font-size: 1.8em;line-height: 25px;}
+	.sayCont{font-size: 3.8em;line-height: 42px}
+	.wizSay .ovs{width: auto;font-size: 1.4em;line-height: 20px}
+	.sayCont .line{margin: 15px auto}
+
+	.rbLeft,.rbRight{width: 100%;float: none;}
+	.moblieImg{display: block;max-width: 70%;margin: 0 auto}
+	.imgBlock{display: none;}
+	.rTxt{padding: 20px 0 0}
+	.rTxt h4{padding: 0 0 15px;font-size: 2.4em;line-height: 22px;}
+	.rInfo{font-size: 1.4em;line-height: 20px;}
+
+	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
+		.listBlock{float: none;width: 100%;padding: 0 0 30px;height: auto;}
+		.job{height: auto;font-size: 1.8em}
+		.jobIcon{width: 100px;}
+		.jobOvs{padding-left: 20px;font-size: 1.4em}
+		.job .line{position: static;left: auto;margin: 18px auto 0;}
+		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
+	
+	.pageTitle.work p{width: 100%;}
+	.vdList li{float: none;padding: 0 0 20px;width: 100%}
+	.videoBox .moreBtn{margin-top: 20px;width: 100%;line-height:44px;height: 44px;font-size: 1.4em }
+	
+	.contactBox,.mapBox{float: none;}
+	.contactBox{width: 100%;}
+	.pageTitle.contactTitle{width: 100%;font-size: 2.2em;line-height: 21px;padding-bottom:15px;}
+	.btns.sbmt{width: 100%;}
+	.mapBox {width: 100%;}
+	.mapBox .map{background-size: 100% auto;width: 100%;background-position: 50% 50%;right:0;margin-top: 20px;}
+	.contactInfor li{float: none;width: 80%;margin: 0 auto}
+
+	footer .inner{padding: 10px 0}
+	.gs{display: none;}
+	.footRight{float: none;width: 100%;text-align: center;}
+	#ScrollTop{right: 0;-webkit-transform: scale(0.6);-ms-transform: scale(0.6);transform: scale(0.6);}
+}
+@media screen and (min-width:960px) and (min-height:660px) {
+  .heroSlider .rsOverflow,
+  .royalSlider.heroSlider {
+      height: 520px !important;
+  }
+}
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .royalSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+    height: 300px !important;
+  }
+}

@@ -1,0 +1,39 @@
+<?php $tempUrl= $this->tempUrl;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php include_once "./template/".$tempUrl."/css/style.css.php";?>
+        <script type="text/javascript" src="./template/<?php echo $tempUrl;?>/script/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $(".first").click(function () {
+                    $(".first").removeClass('mainRed').next().hide();
+                    $(this).addClass('mainRed').next().show();
+                    $(".second").removeClass('mainRed');
+                });
+                $(".second").click(function () {
+                    $(".second").removeClass('mainRed');
+                    $(this).addClass('mainRed');
+                });
+            });
+        </script>
+        <title>left</title>
+    </head>
+    <body>
+        <div class="title">
+            <a class="first mainRed" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=category&m=getList'" href="javascript:void(0);" >CATEGORY 分类</a>
+        </div>
+        <div class="title">
+            <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=product&m=getList'" href="javascript:void(0);" >GOODS 商品</a>
+        </div>
+        <div class="title">
+            <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=news&m=getList'" href="javascript:void(0);" >NEWS 文章</a>
+        </div>
+<?php if($_COOKIE[$this->shop_name]['h_id']==1){?>
+        <div class="title">
+            <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=config&m=getList'" href="javascript:void(0);" >SYSTEM  系统</a>
+        </div>
+<?php }?>
+    </body>
+</html>
