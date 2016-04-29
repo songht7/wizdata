@@ -1,150 +1,86 @@
+<?php
+$tempUrl = $this->tempUrl;
+
+$action = $this->temp['action'];
+$list = $this->temp['list'];
+$count = $this->temp['count'];
+$currentpage = $this->temp['currentpage'];
+$pagesize = $this->temp['pagesize'];
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<title>无标题文档</title>
-<script type="text/javascript">
-	$(function(){
-		$('.show_show').click(function (){
-			var thisdiv=$(this);
-			$.post("./index.php?a=news&m=change_show",{id:$(this).attr('value')},function(data){
-				if(data.say=='ok'){
-				//	alert(data.is_show);
-					thisdiv.attr('class','show_show');
-					thisdiv.addClass('show_show'+data.is_show);
-				
-				}
-			},'json');
-		});
-		$('.show_order').click(function (){
-			$(this).hide().next().show();
-			$(this).next().selectRange('100','100');
-		});
-		$('.show_order_text').blur(function(){
-			var thisdiv=$(this);
-			var val=$(this).attr('value');
-			var id=$(this).prev().attr('value')
-			if(val!=null){
-				$.post("./index.php?a=news&m=change_order",{id:id,val:val},function(data){
-					if(data.say=='ok'){
-						thisdiv.prev().html(data.val);
-						thisdiv.attr('value',data.val);
-					}
-				},'json');
-			}
-			$(this).hide().prev().show();
-		});
-	});
-	$.fn.selectRange = function(start, end) {
-		return this.each(function() {
-			if (this.setSelectionRange) {
-				this.focus();
-				this.setSelectionRange(start, end);
-			} else if (this.createTextRange) {
-				var range = this.createTextRange();
-				range.collapse(true);
-				range.moveEnd('character', end);
-				range.moveStart('character', start);
-				range.select();
-			}
-		});
-	};
-</script>
-</head>
-
-<body>
-<div class="content">
-
-	<table class="mytable" cellspacing="0" >
-    	<tr bgcolor="#e1e1e1">
-            <td class="td1" width=""><a href="index.php?a=news&m=index&perpagenum=<?php echo $perpagenum;?>&page=<?php echo $page;?>&by=<?php echo $bys;?>&order=art_name&type=i">HEADLINE<br />标题</a></td>
-            <td class="td1" width="20%"><a href="index.php?a=news&m=index&perpagenum=<?php echo $perpagenum;?>&page=<?php echo $page;?>&by=<?php echo $bys;?>&order=add_time&type=a">TIME<br />时间</a></td>
-            <td class="td1" width="20%">ACTION<br />操作</td>
-        </tr>
-        <?php
-        $sum_i=1;
-        if(!empty($products))
-        foreach($products as $product){
-        	?>
-        	<tr <?php if($sum_i%2!=1){?>  class="tr2"<?php }?> ">
-	            <td class="td1"><?php echo $product['art_name'];?></td>
-	            <td class="td1"><?php echo $product['edit_time'];?></td>
-	            <td class="td1"><a href="index.php?a=news&m=show_news_detail&id=<?php echo $product['art_id'];?>">EDIT 编辑</a>
-	            	<br /><a href="index.php?a=news&m=del_news&id=<?php echo $product['art_id'];?>" onclick="return confirm('确定将此产品删除?')">DELETE 删除</a></td>
-        	</tr>
-
-      	<?php
-      		$sum_i++;
-        }
-        ?>
-    </table>
-    <div class="page">
-	    <div class="page_left">
-	    	<input name="" type="button" id="button" value="+ NEW 添加" onclick="javascript:parent.mainFrame.location.href='index.php?a=news&m=show_news_detail&c_id=<?php echo $id;?>'"/>
-	    </div>
-	    <div class="page_right">
-<!--page-->
-<?php
-		$space='3';
-		$first='2';
-		$last=$Totalpage-1;
-		$sl='';
-		if($page>1){
-			$sl.= '<a href="index.php?a=news&&m=index&page='.($page-1).'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'"><</a>';
-		}
-		if($Totalpage<10){
-			for($i=1;$i<=$Totalpage;$i++){
-				$sl.= '<a href="index.php?a=news&m=index&page='.$i.'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'"';
-				if($page==$i){
-					$sl.='class="active"';
-				}
-				$sl.= '>'.$i.'</a>';
-			}
-		}else{
-			if($page>$space){
-				$sl.= '<a href="index.php?a=news&m=index&page=1&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'">1</a><a >...</a>';
-			}else{
-				$sl.= '<a href="index.php?a=news&m=index&page=1&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'"';
-				if($page==1){
-					$sl.='class="active"';
-				}
-				$sl.= '>1</a>';
-			}
-			if(($page-$space)>1){
-				$first=$page-$space;
-			}
-			if(($page+$space)<$Totalpage){
-				$last=$page+$space;
-			}
-			for($i=$first;$i<=$last;$i++){
-				$sl.= '<a href="index.php?a=news&m=index&page='.$i.'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'"';
-				if($page==$i){
-					$sl.='class="active"';
-				}
-				$sl.= '>'.$i.'</a>';
-			}
-			if($page<($Totalpage-$space)){
-				$sl.= '<a >...</a><a href="index.php?a=news&m=index&page='.$Totalpage.'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'">'.$Totalpage.'</a>';
-			}else{
-				$sl.= '<a href="index.php?a=news&m=index&page='.$Totalpage.'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'"';
-				if($page==$perpagenum){
-					$sl.='class="active"';
-				}
-				$sl.= '>'.$Totalpage.'</a>';
-			}
-		}
-		if($page<$Totalpage){
-			$sl.= '<a href="index.php?a=news&&m=index&page='.($page+1).'&perpagenum='.$perpagenum.'&by='.$by.'&order='.$order.'&type='.$type.'">></a>';
-		}
-			
-		echo $sl;
-?>
-<!--page end-->
-	    </div>
-	    <div class="clear"></div>
-	</div>
-</div>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php include_once "./template/" . $tempUrl . "/css/style.css.php"; ?>
+        <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript">
+            function post(obj) {
+                if (confirm('delete confirm?')) {
+                    $("#shadow").show();
+                    var id = $(obj).attr('value');
+                    var url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=del_' . $action . '&id="+ id+"'); ?>" ;
+                    $.ajax({
+                        type: "GET",
+                        url: url,
+                        contentType: false,
+                        processData: false,
+                        dataType: "json"
+                    }).success(function (data) {
+                        $("#shadow").hide();
+                        if (data.error === 0) {
+                            location.href = '<?php echo $this->url_rewrite("index.php?a=" . $action . "&m=getList"); ?>';
+                            console.log(data.error);
+                        } else {
+                            alert(data.error_info);
+                            console.log(data.error);
+                            console.log(data.error_info);
+                        }
+                    }).error(function (data) {
+                        $("#shadow").hide();
+                        alert(data);
+                        console.log(data);
+                    });
+                }
+            }
+        </script>
+        <title>无标题文档</title>
+    </head>
+    <body>
+        <div class="content">
+            <table class="mytable" cellspacing="0" >
+                <tr bgcolor="#e1e1e1">
+                    <td class="th" width="20%">NAME</td>
+                    <td class="th" >OVERVIEW</td>
+                    <td class="th" width="10%">ACTION</td>
+                </tr>
+                <?php
+                if (!empty($list)) {
+                    foreach ($list as $product) {
+                        ?>
+                        <tr>
+                            <td class="td1"><?php echo $product['art_name']; ?></td>
+                            <td class="td1"><?php echo $product['art_overview']; ?></td>
+                            <td class="td1">
+                                <a href="<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=show_' . $action . '_detail&id=' . $product['art_id']); ?>">EDIT</a><br />
+                                <a href="javascript:void(0);" onclick="post(this)" value="<?php echo $product['art_id']; ?>">DELETE</a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+                ?>
+            </table>
+            <div class="page">
+                <div class="page_left">
+                    <input name="" type="button" id="button" value="+ NEW" onclick="javascript:parent.mainFrame.location.href = '<?php echo $this->url_rewrite("index.php?a=" . $action . "&m=show_" . $action . "_detail"); ?>'"/>
+                </div>
+                <div class="page_right">
+                    <!--page-->
+<?php include_once 'page.xxx'; ?>
+                    <!--page end-->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </body>
 </html>

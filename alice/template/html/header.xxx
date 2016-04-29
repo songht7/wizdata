@@ -1,3 +1,10 @@
+<?php
+if (isset($_GET['m'])) {
+    $mod = $_GET['m']=="index"?"home":$_GET['m'];
+} else {
+    $mod = "home";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,4 +26,4 @@
         <![endif]-->
     </head>
     <body>
-        <div id="Wrapper" class="homePage isSkrollr">
+        <div id="Wrapper" class="<?=strtolower($mod)?>Page isSkrollr">
