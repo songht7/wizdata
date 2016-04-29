@@ -213,7 +213,7 @@ $action = $this->temp['action'];
 
         <div class="contactBox">
             <h3 id="Contact" class="pageTitle contactTitle">CONTACT</h3>
-            <form action="<?php echo $this->url_rewrite("./index.php?a=" . $action . "&m=sendEmail"); ?>" name="Contact" id="Contact" class="formBox" method="post">
+            <form action="<?php echo $this->url_rewrite("./index.php?a=homeAjax&m=sendEmail"); ?>" name="Contact" id="Contact" class="formBox" method="post">
                 <div class="fmRow">
                     <div class="iptBlock">
                         <input type="text"  name="name" id="Name" class="iptTxt ndCheck" placeholder="NAME" data-verify="notempty" data-type="Name" >
