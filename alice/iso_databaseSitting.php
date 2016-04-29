@@ -6,7 +6,7 @@ $host='localhost'; //数据库主机名
 $port='3306';
 $dbName='alice';    //使用的数据库
 $user='root';      //数据库连接用户名
-$password='12321';          //对应的密码
+$password='';          //对应的密码
 
 /*
 $table_pre ='fm_'; //
