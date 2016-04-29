@@ -18,6 +18,14 @@ class home extends \Common\init {
         $this->getTemplate($this->tempUrl, 'index');
     }
 
+    function htm() {
+        $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+
+        $this->temp['action'] = $action;
+        $this->getTemplate($this->tempUrl, 'product');
+    }
+
+
     function sendEmail() {
         $orderInfo = $this->specifyChar($_POST);
         //pr($_REQUEST);

@@ -61,6 +61,9 @@ function reSizeForSlide () {
   setRoyal();
 }
 function setRoyal(){
-  $('.royalSlider').royalSlider(cfg);
-  slider=$(".royalSlider").data('royalSlider');
+  var sliderBox=$(".royalSlider");
+  if(sliderBox.hasClass('justOne')){cfg['loop']=false;cfg['arrowsNav']=false;cfg['autoScaleSlider']=false;cfg['controlNavigation']="none";}
+  console.log(cfg);
+  sliderBox.royalSlider(cfg);
+  slider=sliderBox.data('royalSlider');
 }
