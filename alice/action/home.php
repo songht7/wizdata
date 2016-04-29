@@ -17,7 +17,6 @@ class home extends \Common\init {
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'index');
     }
-
     function solutions() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
         
