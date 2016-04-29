@@ -7,72 +7,40 @@ $action = $this->temp['action'];
 <?php include_once 'menu_top.xxx'; ?>
 <!-- home page -->
 <!-- page1 -->
-<div class="pageBlock page1">
+<div class="pageBlock pro_page1">
 
     <div class="sliderContainer fullWidth clearfix">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
             <div class="rsContent">
-                <img class="rsImg" src="template/html/images/slide01.jpg" alt="" />
+                <img class="rsImg" src="template/html/images/pro/caia412-24188.png" alt="" />
             </div>
         </div>
     </div>
 
 </div>
 <!-- page2 -->
-<div class="pageBlock page2">
+<div class="pageBlock pro_page2">
     <div class="pageCont inner">
-        <div class="wizSay">
-            <h3 id="About" class="say">WIZ SAYS:</h3>
-            <div class="sayCont">
-                When Business Transformation meets Analytics<span class="quote">&nbsp;</span>
-                <span class="line"></span>
-            </div>
-            <div class="ovs">This is where we work. Our Management Consultants,"Insight Coaches" and Data Architects work with business leaders to:</div>
+        <h1 id="ProTitle">Wiz Cloud<span class="line"></span></h1>
+        <div class="cloud">Wiz Cloud is software-as-a-service based, with all the benefits of agility, 
+        <br/>Intelligent, security, powerful. Wiz Cloud scales to over 5TB/day, and offers a 
+        <br/>highly secure environment, 100% satisfy your diverse requirement. 
+        <br/>Minimal-Risk Strategy that Produces Results Quickly</div>
+    </div>
+</div>
+<!-- page3 -->
+<div class="pageBlock pro_page3">
+    <div class="pageCont inner proFull">
+        <div class="proLeft">
+            <img src="template/html/images/pro/Wiz-Enterprise.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Increase Success Rates. </h3>
+            <div class="proOvs">Wiz cloud allows installers to spin up new clusters of big data software in a matter of hours, automatically configure components and quickly test and verify the results.  </div>
         </div>
-
-        <div class="rowBlock">
-            <div class="rbLeft">
-                <img src="template/html/images/INFORM.png" alt="" class="moblieImg">
-                <div class="rTxt">
-                    <h4>INFORM</h4>
-                    <div class="rInfo">
-                        We work with leadership teams to brief them on what sector best practice looks like - and to equip them to make strategic choices on the risks and benefits of deploying analytics in their own business for competitive edge.
-                    </div>
-                </div>
-            </div>
-            <div class="rbRight imgBlock">
-                <img src="template/html/images/INFORM.png" alt="" class="rImg">
-            </div>
+        <div class="proRight imgBlock">
+            <div class="proImg"></div>
+            <!-- <img src="template/html/images/pro/Group-7.png" alt="" class="rImg overWid"> -->
         </div>
-        <div class="rowBlock">
-            <div class="rbLeft imgBlock">
-                <img src="template/html/images/ADVISE.png" alt="" class="rImg">
-            </div>
-            <div class="rbRight">
-                <img src="template/html/images/ADVISE.png" alt="" class="moblieImg">
-                <div class="rTxt">
-                    <h4>ADVISE</h4>
-                    <div class="rInfo">
-                        We work with managers across multiple functions to identify and scope opportunities (or indeed challenges) where analytics could make a difference - with a particular focus on the non-technical obstacles (organisational, people-related, skills, etc)
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="rowBlock">
-            <div class="rbLeft">
-                <img src="template/html/images/TRANSFORM.png" alt="" class="moblieImg">
-                <div class="rTxt">
-                    <h4>TRANSFORM</h4>
-                    <div class="rInfo">
-                        We design and architect analytic solutions to transform business - as pilot or production projects (often working with your own technical staff). We also provide business-savvy interim managers (full-time) or "Data Mentors" (a few days a month) toget things started before you hire a full time expert, to strengthen your team or to recover failing projects
-                    </div>
-                </div>
-            </div>
-            <div class="rbRight imgBlock">
-                <img src="template/html/images/TRANSFORM.png" alt="" class="rImg">
-            </div>
-        </div>
-
+        <div class="clearn"></div>
     </div>
 </div>
 
