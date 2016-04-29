@@ -1,5 +1,5 @@
 <?php
-
+namespace alice;
 /**
  * 用户登录
  */
