@@ -180,30 +180,23 @@ $action = $this->temp['action'];
 <div class="pageBlock page4">
     <div class="pageCont inner">
         <h3 id="Know" class="pageTitle work">LASTEST WORK
-            <p>Analytics for organizations alytics for organizations Analytics for organizations, tics for organ zations.</p>
+            <p>Are you tired of using a huge amount of flat data to accomplish challenge job?<br>Do you have bad feelings because nobody can’t understand your purposes with boring data sheet?<br>Easy, easy, WizData always are your backup!</p>
         </h3>
         <div class="videoBox">
             <ul class="vdList">
                 <li>
                     <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
-                    <div class="vdTitle">Our Work Video Title</div>
-                    <div class="ovs">Toget things started before you hire a full time expert, to strengthen your team.</div>
-                    <a href="#" class="vdLink">READ MORE</a>
+                    <div class="vdTitle">We are in Tableau Roadshow. </div>
                 </li>
                 <li>
                     <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
-                    <div class="vdTitle">Our Work Video Title</div>
-                    <div class="ovs">Toget things started before you hire a full time expert, to strengthen your team.</div>
-                    <a href="#" class="vdLink">READ MORE</a>
+                    <div class="vdTitle">Tableau China Launch Media Day.</div>
                 </li>
                 <li>
                     <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
-                    <div class="vdTitle">Our Work Video Title</div>
-                    <div class="ovs">Toget things started before you hire a full time expert, to strengthen your team.</div>
-                    <a href="#" class="vdLink">READ MORE</a>
+                    <div class="vdTitle">Tableau Data Rockstar in Shanghai</div>
                 </li>
             </ul>
-            <a href="#" class="btns moreBtn"><span>MORE ABOUT OURWORK</span></a>
         </div>
     </div>
 </div>

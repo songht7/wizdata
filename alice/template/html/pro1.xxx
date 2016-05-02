@@ -1,0 +1,93 @@
+<!-- page1 -->
+<div class="pageBlock pro_page1">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="template/html/images/pro/caia412-24188.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- page2 -->
+<div class="pageBlock pro_page2">
+    <div class="pageCont inner">
+        <h1 id="ProTitle">Wiz Cloud<span class="line"></span></h1>
+        <div class="cloud">Wiz Cloud is software-as-a-service based, with all the benefits of agility, 
+        <br/>Intelligent, security, powerful. Wiz Cloud scales to over 5TB/day, and offers a 
+        <br/>highly secure environment, 100% satisfy your diverse requirement. 
+        <br/>Minimal-Risk Strategy that Produces Results Quickly</div>
+    </div>
+</div>
+<!-- page3 -->
+<div class="pageBlock pro_page3">
+    <div class="pageCont inner proFull">
+        <div class="proLeft">
+            <img src="template/html/images/pro/Group-7.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Increase Success Rates. </h3>
+            <div class="proOvs">Wiz cloud allows installers to spin up new clusters of big data software in a matter of hours, automatically configure components and quickly test and verify the results.  </div>
+        </div>
+        <div class="proRight imgBlock">
+            <div class="proImg" style="background: url('template/html/images/pro/Group-7.png') no-repeat 0 0;"></div>
+            <!-- <img src="template/html/images/pro/Group-7.png" alt="" class="rImg overWid"> -->
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page4 -->
+<div class="pageBlock pro_page4">
+    <div class="pageCont inner">
+        <div class="proLeft imgBlock">
+            <img src="template/html/images/pro/calendar.png" alt="">
+        </div>
+        <div class="proRight ">
+            <img src="template/html/images/pro/calendar.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Derive Faster Time <br/>to Value. </h3>
+            <div class="proOvs">Wiz cloud supports quick-start proofs of concept as well as advanced analytic applications. Wiz approach to implementing a big data application takes weeks, not months, enabling you to integrate structured and unstructured data from any sources and in any format to quickly analyze and draw actionable insights.</div>
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page5 -->
+<div class="pageBlock pro_page5">
+    <div class="pageCont inner">
+        <div class="proLeft">
+            <img src="template/html/images/pro/Group-2.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Protect Data with Multilayer Enterprise Security. </h3>
+            <div class="proOvs">Wiz cloud dramatically simplifies the challenge of securing your data. You can quickly set role-based access and complex policies to secure not only the application layer, but also individual data objects and cells. Data is encrypted in transit and can be only be accessed by authorized users, based on their security clearance.</div>
+        </div>
+        <div class="proRight imgBlock">
+            <img src="template/html/images/pro/Group-2.png" alt="">
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page6 -->
+<div class="pageBlock pro_page6">
+    <div class="pageCont inner">
+        <div class="proLeft imgBlock">
+            <img src="template/html/images/pro/Group-4.png" alt="">
+        </div>
+        <div class="proRight ">
+            <img src="template/html/images/pro/Group-4.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Enable Rapid Big Data <br>Application Development. </h3>
+            <div class="proOvs">Wiz cloud enables your developers online to quickly develop, test and deploy applications with any combination of ad hoc, batch and real-time analytics. </div>
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page7 -->
+<div class="pageBlock pro_page7">
+    <div class="pageCont inner">
+        <div class="proLeft">
+            <img src="template/html/images/pro/Group-2.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Deliver Real-Time Visibility. </h3>
+            <div class="proOvs">Wiz cloud gives you real-time visibility into the performance metrics of projects, enabling you to take control of your infrastructure.</div>
+        </div>
+        <div class="proRight imgBlock">
+            <img src="template/html/images/pro/Group-2.png" alt="">
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>

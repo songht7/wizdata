@@ -71,7 +71,7 @@ footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflo
 .gs{float: left;}
 .footRight{float: right;width: 60%;text-align: right;}
 .fotMenu{padding-bottom: 10px}
-.fotMenu,.fotMenu a{color: #fff;}
+.fotMenu,.fotMenu a{color: #4a4a4a;}
 #CopyRight{color: #CDCDCD;font-size: 12px;}
 
 #ScrollTop{display: block;width: 48px;height: 48px;text-indent: -99999px;background-position: 0 0;position: fixed;right: 20px;bottom: 20px;z-index: 50px;}

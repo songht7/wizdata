@@ -1,6 +1,9 @@
-
+<?php
+	$bgColr="";
+	if(isset($bg)){$bgColr="background:".$bg;}
+?>
 	<!-- footer -->
-		<footer>
+		<footer style="<?=$bgColr?>">
 			<div class="inner">
 				<img src="template/html/images/gongshang.png" class="gs" alt="wizdata">
 				<div class="footRight">
