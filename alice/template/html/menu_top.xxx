@@ -5,11 +5,29 @@
 				<div class="menuBox">
 					<a href="javascript:;" id="MenuBtn">menu</a>
 				</div>
-				<menu>
-					<li><a href="javascript:;" class="active" data-page="About">ABOUT<em><i></i></em></a></li>
+				<menu class="clearfix">
+					<li><a href="/index-a-home-m-about.htm" class="<?php echo $mod=='about'?'active':''?>">ABOUT<em><i></i></em></a></li>
 					<li><a href="javascript:;" data-page="Services">SERVICES<em><i></i></em></a></li>
-					<li><a href="javascript:;" data-page="Solution">SOLUTION<em><i></i></em></a></li>
-					<li><a href="/index-a-home-m-product-id-1.htm" data-page="Product">PRODUCT<em><i></i></em></a></li>
+					<li>
+						<a href="javascript:;" data-page="Solution">SOLUTION<em><i></i></em></a>
+						<div class="subMenu">
+							<ul class="subDefault">
+								<li><a href="">Application Delivery</a></li>
+								<li><a href="">Log Management</a></li>
+								<li><a href="">Energy and Utilities</a></li>
+								<li><a href="">Manufacturing</a></li>
+								<li><a href="">Simplify IT Operations</a></li>
+								<li><a href="">Security and Fraud</a></li>
+								<li><a href="">Communications Service Providers</a></li>
+								<li><a href="">Retail</a></li>
+								<li><a href="">Business Analytics</a></li>
+								<li><a href="">Financial Services</a></li>
+								<li><a href="">Higher Education</a></li>
+								<li><a href="">Simulation Technique</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="/index-a-home-m-product-id-1.htm" class="<?php echo $mod=='product'?'active':''?>">PRODUCT<em><i></i></em></a></li>
 					<li><a href="javascript:;" data-page="Contact">CONTACT<em><i></i></em></a></li>
 				</menu>
 				<div class="clearn"></div>

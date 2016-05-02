@@ -1,9 +1,12 @@
 <?php
+$tempUrl = $this->tempUrl;
+$action = $this->temp['action'];
 if (isset($_GET['m'])) {
     $mod = $_GET['m']=="index"?"home":$_GET['m'];
 } else {
     $mod = "home";
 }
+$mod=strtolower($mod);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,4 +29,4 @@ if (isset($_GET['m'])) {
         <![endif]-->
     </head>
     <body>
-        <div id="Wrapper" class="<?=strtolower($mod)?>Page isSkrollr">
+        <div id="Wrapper" class="<?=$mod?>Page isSkrollr">

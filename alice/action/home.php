@@ -31,4 +31,12 @@ class home extends \Common\init {
         $this->getTemplate($this->tempUrl, 'product');
     }
 
+
+    function about() {
+        $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        
+        $this->temp['action'] = $action;
+        $this->getTemplate($this->tempUrl, 'about');
+    }
+
 }

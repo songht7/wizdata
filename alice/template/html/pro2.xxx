@@ -47,7 +47,7 @@
 </div>
 <!-- page5 -->
 <div class="pageBlock pro_page5">
-    <div class="pageCont inner proFull">
+    <div class="pageCont inner isFull">
         <div class="proLeft">
             <img src="template/html/images/pro/Group.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Content Management</h3>

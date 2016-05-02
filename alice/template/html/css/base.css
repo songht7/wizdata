@@ -43,15 +43,22 @@ header .inner{overflow: visible;width: 1280px}
 #Logo img{width: 100%;}
 .menuBox{float:right;position: relative;height: 40px}
 #MenuBtn{display: none;background: url("../images/mobile/Menu_normal@2x.png") no-repeat 50% 50%;width: 50px;height: 100%;text-indent: -99999px;}
-menu {overflow:hidden;float: right;display: block;}
-menu li{float:left;height: 44px;text-align: center;padding-left: 43px;line-height: 44px;}
-menu li a{font-family:'Helvetica-Bold',Arial;font-weight: bold; color: #fff;position: relative;display: block;height: 100%;}
-menu li a em{display: none;position: absolute;bottom:5px;left: 0;width: 100%;}
-menu li a em i{height: 1px;background: #fff;width: 35px;overflow: hidden;display: block;margin: 0 auto}
-menu li a.active em,menu li a:hover em{display: block;}
+menu {float: right;display: block;}
+menu li{float:left;text-align: center;padding-left: 43px;line-height: 44px;}
+menu li a{font-family:'Helvetica-Bold',Arial;font-weight: bold; color: #fff;position: relative;display: block;height: 44px;background: url("../images/arrow_01.png") no-repeat right 50%;padding-right: 18px;}
+menu li a em{display: none;position: absolute;bottom:-27px;left: 0;width: 100%;}
+menu li a em i{height: 0;width: 0;overflow: hidden;display: block;margin: 0 auto;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 12px solid #4a4a4a;}
+menu li a.active,menu li a:hover{color: #4a4a4a;background-image: url("../images/arrow_02.png");}
 header.isFix{z-index:100;width:100%;top:0;left:0;position:fixed;padding: 5px 0;border-bottom: 1px solid #fff;}
 header.isFix #Logo{width: 105px;}
-header.isFix li{height: 40px;line-height: 40px;}
+header.isFix li a{height: 40px;line-height: 40px;}
+header.isFix menu li a em {bottom: -9px;}
+
+.subMenu{display: none; position: absolute;top: 100%;background: #4a4a4a;color: #fff;left: 0;z-index: 10;width: 100%;}
+.subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 20px 10px;}
+.subMenu ul.subDefault li{width: 25%;float: left;text-align: left;padding-left: 0}
+.subMenu ul.subDefault li a{display: block;height: 40px;line-height: 40px; color: #fff;width: 95%;border-bottom: 1px solid #90C31F;padding-right: 0}
+.subMenu a,.subMenu a:hover,.subMenu a.active{background-image: none;font-weight: normal;font-family: 'Helvetica-Light',Arial;font-size: 14px;}
 
 	.slidebox{position: relative;overflow: hidden;}
 	.slidebox ul{overflow:hidden;}

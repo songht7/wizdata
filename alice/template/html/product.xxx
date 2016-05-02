@@ -1,6 +1,4 @@
 <?php
-$tempUrl = $this->tempUrl;
-$action = $this->temp['action'];
 $pid=isset($_GET['id'])?$_GET['id']:1;
 $page='pro'.$pid.'.xxx';
 if($pid==2){

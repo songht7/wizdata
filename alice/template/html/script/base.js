@@ -5,6 +5,21 @@ if (browser && browser.is == "ie" && browser.vs < 9) { ie8 = true; }
 if (browser && browser.is == "ie" && browser.vs <= 9) { ie9 = true; }
 
 $(function () {
+    /** 菜单  */
+    $(document).on("mouseover","menu a",function(){
+        var prt=$(this).parent();
+        if(prt.find(".subMenu").length){
+            prt.find(".subMenu").show();
+            prt.find("em").show();
+        }
+    });
+    $(document).on("mouseleave","menu a",function(){
+        var prt=$(this).parent();
+        if(prt.find(".subMenu").length){
+            prt.find(".subMenu").hide();
+            prt.find("em").hide();
+        }
+    });
     /* 回到顶部 */
     $(document).on("click","#ScrollTop",function(){
         $("html,body").animate({"scrollTop":0},500);

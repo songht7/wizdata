@@ -22,7 +22,7 @@
 </div>
 <!-- page3 -->
 <div class="pageBlock pro_page3">
-    <div class="pageCont inner proFull">
+    <div class="pageCont inner isFull">
         <div class="proLeft">
             <img src="template/html/images/pro/Group-7.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Increase Success Rates. </h3>

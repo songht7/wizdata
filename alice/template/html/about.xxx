@@ -1,0 +1,65 @@
+<?php
+	$tempUrl = $this->tempUrl;
+	$action = $this->temp['action'];
+	$bg='#535353';
+?>
+<?php include_once 'header.xxx'; ?>
+
+<?php include_once 'menu_top.xxx'; ?>
+
+<!-- about page -->
+<!-- page1 -->
+<div class="pageBlock abt_page1">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="template/html/images/about/Group-9.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- page2 -->
+<div class="pageBlock abt_page2">
+
+    <div class="pageCont inner isFull">
+        <div class="abtBlock">
+        	<div class="abtLeft imgBlock">
+          	<img src="template/html/images/about/shutterstock_32.png" alt="" class="rImg">
+        	</div>
+        	<div class="abtRight">
+        		<div class="txtBlock">
+	          	<img src="template/html/images/about/shutterstock_32.png" alt="" class="moblieImg">
+	          	<div class="bkTitle">WIZ Core Value</div>
+	          	<div class="bkOvs">WIZ is Original with a crowd of Vigorous & Talented people who are born with Free-thinking & Creative personalities. <br>We keep constant Concentration on the leading Technology and provide DATA insights to boost your business.</div>
+          	</div>
+          </div>
+        </div>
+        <div class="abtBlock">
+        	<div class="abtLeft ">
+        		<div class="txtBlock">
+	          	<img src="template/html/images/about/Group-8.png" alt="" class="moblieImg">
+	          	<div class="bkTitle">Our Vision</div>
+	          	<div class="bkOvs">"Wizdata" makes the invisible visible, transform hidden or undervalued Corp data assets into sustainable business value. Wizdata acts as independent expert "guides" for business leaders on their "Big Data Journey" to drive up profitability and competitiveness.</div>
+          	</div>
+        	</div>
+        	<div class="abtRight imgBlock">
+          	<img src="template/html/images/about/Group-8.png" alt="" class="rImg">
+          </div>
+        </div>
+    </div>
+
+</div>
+<!-- page3 -->
+<div class="pageBlock abt_page3">
+
+    <div class="pageCont inner">
+        <div class="abtRow">
+        </div>
+    </div>
+
+</div>
+<!-- /about page -->
+
+<?php include_once 'footer.xxx'; ?>
