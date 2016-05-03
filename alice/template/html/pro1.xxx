@@ -23,7 +23,7 @@
 <!-- page3 -->
 <div class="pageBlock pro_page3 pro_odd">
     <div class="pageCont inner isFull">
-        <div class="proLeft">
+        <div class="proLeft" style="padding-top: 100px">
             <img src="template/html/images/pro/Group-7.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Increase Success Rates. </h3>
             <div class="proOvs">Wiz cloud allows installers to spin up new clusters of big data software in a matter of hours, automatically configure components and quickly test and verify the results.  </div>
