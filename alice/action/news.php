@@ -8,6 +8,7 @@ class news extends \Common\init {
 
     function __construct() {
         parent::__construct();
+        include_once './model/Cms/CategoryDAL.php';
         include_once './model/Cms/NewsDAL.php';
     }
 
@@ -36,11 +37,15 @@ class news extends \Common\init {
             $id = $this->specifyChar($_GET['id']);
             $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "news";
 
+            $Category = new \AliceDAL\Category();
+            $category = $Category->getList($_COOKIE[$this->shop_name]["b_lang"], 1, 100);
+
             $News = new \AliceDAL\News();
             $product = $News->getDetail($id);
             $pro = $News->getDetailI8n($id);
             $imgs = $News->getDetailImg($id);
 
+            $this->temp['category'] = $category['list'];
             $this->temp['product'] = $product;
             $this->temp['pro'] = $pro;
             $this->temp['imgs'] = $imgs;
@@ -50,6 +55,11 @@ class news extends \Common\init {
         } else {
             $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "news";
             $this->temp['action'] = $action;
+            
+            $Category = new \AliceDAL\Category();
+            $category = $Category->getList($_COOKIE[$this->shop_name]["b_lang"], 1, 100);
+
+            $this->temp['category'] = $category['list'];
             $this->getTemplate($this->tempUrl, 'show_news_detailed');
         }
     }

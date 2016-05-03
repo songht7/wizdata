@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<form id="uploadForm" action="Upload" method="post" enctype="multipart/form-data">
+    <input id="File1" name="fileupload" accept="image/gif, image/jpeg,image/png" multiple="multiple" type="file" value="" />
+    <input id="btnImportOK" type="button" value="上传" />
+</form>
+<script src="./script/jquery.js"></script>
+<!--<script src="~/Scripts/jquery-1.10.2.min.js"></script>-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnImportOK").click(function () {
+            var formData = new FormData($("#uploadForm")[0]);
+            $.ajax({
+                type: "POST",
+                data: formData,
+               //url: "http://honstat.com/api/upload/image",						//传红图片上传接口
+               url: "http://spacehu.com/api/api.php",					//space图片上传接口
+               //url: "./api.php",					//space 本地调试图片上传接口
+                contentType: false,
+                processData: false,
+                dataType: "json"
+            }).success(function (data) {
+                if (data.error==0) {
+                    console.log(data.url);
+                } else {
+                    console.log(data.error);
+                    console.log(data.error_info);
+                }
+            }).error(function (data) {
+                //alert(data);
+                console.log(data);
+            });
+        });
+    });
+</script>

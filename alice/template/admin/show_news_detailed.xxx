@@ -1,6 +1,7 @@
 <?php
 $tempUrl = $this->tempUrl;
 $action = $this->temp['action'];
+$category = isset($this->temp['category']) ? $this->temp['category'] : null;
 $product = isset($this->temp['product']) ? $this->temp['product'] : null;
 $pro = isset($this->temp['pro']) ? $this->temp['pro'] : null;
 $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
@@ -90,11 +91,29 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
         <div class="content">
             <form name="theForm" id="demo" action="<?php echo $this->url_rewrite("./index.php?a=" . $action . "&m=edit_" . $action . "&id=" . $product['art_id']); ?>" method="post" enctype='multipart/form-data' onsubmit="post();
                     return false;">
-                      <?php
-                      $il = 1;
-                      if (!empty($this->dbconfig['lang_arr'])) {
-                          foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
-                              ?>
+                      <?php if (!empty($category)) { ?>
+                    <div class="leftA">
+                        <div class="leftAlist" >
+                            <span>CATEGORY</span>
+                        </div>
+                        <div class="leftAlist" >
+                            <select id="cat_id" name="cat_id" class="postElement" data-set="1"  >
+                                <?php foreach ($category as $k => $v) { ?>
+                                    <option <?php
+                                    if ($v['cat_id'] == $product['cat_id']) {
+                                        echo "selected";
+                                    }
+                                    ?> value="<?php echo $v["cat_id"]; ?>" ><?php echo $v["cat_name"]; ?></option>
+                                    <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php
+                $il = 1;
+                if (!empty($this->dbconfig['lang_arr'])) {
+                    foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
+                        ?>
                         <div class="pathA <?php echo $lkey; ?> <?php
                         if ($il != 1) {
                             echo 'hide';
@@ -117,7 +136,7 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                                     <span>OVERVIEW</span>
                                 </div>
                                 <div class="leftAlist" >
-                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][overview]" class="postElement" ><?php
+                                    <textarea id="<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][overview]" class="postElement" ><?php
                                         if (!empty($pro[$lkey]['art_overview'])) {
                                             echo $pro[$lkey]['art_overview'];
                                         }
@@ -127,12 +146,14 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                                     <span>DETAIL</span>
                                 </div>
                                 <div class="leftAlist" >
-                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]" class="postElement" ><?php
+                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]" data-set="1"   class="postElement" ><?php
                                         if (!empty($pro[$lkey]['art_detail'])) {
                                             echo $pro[$lkey]['art_detail'];
                                         }
                                         ?></textarea>
-                                    <script type="text/javascript">CKEDITOR.replace('i8n[<?php echo $lkey; ?>][detail]');</script>
+                                    <script type="text/javascript">
+                                        CKEDITOR.replace('i8n[<?php echo $lkey; ?>][detail]');
+                                    </script>
                                 </div>
                                 <?php if (!empty($imgs)) { ?>
                                     <div class="leftAlist" >

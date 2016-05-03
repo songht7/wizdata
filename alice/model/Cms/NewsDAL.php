@@ -71,8 +71,8 @@ class News extends \CommonDAL\BaseDAL {
 
     //insert category
     function add($model) {
-        $sql = "insert into " . $this->table_name('article') . "(parent_id,type,is_show,order_by,add_by ,add_time,edit_by) "
-                . "values('" . $model['parent_id'] . "','" . $model['type'] . "','" . $model['is_show'] . "','" . $model['order_by'] . "','" . $model['h_id'] . "',NOW(),'" . $model['h_id'] . "')";
+        $sql = "insert into " . $this->table_name('article') . "(cat_id,type,order_by,add_by ,add_time,edit_by) "
+                . "values('" . $model['cat_id'] . "','" . $model['type'] . "','" . $model['order_by'] . "','" . $model['h_id'] . "',NOW(),'" . $model['h_id'] . "')";
         $this->query($sql);
         $id = mysql_insert_id();
 
@@ -91,7 +91,7 @@ class News extends \CommonDAL\BaseDAL {
 //update category
     function edit($model) {
         $id = $model['id'];
-        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] . "'  where art_id='{$id}'";
+        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] . "',cat_id='".$model['cat_id']."'  where art_id='{$id}'";
         $this->query($sql);
         if (!empty($model['i8n'])) {
             foreach ($model['i8n'] as $v) {
