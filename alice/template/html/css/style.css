@@ -154,9 +154,11 @@
 }
 
 /*** Product ***/
-.productPage{background: #F0F0F0}
+.productPage{}
 .productPage .inner.isFull{overflow:visible;padding: 0;}
-.pro_page2{background: #fff}
+.pro_even{background: #fff}
+.pro_odd{background: #F0F0F0}
+.pro_page2{}
 	#ProTitle{font-family: 'Helvetica-Bold',Arial;font-size: 58px;line-height: 60px;color: #4a4a4a;text-align: center;}
 	.cloud{font-size: 28px;line-height: 42px;font-family: 'Helvetica-Light',Arial;text-align: center;}
 .proLeft{width: 540px;float: left;}
@@ -166,7 +168,6 @@
 	.proImg{width: 714px;height:376px;}
 	.overWid{position: relative;right: 0;top: 0;}
 #Pro_1 .pro_page3 .proLeft,#Pro_2 .pro_page5 .proLeft{padding-top: 100px}
-.pro_page4,.pro_page6{background: #fff}
 
 /** About */
 .aboutPage .inner.isFull{padding: 0;}

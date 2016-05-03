@@ -32,6 +32,12 @@ class home extends \Common\init {
     }
 
 
+    function client() {
+        $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        
+        $this->temp['action'] = $action;
+        $this->getTemplate($this->tempUrl, 'client');
+    }
     function about() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
         

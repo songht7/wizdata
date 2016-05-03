@@ -52,6 +52,9 @@ $(function () {
         });
     }
     
+    /** set footer bgColor**/
+        var bg=$(".pageBlock:last").css("background-color");
+        $("footer").css({"background-color":bg});
 });
 
 window.onload=function(){

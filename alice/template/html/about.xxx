@@ -1,8 +1,7 @@
 <?php
 	$tempUrl = $this->tempUrl;
 	$action = $this->temp['action'];
-    $bg='#5C5C5C';
-
+  
     $imgPath="template/html/images/about";
 ?>
 <?php include_once 'header.xxx'; ?>
