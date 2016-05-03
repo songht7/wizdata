@@ -1,10 +1,5 @@
 <?php
 $pid=isset($_GET['id'])?$_GET['id']:1;
-if($pid==2){
-    $bg='#fff';
-}else if($pid==1){
-    $bg='#F0F0F0';
-}
 
 ?>
 <?php include_once 'header.xxx'; ?>

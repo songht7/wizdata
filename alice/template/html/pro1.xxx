@@ -1,5 +1,5 @@
 <!-- page1 -->
-<div class="pageBlock pro_page1">
+<div class="pageBlock pro_page1 pro_odd">
 
     <div class="sliderContainer fullWidth clearfix">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
@@ -11,7 +11,7 @@
 
 </div>
 <!-- page2 -->
-<div class="pageBlock pro_page2">
+<div class="pageBlock pro_page2 pro_even">
     <div class="pageCont inner">
         <h1 id="ProTitle">Wiz Cloud<span class="line"></span></h1>
         <div class="cloud">Wiz Cloud is software-as-a-service based, with all the benefits of agility, 
@@ -21,9 +21,9 @@
     </div>
 </div>
 <!-- page3 -->
-<div class="pageBlock pro_page3">
+<div class="pageBlock pro_page3 pro_odd">
     <div class="pageCont inner isFull">
-        <div class="proLeft">
+        <div class="proLeft" style="padding-top: 100px">
             <img src="template/html/images/pro/Group-7.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Increase Success Rates. </h3>
             <div class="proOvs">Wiz cloud allows installers to spin up new clusters of big data software in a matter of hours, automatically configure components and quickly test and verify the results.  </div>
@@ -36,7 +36,7 @@
     </div>
 </div>
 <!-- page4 -->
-<div class="pageBlock pro_page4">
+<div class="pageBlock pro_page4 pro_even">
     <div class="pageCont inner">
         <div class="proLeft imgBlock">
             <img src="template/html/images/pro/calendar.png" alt="">
@@ -50,7 +50,7 @@
     </div>
 </div>
 <!-- page5 -->
-<div class="pageBlock pro_page5">
+<div class="pageBlock pro_page5 pro_odd">
     <div class="pageCont inner">
         <div class="proLeft">
             <img src="template/html/images/pro/Group-2.png" alt="" class="moblieImg">
@@ -64,7 +64,7 @@
     </div>
 </div>
 <!-- page6 -->
-<div class="pageBlock pro_page6">
+<div class="pageBlock pro_page6 pro_even">
     <div class="pageCont inner">
         <div class="proLeft imgBlock">
             <img src="template/html/images/pro/Group-4.png" alt="">
@@ -78,7 +78,7 @@
     </div>
 </div>
 <!-- page7 -->
-<div class="pageBlock pro_page7">
+<div class="pageBlock pro_page7 pro_odd">
     <div class="pageCont inner">
         <div class="proLeft">
             <img src="template/html/images/pro/Searchcloud.png" alt="" class="moblieImg">
