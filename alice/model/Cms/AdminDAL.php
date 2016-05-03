@@ -16,7 +16,7 @@ class Admin extends \CommonDAL\BaseDAL {
 //login 
     function loginPost($name, $password) {
         $sql = "select h_id,h_name,count(*) as num from " . $this->table_name('administrator_had') . " where h_name='" . $name . "' and h_password='" . $password . "' limit 0,1";
-        $sod = $this->getFetchRow($sql, $this->conn);
+        $sod = $this->getFetchRow($sql);
         return $sod;
     }
 }

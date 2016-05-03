@@ -14,27 +14,27 @@ class Category extends \CommonDAL\BaseDAL {
 
         $sql = "select count(1) as count from " . $this->table_name('category') . " as c left join " . $this->table_name('category_i8n') . " as i on c.cat_id=i.cat_id "
                 . " where i.i8n='" . $i8n . "';";
-        $count = $this->getFetchRow($sql, $this->conn);
+        $count = $this->getFetchRow($sql);
         $orderby = " order by c.cat_id desc ";
         $limit = " limit " . (($currentpage - 1) * $pagesize) . "," . $pagesize . " ";
         $sql = "select * from " . $this->table_name('category') . " as c left join " . $this->table_name('category_i8n') . " as i on c.cat_id=i.cat_id "
                 . " where i.i8n='" . $i8n . "' "
                 . " " . $orderby . " " . $limit . ";";
-        $product = $this->getFetchAll($sql, $this->conn);
+        $product = $this->getFetchAll($sql);
         return array("list" => $product, "count" => $count['count']);
     }
 
 //detail 
     function getCategoryDetail($id) {
         $sql = "select * from " . $this->table_name('category') . " where cat_id='{$id}'";
-        $product = $this->getFetchRow($sql, $this->conn);
+        $product = $this->getFetchRow($sql);
         return $product;
     }
 
 //i8n
     function getCategoryDetailI8n($id) {
         $sql = "select * from " . $this->table_name('category_i8n') . " where cat_id='{$id}' order by i8n asc";
-        $products = $this->getFetchAll($sql, $this->conn);
+        $products = $this->getFetchAll($sql);
         $pro = array();
         if (!empty($products)) {
             foreach ($products as $v) {
@@ -48,7 +48,7 @@ class Category extends \CommonDAL\BaseDAL {
 //img
     function getCategoryDetailImg($id) {
         $sql = "select * from " . $this->table_name('img') . " where type_id='{$id}' and type='C' order by i8n asc";
-        $img = $this->getFetchAll($sql, $this->conn);
+        $img = $this->getFetchAll($sql);
         $imgs = array();
         if (!empty($img)) {
             foreach ($img as $v) {

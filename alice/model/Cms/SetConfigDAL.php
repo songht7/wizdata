@@ -29,12 +29,12 @@ class SetConfigDAL extends \CommonDAL\BaseDAL {
         }
 
         $sql = "select count(1) as count from " . $this->table_name('config') . $where . " ;";
-        $count = $this->getFetchRow($sql, $this->conn);
+        $count = $this->getFetchRow($sql);
         $orderby = " order by order_by asc, con_id desc ";
         $limit = " limit " . (($currentpage - 1) * $pagesize) . "," . $pagesize . " ";
         $sql = "select * from " . $this->table_name('config') . $where
                 . " " . $orderby . " " . $limit . ";";
-        $product = $this->getFetchAll($sql, $this->conn);
+        $product = $this->getFetchAll($sql);
         return array("list" => $product, "count" => $count['count']);
     }
 

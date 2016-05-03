@@ -68,7 +68,7 @@ class init {
         if ($_SERVER['SERVER_NAME'] === "spacehu.com" || $_SERVER['SERVER_NAME'] === "www.spacehu.com") {
             $this->imguploadlink = "http://spacehu.com/api/api.php";
         } else {
-            $this->imguploadlink = "http://192.168.1.67/api/api.php";
+            $this->imguploadlink = "http://wizdata.local.org/api/api.php";
         }
         $this->sysVar = array(
             'template' => MANAGE_TEMPLATE,

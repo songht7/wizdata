@@ -23,7 +23,7 @@ class homeAjax extends \Common\init {
     function sendEmail() {
         $orderInfo = $this->specifyChar($_POST);
         //pr($_REQUEST);
-        $HomeDAL = new \AliceDAL\HomeDAL();
+        $HomeDAL = new \AliceDAL\Home();
         //操作返回值
         $res = array('Result' => 0, 'Msg' => "data is null", "Type" => "reload");
         try {

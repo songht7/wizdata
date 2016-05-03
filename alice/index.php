@@ -35,6 +35,9 @@ session_start();
 if (empty($_SESSION['lang'])) {
     $_SESSION['lang'] = "en_us";
 }
+if (empty($_COOKIE['lang'])) {
+    $_COOKIE['lang'] = "en_us";
+}
 include_once('iso_dd.php');
 
 /**
