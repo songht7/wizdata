@@ -52,10 +52,10 @@
 
 </div>
 <!-- page2 -->
-<div class="pageBlock page2">
+<div class="pageBlock page2" id="Services">
     <div class="pageCont inner">
         <div class="wizSay">
-            <h3 id="About" class="say">WIZ SAYS:</h3>
+            <h3  class="say">WIZ SAYS:</h3>
             <div class="sayCont">
                 When Business Transformation meets Analytics<span class="quote">&nbsp;</span>
                 <span class="line"></span>
@@ -181,15 +181,15 @@
         <div class="videoBox">
             <ul class="vdList">
                 <li>
-                    <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
+                    <a href="javascript:;" data-url="index.php?a=home&m=video&id=1" data-id='1' class="vdImg"><img src="template/html/video/Tableau9.0Roadshow.png" alt=""><span></span></a>
                     <div class="vdTitle">We are in Tableau Roadshow. </div>
                 </li>
                 <li>
-                    <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
+                    <a href="javascript:;" data-url="index.php?a=home&m=video&id=2" data-id='2' class="vdImg"><img src="template/html/video/TableauChinaLaunch.png" alt=""><span></span></a>
                     <div class="vdTitle">Tableau China Launch Media Day.</div>
                 </li>
                 <li>
-                    <a href="#" class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
+                    <a href="javascript:;" data-url="index.php?a=home&m=video&id=3" data-id='3' class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
                     <div class="vdTitle">Tableau Data Rockstar in Shanghai</div>
                 </li>
             </ul>
@@ -197,7 +197,7 @@
     </div>
 </div>
 <!-- page5 -->
-<div class="pageBlock page5">
+<div class="pageBlock page5" id="Contact">
     <div class="pageCont inner">
 
         <div class="contactBox">
@@ -228,16 +228,14 @@
             <div class="map">map</div>
             <ul class="contactInfor">
                 <li class="infor1">
-                    <p>STREET NAME 123</p>
-                    <p>CITY NAME, COUNTRY</p>
+                    <p>Room 416,No.2112 Middle Yanggao road,</p>
+                    <p>Shanghai, China</p>
                 </li>
                 <li class="infor2">
-                    <p>T:+10 1234 5678</p>
-                    <p>F:+20 2345 6789</p>
+                    <p>T:021-61539561</p>
                 </li>
                 <li class="infor3">
-                    <p><a href="mailto:name.surname@office.com">name.surname@office.com</a></p>
-                    <p><a href="mailto:office@companyname.com">office@companyname.com</a></p>
+                    <p><a href="mailto:admin@wizdata.com.cn">admin@wizdata.com.cn</a></p>
                 </li>
             </ul>
         </div>

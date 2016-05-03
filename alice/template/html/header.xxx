@@ -21,6 +21,7 @@ $mod=strtolower($mod);
         <link rel="shortcut icon" href="favicon.ico">
         <link href="template/html/css/base.css" rel="stylesheet" />
         <link href="template/html/css/style.css" rel="stylesheet" />
+        <link href="template/html/script/colorbox/colorbox.css" rel="stylesheet" />
         <link href="template/html/script/royalslider/royalslider.css" rel="stylesheet" />
         <link href="template/html/script/royalslider/rs-minimal-white.css" rel="stylesheet" />
         <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/jquery-1.9.1.js"></script>

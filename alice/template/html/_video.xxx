@@ -1,0 +1,8 @@
+<?php
+    $video='';
+    if(isset($_GET['id'])){
+        $video='v'.$_GET['id'];
+    }
+?>
+<div class="popBox">
+</div>

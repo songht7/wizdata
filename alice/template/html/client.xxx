@@ -1,0 +1,106 @@
+<?php
+	$tempUrl = $this->tempUrl;
+	$action = $this->temp['action'];
+    $bg="#5C5C5C";
+    $imgPath="template/html/images/client";
+?>
+<?php include_once 'header.xxx'; ?>
+
+<?php include_once 'menu_top.xxx'; ?>
+
+<!-- client page -->
+<!-- page1 -->
+<div class="pageBlock clt_page1">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="<?=$imgPath?>/caia.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- page2 -->
+<div class="pageBlock clt_page2">
+    <div class="pageCont inner">
+        <h3 class="clientTitle">Cooperation</h3>
+        <div class="coop">
+            <ul class="coopList">
+                <li>
+                    <div class="cpImg">
+                        <img src="<?=$imgPath?>/jiaoda.png" alt="" style="margin-top: 7px;display: block;">
+                        <span class="line"></span>
+                    </div>
+                    <div class="cpInfo">
+                        <p class="cpName">上海交通大学 中美物流研究院</p>
+                        <p>打造现代物流科学研究与技术开发的国际化大平台</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cpImg">
+                        <img src="<?=$imgPath?>/huifu.png" alt="">
+                        <span class="line"></span>
+                    </div>
+                    <div class="cpInfo">
+                        <p class="cpName">汇富资产</p>
+                        <p>为机构投资者和高端客户提供定制的<br>资产管理和投资顾问</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cpImg">
+                        <img src="<?=$imgPath?>/xiancedianzi.png" alt="">
+                        <span class="line"></span>
+                    </div>
+                    <div class="cpInfo">
+                        <p class="cpName">先测电子科技（上海）有限公司</p>
+                        <p>无线智能测试方案的解决者</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="cpImg">
+                        <img src="<?=$imgPath?>/SME.png" alt="">
+                        <span class="line"></span>
+                    </div>
+                    <div class="cpInfo">
+                        <p class="cpName">魔鹰科技</p>
+                        <p>专注于为教育机构提供基于CRM的 软件产品和服务</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <h3 class="clientTitle">Client</h3>
+        <div class="client">
+            <table class="clientList">
+                <tr>
+                    <td><img src="<?=$imgPath?>/Jconsulting.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/keyplus.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/the-me.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/nike.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/sesa.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="<?=$imgPath?>/ipsos.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/10data2.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/alcatel.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/unicom.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/telecom.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="<?=$imgPath?>/mobile.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/Sinotuk.png" alt=""></td>
+                    <td><img src="<?=$imgPath?>/csf.png" alt=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+<!-- /client page -->
+
+<?php include_once 'footer.xxx'; ?>

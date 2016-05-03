@@ -176,4 +176,27 @@
 	.txtBlock{padding: 35px 40px 0;}
 	.bkTitle{color: #90C31F;font-family: 'Helvetica-Light',Arial;line-height: 60px;font-size: 58px;padding-bottom: 10px;}
 	.bkOvs{color: #4A4A4A;font-family: 'Helvetica-Light',Arial;line-height: 40px;font-size: 28px;}
-.abt_page3{background: #535353}
+.abt_page3{background: #5C5C5C}
+	.abtRow{overflow: hidden;border-bottom: 1px solid #757575;padding-bottom: 60px;margin-bottom: 60px;}
+	.abtRow.last{margin-bottom:0;border-bottom: none;padding-bottom: 0}
+	.rowLeft{float: left;}
+	.rowRight{float: right;}
+	.portrait{width: 226px;}
+		.portrait img{width: 100%;}
+	.motto{width: 745px;color: #fff;font-family:'Helvetica-Light',Arial;}
+		.mts{font-size: 26px;line-height: 40px;background: url("../images/about/quote.png") no-repeat right 0;padding-top:45px;}
+		.person{font-size: 18px;font-family: 'Helvetica-Light',Arial;line-height: 34px;text-align: right;}
+		.person strong{display: block;letter-spacing: 1px;font-family:'Helvetica-Bold',Arial;line-height: 24px}
+
+/** Client **/
+.clientPage{background: #5C5C5C}
+.clientTitle{text-align: center;font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;color: #90C31F;}
+.coopList{padding: 80px 0;width: 950px;margin: 0 auto;overflow: hidden;}
+	.coopList li{width: 300px;float: left;padding: 0 85px 75px;}
+		.cpImg .line{width: 200px;height: 1px;margin: 23px auto}
+		.cpImg img{display: block;width: auto;max-width:100%;margin: 0 auto}
+		.cpInfo{font-family: 'STHeitiSC-Medium';line-height: 26px;text-align: center;}
+			.cpInfo p{font-size: 12px;color: #ddd;}
+			.cpInfo p.cpName{font-size: 18px;color: #fff;}
+.clientList{width: 100%;margin-top:65px;}
+.clientList td{width: 20%;text-align: center;padding: 0 0 40px;}

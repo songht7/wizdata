@@ -6,19 +6,17 @@ if (browser && browser.is == "ie" && browser.vs <= 9) { ie9 = true; }
 
 $(function () {
     /** 菜单  */
-    $(document).on("mouseover","menu a",function(){
-        var prt=$(this).parent();
-        if(prt.find(".subMenu").length){
-            prt.find(".subMenu").show();
-            prt.find("em").show();
+    $(document).on("mouseover","menu li",function(){
+        var obj=$(this);
+        $("menu .subMenu,menu em").hide();
+        if(obj.find(".subMenu").length){
+            obj.find(".subMenu").show();
+            obj.find("em").show();
         }
     });
-    $(document).on("mouseleave","menu a",function(){
-        var prt=$(this).parent();
-        if(prt.find(".subMenu").length){
-            prt.find(".subMenu").hide();
-            prt.find("em").hide();
-        }
+    $(document).on("mouseleave","header",function(){
+        var obj=$(this);
+        $("menu .subMenu,menu em").hide();
     });
     /* 回到顶部 */
     $(document).on("click","#ScrollTop",function(){
@@ -88,8 +86,8 @@ function reSize(){
         $("menu").show();
     }
     /** pro  */
-    if($(".proFull").length){
-        $(".proFull").each(function(i,e){
+    if($(".isFull").length){
+        $(".isFull").each(function(i,e){
             var imgWidth=714,
                 frameWidth=$(e).find(".proImg").parent().width(),
                 overFlow=imgWidth-frameWidth;
@@ -100,12 +98,27 @@ function reSize(){
                 cut=side==0?0:cut;
                 imgWidth=imgWidth-cut;
             }
-                console.log(imgWidth, frameWidth);
-                console.log(i, overFlow, side, cut, imgWidth);
-                console.log("---------");
+                // console.log(imgWidth, frameWidth);
+                // console.log(i, overFlow, side, cut, imgWidth);
+                // console.log("---------");
             $(e).find(".proImg").css({"width":imgWidth+"px"});
         });
     }
+    /** home page`s video **/
+    $(document).on('click', '.vdImg', function(event) {
+        var obj=$(this),
+        url=obj.data("url"),
+        vid=obj.data('id');
+        $.colorbox({href:url,width:"90%",height:"90%",
+            onComplete:function(){
+                var video='<video id="VideoBox" controls="controls" autoplay="autoplay" width="100%" height="100%">'
+                                +'<source src="template/html/video/v'+vid+'.mp4" type="video/mp4" />'
+                                +'您的浏览器不支持 video 标签。'
+                            +'</video>';
+                $(".popBox").html(video);
+            }
+        });
+    }); 
 }
 /**
 type:验证类型

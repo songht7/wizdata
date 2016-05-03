@@ -1,6 +1,8 @@
 <?php
 	$bgColr="";
-	if(isset($bg)){$bgColr="background:".$bg;}
+	if(isset($bg)){
+		$bgColr="background:".$bg;
+	}
 ?>
 	<!-- footer -->
 		<footer style="<?=$bgColr?>">
@@ -22,6 +24,7 @@
 
 		<a href="javascript:;" id="ScrollTop" class="icons"><span>ScrollTop</span></a>
 	</div>
+	<script src="template/html/script/colorbox/jquery.colorbox.js"></script>
 	<script src="template/html/script/base.js"></script>
 	<script src="template/html/script/jquery.lazyload.min.js"></script>
 	<script src="template/html/script/royalslider/jquery.royalslider.min.js"></script>

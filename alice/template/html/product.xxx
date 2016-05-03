@@ -1,8 +1,9 @@
 <?php
 $pid=isset($_GET['id'])?$_GET['id']:1;
-$page='pro'.$pid.'.xxx';
 if($pid==2){
     $bg='#fff';
+}else if($pid==1){
+    $bg='#F0F0F0';
 }
 
 ?>
@@ -13,6 +14,7 @@ if($pid==2){
 <!-- product page -->
 <div id="Pro_<?=$pid?>">
 <?php 
+    $page='pro'.$pid.'.xxx';
     include_once $page; 
 ?>
 </div>

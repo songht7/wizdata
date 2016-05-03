@@ -1,7 +1,9 @@
 <?php
 	$tempUrl = $this->tempUrl;
 	$action = $this->temp['action'];
-	$bg='#535353';
+    $bg='#5C5C5C';
+
+    $imgPath="template/html/images/about";
 ?>
 <?php include_once 'header.xxx'; ?>
 
@@ -14,7 +16,7 @@
     <div class="sliderContainer fullWidth clearfix">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
             <div class="rsContent">
-                <img class="rsImg" src="template/html/images/about/Group-9.png" alt="" />
+                <img class="rsImg" src="<?=$imgPath?>/Group-9.png" alt="" />
             </div>
         </div>
     </div>
@@ -26,11 +28,11 @@
     <div class="pageCont inner isFull">
         <div class="abtBlock">
         	<div class="abtLeft imgBlock">
-          	<img src="template/html/images/about/shutterstock_32.png" alt="" class="rImg">
+          	<img src="<?=$imgPath?>/shutterstock_32.png" alt="" class="rImg">
         	</div>
         	<div class="abtRight">
         		<div class="txtBlock">
-	          	<img src="template/html/images/about/shutterstock_32.png" alt="" class="moblieImg">
+	          	<img src="<?=$imgPath?>/shutterstock_32.png" alt="" class="moblieImg">
 	          	<div class="bkTitle">WIZ Core Value</div>
 	          	<div class="bkOvs">WIZ is Original with a crowd of Vigorous & Talented people who are born with Free-thinking & Creative personalities. <br>We keep constant Concentration on the leading Technology and provide DATA insights to boost your business.</div>
           	</div>
@@ -39,13 +41,13 @@
         <div class="abtBlock">
         	<div class="abtLeft ">
         		<div class="txtBlock">
-	          	<img src="template/html/images/about/Group-8.png" alt="" class="moblieImg">
+	          	<img src="<?=$imgPath?>/Group-8.png" alt="" class="moblieImg">
 	          	<div class="bkTitle">Our Vision</div>
 	          	<div class="bkOvs">"Wizdata" makes the invisible visible, transform hidden or undervalued Corp data assets into sustainable business value. Wizdata acts as independent expert "guides" for business leaders on their "Big Data Journey" to drive up profitability and competitiveness.</div>
           	</div>
         	</div>
         	<div class="abtRight imgBlock">
-          	<img src="template/html/images/about/Group-8.png" alt="" class="rImg">
+          	<img src="<?=$imgPath?>/Group-8.png" alt="" class="rImg">
           </div>
         </div>
     </div>
@@ -53,12 +55,87 @@
 </div>
 <!-- page3 -->
 <div class="pageBlock abt_page3">
-
     <div class="pageCont inner">
-        <div class="abtRow">
-        </div>
-    </div>
 
+        <div class="abtRow odd">
+            <div class="rowLeft portrait">
+                <img src="<?=$imgPath?>/hd1.png" alt="">
+            </div>
+            <div class="rowRight motto">
+                <div class="mts">WizData is my fantastic dream that makes people to enjoy <br>their life and work.</div>
+                <div class="person">
+                    WizData CEO<strong>Liu Qing</strong>
+                </div>
+            </div>
+        </div>
+        <div class="abtRow">
+            <div class="rowLeft motto">
+                <div class="mts">We are the “Data Chef” who knows how to concoct a sensual <br>
+                coupling of lobster and asparagus, devoting ourselves to be <br>
+                your productivity booster, be your global "Think Tank".</div>
+                <div class="person">
+                    WizData CTO<strong>Jimmy Gan</strong>
+                </div>
+            </div>
+            <div class="rowRight portrait">
+                <img src="<?=$imgPath?>/hd2.png" alt="">
+            </div>
+        </div>
+        <div class="abtRow odd">
+            <div class="rowLeft portrait">
+                <img src="<?=$imgPath?>/hd3.png" alt="">
+            </div>
+            <div class="rowRight motto">
+                <div class="mts">The value of WizData is to help you to understand how to <br>
+                learn from data, how to go deep into you data and how to <br>
+                make money with data.</div>
+                <div class="person">
+                    WizData COO<strong>Zhang Yunlin</strong>
+                </div>
+            </div>
+        </div>
+        <div class="abtRow">
+            <div class="rowLeft motto">
+                <div class="mts">Data is the cell of this amazing planet, so let’s build a data <br>
+                world to make it a better place and WIZDATA will always stay at <br>
+                the forefront of this innovation era with fighting spirit</div>
+                <div class="person">
+                    WizData CMO<strong>Yu Lei</strong>
+                </div>
+            </div>
+            <div class="rowRight portrait">
+                <img src="<?=$imgPath?>/hd4.png" alt="">
+            </div>
+        </div>
+        <div class="abtRow odd">
+            <div class="rowLeft portrait">
+                <img src="<?=$imgPath?>/hd5.png" alt="">
+            </div>
+            <div class="rowRight motto">
+                <div class="mts">Wizdata think what you think. We provide big data <br>
+                visualization to make you smile and ease.  Want to be not only <br>
+                a scientist but also a good story teller. You have found us, we <br>
+                are Wizdata.</div>
+                <div class="person">
+                    WizData CDO<strong>Cheng Lei</strong>
+                </div>
+            </div>
+        </div>
+        <div class="abtRow last">
+            <div class="rowLeft motto">
+                <div class="mts">Digging the true value of data, Making data easy to see and <br>
+                understand, WizData is the best  partner to raise your <br>
+                business value. </div>
+                <div class="person">
+                    WizData CIO<strong>Jiang Shi Xin</strong>
+                </div>
+            </div>
+            <div class="rowRight portrait">
+                <img src="<?=$imgPath?>/hd6.png" alt="">
+            </div>
+        </div>
+
+    </div>
 </div>
 <!-- /about page -->
 
