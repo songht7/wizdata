@@ -1,5 +1,6 @@
 <?php
-$_id=isset($_GET['id'])?$_GET['id']:1;
+	$product=isset($this->temp['product'])?$this->temp['product']:null;
+	$_id=isset($_GET['id'])?$_GET['id']:"sol7";
 
 ?>
 <?php include_once 'header.xxx'; ?>
@@ -12,9 +13,8 @@ $_id=isset($_GET['id'])?$_GET['id']:1;
 	if(!is_numeric($_id)){
     $page='solution/'.$_id.'.xxx';
     include_once $page;
-	}else{
-
-		
+	}else if(!empty($product)){
+		echo $product['detail'];
 	}
   include_once 'solution/_solution_ctgs.xxx'; 
 ?>

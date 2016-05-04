@@ -5,7 +5,10 @@
             CHOOSE OTHER SOLUTION
         </div>
         <ul class="solCtgs">
-            <li><a href="/index-a-home-m-solution-id-1.htm" class="<?php echo $_id==1?'active':'';?>">Application Delivery</a></li>
+             <?php if(!empty($solution)){foreach($solution as $key => $v) { ?>
+                 <li><a href="/index-a-home-m-solution-id-<?=$v['art_id']?>.htm" class="<?php echo $_id==$v['art_id']?'active':'';?>"><?=$v['art_name']?></a></li>
+             <?php }} ?>
+            <!-- <li><a href="/index-a-home-m-solution-id-1.htm" class="">Application Delivery</a></li>
             <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
             <li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
             <li><a href="/index-a-home-m-solution-id-4.htm">Manufacturing</a></li>
@@ -16,7 +19,7 @@
             <li><a href="/index-a-home-m-solution-id-9.htm">Business Analytics</a></li>
             <li><a href="/index-a-home-m-solution-id-10.htm">Financial Services</a></li>
             <li><a href="/index-a-home-m-solution-id-11.htm">Higher Education</a></li>
-            <li><a href="/index-a-home-m-solution-id-12.htm" class="<?php echo $_id==12?'active':'';?>">Simulation Technique</a></li>
+            <li><a href="/index-a-home-m-solution-id-12.htm" class="">Simulation Technique</a></li> -->
         </ul>
     </div>
 </div>
