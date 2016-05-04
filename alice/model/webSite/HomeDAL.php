@@ -49,7 +49,7 @@ class Home extends \CommonDAL\BaseDAL {
                 . " where i.i8n='" . $this->i8n . "' and a.art_id='" . $art_id . "'  limit 0,1; ";
         $product = $this->getFetchRow($sql);
         if($product){
-            $product['detail']=  stripslashes($product['art_detail']);
+            $product['detail']=  html_entity_decode($product['art_detail'], ENT_QUOTES, 'UTF-8');
         }
         
         return $product;

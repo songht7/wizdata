@@ -49,7 +49,7 @@ class News extends \CommonDAL\BaseDAL {
         $pro = array();
         if (!empty($products)) {
             foreach ($products as $v) {
-                $v['detail'] = stripslashes($v['art_detail']);
+                $v['detail'] = html_entity_decode($v['art_detail'], ENT_QUOTES, 'UTF-8');
                 $pro[$v['i8n']] = $v;
             }
         }
@@ -91,14 +91,14 @@ class News extends \CommonDAL\BaseDAL {
 //update category
     function edit($model) {
         $id = $model['id'];
-        $_sql="";
-        if(isset($model['order_by'])){
-            $_sql.=" ,order_by='".$model['order_by']."' ";
+        $_sql = "";
+        if (isset($model['order_by'])) {
+            $_sql.=" ,order_by='" . $model['order_by'] . "' ";
         }
-        if(!empty($model['cat_id'])){
-            $_sql.=" ,cat_id='".$model['cat_id']."' ";
+        if (!empty($model['cat_id'])) {
+            $_sql.=" ,cat_id='" . $model['cat_id'] . "' ";
         }
-        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] ."' ".$_sql."  where art_id='{$id}'";
+        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] . "' " . $_sql . "  where art_id='{$id}'";
         $this->query($sql);
         if (!empty($model['i8n'])) {
             foreach ($model['i8n'] as $v) {
@@ -147,5 +147,5 @@ class News extends \CommonDAL\BaseDAL {
         $sql = "delete from  " . $this->table_name('article') . "  where art_id='{$id}'";
         $this->query($sql);
     }
-}
 
+}
