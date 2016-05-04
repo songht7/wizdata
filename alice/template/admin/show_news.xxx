@@ -15,15 +15,34 @@ $pagesize = $this->temp['pagesize'];
         <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/jquery-2.2.3.min.js"></script>
         <script type="text/javascript">
             function post(obj) {
-                if (confirm('delete confirm?')) {
-                    $("#shadow").show();
-                    var id = $(obj).attr('value');
-                    var url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=del_' . $action . '&id="+ id+"'); ?>" ;
+                $("#shadow").show();
+                var key = 0;
+                var type = "GET";
+                var url = "";
+                var data = {};
+                var id = $(obj).attr('data-value');
+                var processData=false;
+                var contentType=false;
+                if ($(obj).val() === "DELETE" && confirm('delete confirm?')) {
+                    url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=del_' . $action . '&id="+ id+"'); ?>";
+                    key = 1;
+                } else {
+                    url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=edit_' . $action . '&id="+ id+"'); ?>";
+                    var order_by = $(obj).val();
+                    data = {order_by: order_by};
+                    type = "POST";
+                    key = 1;
+                    processData=true;
+                    contentType="application/x-www-form-urlencoded; charset=UTF-8";
+                }
+
+                if (key === 1) {
                     $.ajax({
-                        type: "GET",
+                        type: type,
                         url: url,
-                        contentType: false,
-                        processData: false,
+                        data: data,
+                        contentType: contentType,
+                        processData: processData,
                         dataType: "json"
                     }).success(function (data) {
                         $("#shadow").hide();
@@ -42,6 +61,15 @@ $pagesize = $this->temp['pagesize'];
                     });
                 }
             }
+            $(function () {
+                $(".select_change").click(function () {
+                    $(this).hide().next().show();
+                });
+                $(".change_change").blur(function () {
+                    post(this);
+                    //$(this).hide().prev().show();
+                });
+            });
         </script>
         <title>无标题文档</title>
     </head>
@@ -61,10 +89,13 @@ $pagesize = $this->temp['pagesize'];
                         <tr>
                             <td class="td1"><?php echo $product['art_name']; ?></td>
                             <td class="td1"><?php echo $product['art_overview']; ?></td>
-                            <td class="td1"><?php echo $product['order_by']; ?></td>
+                            <td class="td1">
+                                <div class="select_change"><?php echo $product['order_by']; ?></div>
+                                <input class="change_change hide" style="width:20px;" type="text" data-value="<?php echo $product['art_id']; ?>" value="<?php echo $product['order_by']; ?>" />
+                            </td>
                             <td class="td1">
                                 <a href="<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=show_' . $action . '_detail&id=' . $product['art_id']); ?>">EDIT</a><br />
-                                <a href="javascript:void(0);" onclick="post(this)" value="<?php echo $product['art_id']; ?>">DELETE</a>
+                                <a href="javascript:void(0);" onclick="post(this)" data-value="<?php echo $product['art_id']; ?>">DELETE</a>
                             </td>
                         </tr>
                         <?php
@@ -78,7 +109,7 @@ $pagesize = $this->temp['pagesize'];
                 </div>
                 <div class="page_right">
                     <!--page-->
-<?php include_once 'page.xxx'; ?>
+                    <?php include_once 'page.xxx'; ?>
                     <!--page end-->
                 </div>
                 <div class="clear"></div>

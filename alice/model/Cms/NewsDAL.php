@@ -91,7 +91,14 @@ class News extends \CommonDAL\BaseDAL {
 //update category
     function edit($model) {
         $id = $model['id'];
-        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] . "',cat_id='".$model['cat_id']."'  where art_id='{$id}'";
+        $_sql="";
+        if(!empty($model['order_by'])){
+            $_sql.=" ,order_by='".$model['order_by']."' ";
+        }
+        if(!empty($model['cat_id'])){
+            $_sql.=" ,cat_id='".$model['cat_id']."' ";
+        }
+        $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] ."' ".$_sql."  where art_id='{$id}'";
         $this->query($sql);
         if (!empty($model['i8n'])) {
             foreach ($model['i8n'] as $v) {

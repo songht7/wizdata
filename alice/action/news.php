@@ -140,5 +140,4 @@ class news extends \Common\init {
         print json_encode($res);
         exit;
     }
-
 }
