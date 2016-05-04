@@ -1,6 +1,7 @@
 <?php
 $tempUrl = $this->tempUrl;
 $action = $this->temp['action'];
+$_id=isset($_GET['id'])?$_GET['id']:null;
 if (isset($_GET['m'])) {
     $mod = $_GET['m']=="index"?"home":$_GET['m'];
 } else {

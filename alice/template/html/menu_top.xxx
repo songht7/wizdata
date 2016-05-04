@@ -12,7 +12,7 @@
             <li><a href="/index-a-home-m-about.htm" class="<?php echo $mod == 'about' ? 'active' : '' ?>">ABOUT<em><i></i></em></a></li>
             <li><a href="/index-a-home-m-index.htm#Services" class="" data-page="Services">SERVICES<em><i></i></em></a></li>
             <li>
-                <a href="javascript:;" class="hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>">SOLUTION<em><i></i></em></a>
+                <a href="/index-a-home-m-solution-id-<?=$solution[0]['art_id']?>.htm" class="hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>">SOLUTION<em><i></i></em></a>
                 <div class="subMenu">
                     <ul class="subDefault">
                     		<?php if(!empty($solution)){foreach($solution as $key => $v) { ?>

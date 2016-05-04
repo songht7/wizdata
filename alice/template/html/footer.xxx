@@ -10,10 +10,11 @@
 				<img src="template/html/images/gongshang.png" class="gs" alt="wizdata">
 				<div class="footRight">
 					<div class="fotMenu">
-						<a href="#">About</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="#">Service</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="#">Work</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="#">Product</a>
+						<a href="/index-a-home-m-about.htm">About</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/index-a-home-m-index.htm#Services">Service</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/index-a-home-m-solution-id-<?=$solution[0]['art_id']?>.htm">Solution</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/index-a-home-m-client.htm">Client</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/index-a-home-m-product-id-pro1.htm">Product</a>
 					</div>
 					<div id="CopyRight">
 						沪ICP备12060513号-1 © 2015 brandor.net All rights reserved.
