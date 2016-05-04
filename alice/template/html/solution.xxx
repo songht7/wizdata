@@ -9,9 +9,14 @@ $_id=isset($_GET['id'])?$_GET['id']:1;
 <!-- product page -->
 <div id="Sol_<?=$pid?>">
 <?php 
-    $page='solution/sol'.$_id.'.xxx';
-    include_once $page; 
-    include_once 'solution/_solution_ctgs.xxx'; 
+	if(!is_numeric($_id)){
+    $page='solution/'.$_id.'.xxx';
+    include_once $page;
+	}else{
+
+		
+	}
+  include_once 'solution/_solution_ctgs.xxx'; 
 ?>
 </div>
 <!-- /product page -->
