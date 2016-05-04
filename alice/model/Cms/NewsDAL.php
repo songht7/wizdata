@@ -49,7 +49,7 @@ class News extends \CommonDAL\BaseDAL {
         $pro = array();
         if (!empty($products)) {
             foreach ($products as $v) {
-                //$v['detail_arr'] = explode('":;"', $v['cat_detail']);
+                $v['detail'] = stripslashes($v['art_detail']);
                 $pro[$v['i8n']] = $v;
             }
         }
@@ -92,7 +92,7 @@ class News extends \CommonDAL\BaseDAL {
     function edit($model) {
         $id = $model['id'];
         $_sql="";
-        if(!empty($model['order_by'])){
+        if(isset($model['order_by'])){
             $_sql.=" ,order_by='".$model['order_by']."' ";
         }
         if(!empty($model['cat_id'])){

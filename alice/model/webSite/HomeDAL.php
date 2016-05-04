@@ -48,6 +48,10 @@ class Home extends \CommonDAL\BaseDAL {
         $sql = "select a.art_id,i.art_name,i.art_detail from " . $this->table_name("article") . " as a left join " . $this->table_name("article_i8n") . " as i on a.art_id=i.art_id"
                 . " where i.i8n='" . $this->i8n . "' and a.art_id='" . $art_id . "'  limit 0,1; ";
         $product = $this->getFetchRow($sql);
+        if($product){
+            $product['detail']=  stripslashes($product['art_detail']);
+        }
+        
         return $product;
     }
 

@@ -24,6 +24,15 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                 $('.postElement[data-set=1]').each(function (obj) {
                     formData.append($(this).attr('name'), $(this).val());
                 });
+                <?php
+            if (!empty($this->dbconfig['lang_arr'])) {
+                foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
+                    ?>
+                    formData.append("i8n[<?php echo $lkey; ?>][detail]",CKEDITOR.instances.TextArea<?php echo $lkey; ?>.getData());
+                    <?php
+                }
+            }
+            ?>
                 var url = $("#demo").attr('action');
                 $.ajax({
                     type: "POST",
@@ -146,9 +155,9 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                                     <span>DETAIL</span>
                                 </div>
                                 <div class="leftAlist" >
-                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]" data-set="1"   class="postElement" ><?php
-                                        if (!empty($pro[$lkey]['art_detail'])) {
-                                            echo $pro[$lkey]['art_detail'];
+                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]"  class="postElement" ><?php
+                                        if (!empty($pro[$lkey]['detail'])) {
+                                            echo $pro[$lkey]['detail'];
                                         }
                                         ?></textarea>
                                     <script type="text/javascript">
