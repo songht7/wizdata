@@ -1,5 +1,5 @@
 <?php
-$pid=isset($_GET['id'])?$_GET['id']:1;
+$_id=isset($_GET['id'])?$_GET['id']:1;
 
 ?>
 <?php include_once 'header.xxx'; ?>
@@ -9,8 +9,13 @@ $pid=isset($_GET['id'])?$_GET['id']:1;
 <!-- product page -->
 <div id="Pro_<?=$pid?>">
 <?php 
-    $page='pro'.$pid.'.xxx';
-    include_once $page; 
+	if(!is_numeric($_id)){
+    $page='product/'.$_id.'.xxx';
+    include_once $page;
+	}else{
+
+		
+	}
 ?>
 </div>
 <!-- /product page -->
