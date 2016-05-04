@@ -26,7 +26,7 @@ class home extends \Common\init {
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'index');
     }
-    function solutions() {
+    function solution() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
         $id = isset($_GET['id']) ? $this->specifyChar($_GET['id']) : 0;
         
@@ -35,7 +35,7 @@ class home extends \Common\init {
         
         $this->temp['product'] = $product;
         $this->temp['action'] = $action;
-        $this->getTemplate($this->tempUrl, 'solutions');
+        $this->getTemplate($this->tempUrl, 'solution');
     }
     
     function product() {

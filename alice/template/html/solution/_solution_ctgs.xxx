@@ -1,0 +1,22 @@
+<!-- solution ctgs -->
+<div class="pageBlock soluionMenus">
+    <div class="pageCont inner">
+        <div class="solChoose">
+            CHOOSE OTHER SOLUTION
+        </div>
+        <ul class="solCtgs">
+            <li><a href="/index-a-home-m-solution-id-1.htm" class="<?php echo $_id==1?'active':'';?>">Application Delivery</a></li>
+            <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
+            <li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
+            <li><a href="/index-a-home-m-solution-id-4.htm">Manufacturing</a></li>
+            <li><a href="/index-a-home-m-solution-id-5.htm">Simplify IT Operations</a></li>
+            <li><a href="/index-a-home-m-solution-id-6.htm">Security and Fraud</a></li>
+            <li><a href="/index-a-home-m-solution-id-7.htm">Communications SP</a></li>
+            <li><a href="/index-a-home-m-solution-id-8.htm">Retail</a></li>
+            <li><a href="/index-a-home-m-solution-id-9.htm">Business Analytics</a></li>
+            <li><a href="/index-a-home-m-solution-id-10.htm">Financial Services</a></li>
+            <li><a href="/index-a-home-m-solution-id-11.htm">Higher Education</a></li>
+            <li><a href="/index-a-home-m-solution-id-12.htm" class="<?php echo $_id==12?'active':'';?>">Simulation Technique</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!-- page1 -->
+<div class="pageBlock pro_page1 pro_odd">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="template/html/images/solution_communica/Group8.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- page2 -->
+<div class="pageBlock pro_page2 pro_even">
+    <div class="pageCont inner">
+        <h1 id="ProTitle">Communications Service Providers<span class="line"></span></h1>
+        <div class="cloud">Communications service providers (CSPs) operate some of the largest IT <br>
+        and network operations in the world. With converged services, device <br>
+        proliferation and new competitors, today's CSPs are investing in their <br>
+        infrastructures and developing innovative applications, all of which is <br>
+        adding to management complexity.</div>
+        <h3 class="canHelp">WIZ CAN HELP YOU</h3>
+        <ul class="helpList">
+            <li>Accelerate service provisioning and delivery.</li>
+            <li>Accelerate delivery of new products and services.</li>
+            <li>Improve customer experience.</li>
+            <li>Improve security posture and reduce fraud.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ************************ page3 ********************** -->
+<div class="pageBlock pro_page3 pro_odd">
+    <div class="pageCont inner ">
+        <div class="solBlock sb1">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Monitor.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">Monitor Activations in Real Time</div>
+                    <div class="sOvs">CSPs can effectively monitor their network infrastructures to proactively resolve problems, ensure consistent delivery of services and accelerate the introduction of new products. </div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb2">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Detect.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">Detect Network Abusers <br>and Prevent Fraud</div>
+                    <div class="sOvs">Detect fraudulent activity as it occurs by correlating information across different types of machine data such as firewall, intrusion detection systems (IDS) and IP addresses, network traffic data, content delivery and network data. </div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb3">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Proactively.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">Proactively Resolve Customer Issues</div>
+                    <div class="sOvs">Correlate structured, unstructured and semi-structured data to gain new insights and proactively monitor and resolve customer issues across Internet, voice and data services. </div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb4">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">Strengthen Your Security Posture</div>
+                    <div class="sOvs">Secure subscriber information across devices and services. Collect and index machine data to support ad hoc reporting and the real-time monitoring of incidents to give security teams new levels of visibility and intelligence.  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

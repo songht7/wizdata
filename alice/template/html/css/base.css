@@ -58,9 +58,11 @@ header.isFix menu li a em {bottom: -9px;}
 
 .subMenu{display: none; position: absolute;top: 100%;background: #4a4a4a;color: #fff;left: 0;z-index: 10;width: 100%;}
 .subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 20px 10px;}
-.subMenu ul.subDefault li{width: 25%;float: left;text-align: left;padding-left: 0}
-.subMenu ul.subDefault li a{display: block;height: 40px;line-height: 40px; color: #fff;width: 95%;border-bottom: 1px solid #90C31F;padding-right: 0}
-.subMenu a,.subMenu ul.subDefault li a:hover,.subMenu ul.subDefault li a.active{background-image: none;font-weight: normal;font-family: 'Helvetica-Light',Arial;font-size: 18px;color: #90C31F}
+.subMenu ul.subDefault li,.solCtgs li{width: 25%;float: left;text-align: left;padding-left: 0}
+.subMenu ul.subDefault li a,.solCtgs li a{display: block;height: 40px;line-height: 40px; color: #fff;width: 95%;border-bottom: 1px solid #90C31F;padding-right: 0}
+.solCtgs a{font-size: 18px;font-family: 'Helvetica-Light',Arial;}
+.subMenu a,.subMenu ul.subDefault li a:hover,.subMenu ul.subDefault li a.active
+,.solCtgs a:hover,.solCtgs a.active{background-image: none;font-weight: normal;font-family: 'Helvetica-Light',Arial;font-size: 18px;color: #90C31F}
 
 .subProNav{overflow: hidden;}
 .subMenu ul.subDefault.subProNav li{float: left;width: 50%;overflow: hidden;}

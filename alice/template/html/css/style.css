@@ -200,3 +200,36 @@
 			.cpInfo p.cpName{font-size: 18px;color: #fff;}
 .clientList{width: 100%;margin-top:65px;}
 .clientList td{width: 20%;text-align: center;padding: 0 0 40px;}
+
+/** soluion **/
+.pageBlock.soluionMenus{background: #5C5C5C}
+.solChoose{font-size: 22px;font-family: 'Helvetica-Bold',Arial;line-height: 24px;padding-bottom: 15px;color: #fff}
+.canHelp{font-size: 20px;line-height: 42px;font-family: 'Helvetica-Bold',Arial;text-align: center;background: #EBEBEB;margin: 40px 0 20px;}
+.helpList{overflow: hidden;padding-left: 30px;}
+.helpList li{float: left;width: 50%;color: #9B9B9B;font-size: 22px;line-height: 32px;font-family: 'Helvetica-Light',Arial;list-style:disc}
+
+.solBlock{width: 49%;float: left;border-left: 2px solid #E5E5E5;position: relative;top: -10px}
+.sBkImg{display: block;float: left;position: relative;top: 30px;}
+.bkInner{overflow: hidden;padding: 40px 35px 40px 30px;margin:0 auto;border-bottom: 2px solid #E5E5E5;height: 160px;position: relative;left:10px;top: 10px;}
+.sb1 .bkInner,.sb3 .bkInner{left: -10px;}
+.solBlock.sb3,.solBlock.sb4{top: 10px;}
+.solBlock.sb1,.solBlock.sb3{border-left: none;}
+.solBlock.sb1 .bkInner,.solBlock.sb2 .bkInner{padding-top: 10px;}
+.solBlock.sb3 .bkInner,.solBlock.sb4 .bkInner{border-bottom: none;padding-bottom: 10px;}
+.solInfo{width: 65%;float: right;}
+	.sTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;color: #4a4a4a;line-height: 22px;padding-bottom: 10px;}
+	.sOvs{color: #676767;}
+
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	#ProTitle{font-size: 2.4em;line-height: 1.2em}
+	.cloud{font-size: 1.8em;line-height: 1.3em}
+
+	.helpList{font-size: 1.4em;line-height: 1em}
+	.solBlock{width: 100%;float: none;border: none;}
+	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
+	.sBkImg{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
+	.solInfo{float: none;width: 100%;}
+
+	.soluionMenus{display: none;}
+}

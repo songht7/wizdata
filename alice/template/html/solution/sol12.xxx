@@ -1,0 +1,77 @@
+<!-- page1 -->
+<div class="pageBlock pro_page1 pro_odd">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="template/html/images/solution_simulation_technique/caia.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- page2 -->
+<div class="pageBlock pro_page2 pro_even">
+    <div class="pageCont inner">
+        <h1 id="ProTitle">Simulation Technique<span class="line"></span></h1>
+        <div class="cloud">Simulation technique can be roughly classified into three categories: System <br>
+        Dynamics, Discrete Event, and Agent Based. System Dynamics simulation is an <br>
+        approach to understand the dynamic behaviour of complex systems and is <br>
+        mostly suitable to depict the nonlinear relationships among elements of systems <br>
+        in a continuous and aggregated manner. </div>
+    </div>
+</div>
+<!-- page3 -->
+<div class="pageBlock pro_page3 pro_odd">
+    <div class="pageCont inner">
+        <div class="proLeft">
+            <img src="template/html/images/solution_simulation_technique/dasf.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Agent Based <br>Simulation.</h3>
+            <div class="proOvs">Agent based simulation is in the most disaggregated level compared to the aforementioned two. It is able to simulate the reasoning activities, actions and interactions of autonomous agents inside of  a virtual society. </div>
+        </div>
+        <div class="proRight imgBlock">
+            <img src="template/html/images/solution_simulation_technique/dasf.png" width="100%" alt="">
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page4 -->
+<div class="pageBlock pro_page4 pro_even">
+    <div class="pageCont inner">
+        <div class="proLeft imgBlock">
+            <img src="template/html/images/solution_simulation_technique/Group.png" alt="">
+        </div>
+        <div class="proRight ">
+            <img src="template/html/images/solution_simulation_technique/Group.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">Discrete Event <br/>Simulation.</h3>
+            <div class="proOvs">Discrete event simulation focuses on the evolution of a discrete sequence of events of a system in time. Supply chain network management, production and manufacturing system and service industries, etc, can adopt discrete event simulation method to monitor their performances and to identify operational bottlenecks. </div>
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page5 -->
+<div class="pageBlock pro_page5 pro_odd">
+    <div class="pageCont inner">
+        <div class="proLeft">
+            <img src="template/html/images/solution_simulation_technique/Group53.png" alt="" class="moblieImg">
+            <h3 class="proBlockTitle">System Dynamics <br>Simulation.</h3>
+            <div class="proOvs">System dynamics simulation can be widely used in social, ecological, and economic and even financial systems.</div>
+        </div>
+        <div class="proRight imgBlock">
+            <img src="template/html/images/solution_simulation_technique/Group53.png" alt="">
+        </div>
+        <div class="clearn"></div>
+    </div>
+</div>
+<!-- page6 -->
+<div class="pageBlock pro_page6 pro_even">
+    <div class="pageCont inner">
+        <div class="proOvs" style="text-align:center">
+        It is a perfect tool to investigate the behaviour shifting/changing and finally the social trend movement. Currently, agent based <br>
+        simulation has been broadly used in the field of marketing, organisational dynamics, and policy making, etc. <br>
+        In data science, after the basic descriptive manipulation of data, simulation technique is an ideal approach to provide insights and give <br>
+        valuable advises to our clients, especially when the studied problem is inherently complex and dynamic. Simulation is a way to digitally <br>
+        mimic the real world operations and is extremely helpful to capture the intrinsic mechanism of complex system (e.g., your organisation/ <br>
+        company) misted by uncertainties and human irrationalness.</div>
+    </div>
+</div>

@@ -12,19 +12,19 @@
                 <a href="javascript:;" class="hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>">SOLUTION<em><i></i></em></a>
                 <div class="subMenu">
                     <ul class="subDefault">
-                        <li><a href="/index-a-home-m-solutions-id-1.htm">Application Delivery</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-2.htm">Log Management</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-3.htm">Energy and Utilities</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-4.htm">Manufacturing</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-5.htm">Simplify IT Operations</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-6.htm">Security and Fraud</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-7.htm">Communications SP</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-8.htm">Retail</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-9.htm">Business Analytics</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-10.htm">Financial Services</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-11.htm">Higher Education</a></li>
-                        <li><a href="/index-a-home-m-solutions-id-12.htm">Simulation Technique</a></li>
-                    </ul>
+                        <li><a href="/index-a-home-m-solution-id-1.htm">Application Delivery</a></li>
+                        <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
+                        <li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
+                        <li><a href="/index-a-home-m-solution-id-4.htm">Manufacturing</a></li>
+                        <li><a href="/index-a-home-m-solution-id-5.htm">Simplify IT Operations</a></li>
+                        <li><a href="/index-a-home-m-solution-id-6.htm">Security and Fraud</a></li>
+                        <li><a href="/index-a-home-m-solution-id-7.htm">Communications SP</a></li>
+                        <li><a href="/index-a-home-m-solution-id-8.htm">Retail</a></li>
+                        <li><a href="/index-a-home-m-solution-id-9.htm">Business Analytics</a></li>
+                        <li><a href="/index-a-home-m-solution-id-10.htm">Financial Services</a></li>
+                        <li><a href="/index-a-home-m-solution-id-11.htm">Higher Education</a></li>
+                        <li><a href="/index-a-home-m-solution-id-12.htm">Simulation Technique</a></li>
+                    </ul
                 </div>
             </li>
             <li><a href="/index-a-home-m-product-id-1.htm" class="hasSub <?php echo $mod == 'product' ? 'active' : '' ?>">PRODUCT<em><i></i></em></a>
