@@ -1,57 +1,57 @@
-	<!-- header -->
-		<header>
-			<div class="inner">
-				<a href="/" id="Logo"><img src="template/html/images/logo.png" alt="wizdata"></a>
-				<div class="menuBox">
-					<a href="javascript:;" id="MenuBtn">menu</a>
-				</div>
-				<menu class="clearfix">
-					<li><a href="/index-a-home-m-about.htm" class="<?php echo $mod=='about'?'active':''?>">ABOUT<em><i></i></em></a></li>
-					<li><a href="/index-a-home-m-index.htm#Services" class="" data-page="Services">SERVICES<em><i></i></em></a></li>
-					<li>
-						<a href="javascript:;" class="hasSub <?php echo $mod=='solution'?'active':''?>">SOLUTION<em><i></i></em></a>
-						<div class="subMenu">
-							<ul class="subDefault">
-								<li><a href="/index-a-home-m-solution-id-1.htm">Application Delivery</a></li>
-								<li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
-								<li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
-								<li><a href="/index-a-home-m-solution-id-4.htm">Manufacturing</a></li>
-								<li><a href="/index-a-home-m-solution-id-5.htm">Simplify IT Operations</a></li>
-								<li><a href="/index-a-home-m-solution-id-6.htm">Security and Fraud</a></li>
-								<li><a href="/index-a-home-m-solution-id-7.htm">Communications SP</a></li>
-								<li><a href="/index-a-home-m-solution-id-8.htm">Retail</a></li>
-								<li><a href="/index-a-home-m-solution-id-9.htm">Business Analytics</a></li>
-								<li><a href="/index-a-home-m-solution-id-10.htm">Financial Services</a></li>
-								<li><a href="/index-a-home-m-solution-id-11.htm">Higher Education</a></li>
-								<li><a href="/index-a-home-m-solution-id-12.htm">Simulation Technique</a></li>
-							</ul>
-						</div>
-					</li>
-					<li><a href="/index-a-home-m-product-id-1.htm" class="hasSub <?php echo $mod=='product'?'active':''?>">PRODUCT<em><i></i></em></a>
-						<div class="subMenu">
-							<ul class="subDefault subProNav">
-								<li>
-									<img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="">
-									<div class="navInfo">
-										<a href="/index-a-home-m-product-id-1.htm" class="navTitle">Wiz Enterprise<span class="line"></span></a>
-										<p class="ovs">On Premises Deployment</p>
-										<a href="/index-a-home-m-product-id-1.htm" class="navRmore">READ MORE</a>
-									</div>
-								</li>
-								<li>
-									<img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 25px;">
-									<div class="navInfo">
-										<a href="/index-a-home-m-product-id-2.htm" class="navTitle">Wiz Cloud<span class="line"></span></a>
-										<p class="ovs">Minimal-Risk strategy that <br>produces results quickly.</p>
-										<a href="/index-a-home-m-product-id-2.htm" class="navRmore">READ MORE</a>
-									</div>
-								</li>
-							</ul>
-						</div></li>
-					<li><a href="/index-a-home-m-client.htm" class="<?php echo $mod=='client'?'active':''?>">CLIENT<em><i></i></em></a></li>
-					<li><a href="/index-a-home-m-index.htm#Contact" data-page="Contact">CONTACT<em><i></i></em></a></li>
-				</menu>
-				<div class="clearn"></div>
-			</div>
-		</header>
-	<!-- /header -->
+<!-- header -->
+<header>
+    <div class="inner">
+        <a href="/" id="Logo"><img src="template/html/images/logo.png" alt="wizdata"></a>
+        <div class="menuBox">
+            <a href="javascript:;" id="MenuBtn">menu</a>
+        </div>
+        <menu class="clearfix">
+            <li><a href="/index-a-home-m-about.htm" class="<?php echo $mod == 'about' ? 'active' : '' ?>">ABOUT<em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-index.htm#Services" class="" data-page="Services">SERVICES<em><i></i></em></a></li>
+            <li>
+                <a href="javascript:;" class="hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>">SOLUTION<em><i></i></em></a>
+                <div class="subMenu">
+                    <ul class="subDefault">
+                        <li><a href="/index-a-home-m-solutions-id-1.htm">Application Delivery</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-2.htm">Log Management</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-3.htm">Energy and Utilities</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-4.htm">Manufacturing</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-5.htm">Simplify IT Operations</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-6.htm">Security and Fraud</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-7.htm">Communications SP</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-8.htm">Retail</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-9.htm">Business Analytics</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-10.htm">Financial Services</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-11.htm">Higher Education</a></li>
+                        <li><a href="/index-a-home-m-solutions-id-12.htm">Simulation Technique</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/index-a-home-m-product-id-1.htm" class="hasSub <?php echo $mod == 'product' ? 'active' : '' ?>">PRODUCT<em><i></i></em></a>
+                <div class="subMenu">
+                    <ul class="subDefault subProNav">
+                        <li>
+                            <img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="">
+                            <div class="navInfo">
+                                <a href="/index-a-home-m-product-id-1.htm" class="navTitle">Wiz Enterprise<span class="line"></span></a>
+                                <p class="ovs">On Premises Deployment</p>
+                                <a href="/index-a-home-m-product-id-1.htm" class="navRmore">READ MORE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 25px;">
+                            <div class="navInfo">
+                                <a href="/index-a-home-m-product-id-2.htm" class="navTitle">Wiz Cloud<span class="line"></span></a>
+                                <p class="ovs">Minimal-Risk strategy that <br>produces results quickly.</p>
+                                <a href="/index-a-home-m-product-id-2.htm" class="navRmore">READ MORE</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div></li>
+            <li><a href="/index-a-home-m-client.htm" class="<?php echo $mod == 'client' ? 'active' : '' ?>">CLIENT<em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-index.htm#Contact" data-page="Contact">CONTACT<em><i></i></em></a></li>
+        </menu>
+        <div class="clearn"></div>
+    </div>
+</header>
+<!-- /header -->

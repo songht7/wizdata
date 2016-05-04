@@ -26,7 +26,7 @@ class News extends \CommonDAL\BaseDAL {
         $sql = "select count(1) as count from " . $this->table_name('article') . " as c left join " . $this->table_name('article_i8n') . " as i on c.art_id=i.art_id "
                 . " where i.i8n='" . $i8n . "';";
         $count = $this->getFetchRow($sql);
-        $orderby = " order by c.art_id desc ";
+        $orderby = " order by c.order_by asc,c.art_id desc ";
         $limit = " limit " . (($currentpage - 1) * $pagesize) . "," . $pagesize . " ";
         $sql = "select * from " . $this->table_name('article') . " as c left join " . $this->table_name('article_i8n') . " as i on c.art_id=i.art_id "
                 . " where i.i8n='" . $i8n . "' "

@@ -51,6 +51,7 @@ $pagesize = $this->temp['pagesize'];
                 <tr bgcolor="#e1e1e1">
                     <td class="th" width="20%">NAME</td>
                     <td class="th" >OVERVIEW</td>
+                    <td class="th" width="9%">ORDER BY</td>
                     <td class="th" width="10%">ACTION</td>
                 </tr>
                 <?php
@@ -60,6 +61,7 @@ $pagesize = $this->temp['pagesize'];
                         <tr>
                             <td class="td1"><?php echo $product['art_name']; ?></td>
                             <td class="td1"><?php echo $product['art_overview']; ?></td>
+                            <td class="td1"><?php echo $product['order_by']; ?></td>
                             <td class="td1">
                                 <a href="<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=show_' . $action . '_detail&id=' . $product['art_id']); ?>">EDIT</a><br />
                                 <a href="javascript:void(0);" onclick="post(this)" value="<?php echo $product['art_id']; ?>">DELETE</a>

@@ -28,14 +28,24 @@ class home extends \Common\init {
     }
     function solutions() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        $id = isset($_GET['id']) ? $this->specifyChar($_GET['id']) : 0;
         
+        $Home=new  \AliceDAL\Home($_COOKIE['lang']);
+        $product=$Home->getNews($id);
+        
+        $this->temp['product'] = $product;
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'solutions');
     }
     
     function product() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        $id = isset($_GET['id']) ? $this->specifyChar($_GET['id']) : 0;
         
+        $Home=new  \AliceDAL\Home($_COOKIE['lang']);
+        $product=$Home->getNews($id);
+        
+        $this->temp['product'] = $product;
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'product');
     }
@@ -43,13 +53,23 @@ class home extends \Common\init {
 
     function client() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        $id = isset($_GET['id']) ? $this->specifyChar($_GET['id']) : 0;
         
+        $Home=new  \AliceDAL\Home($_COOKIE['lang']);
+        $product=$Home->getNews($id);
+        
+        $this->temp['product'] = $product;
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'client');
     }
     function about() {
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "home";
+        $id = isset($_GET['id']) ? $this->specifyChar($_GET['id']) : 0;
         
+        $Home=new  \AliceDAL\Home($_COOKIE['lang']);
+        $product=$Home->getNews($id);
+        
+        $this->temp['product'] = $product;
         $this->temp['action'] = $action;
         $this->getTemplate($this->tempUrl, 'about');
     }
