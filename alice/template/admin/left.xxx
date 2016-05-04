@@ -21,19 +21,19 @@
         <title>left</title>
     </head>
     <body>
+<?php if($_COOKIE[$this->shop_name]['h_id']==1){?>
         <div class="title">
             <a class="first mainRed" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=category&m=getList'" href="javascript:void(0);" >CATEGORY 分类</a>
         </div>
         <div class="title">
             <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=product&m=getList'" href="javascript:void(0);" >GOODS 商品</a>
         </div>
+<?php }?>
         <div class="title">
             <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=news&m=getList'" href="javascript:void(0);" >NEWS 文章</a>
         </div>
-<?php if($_COOKIE[$this->shop_name]['h_id']==1){?>
         <div class="title">
             <a class="first" onclick="javascript:parent.mainFrame.location.href = 'index.php?a=config&m=getList'" href="javascript:void(0);" >SYSTEM  系统</a>
         </div>
-<?php }?>
     </body>
 </html>
