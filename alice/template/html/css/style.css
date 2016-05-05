@@ -1,4 +1,5 @@
 .line{display: block;height: 2px;width: 285px;margin: 35px auto;overflow: hidden;background: #90C31F}
+.rsContent img{max-width: none;}
 /*** home page ***/
 .homePage{background: #9B9B9B}
 .pageBlock{min-height: 200px;position: relative;}
@@ -229,7 +230,7 @@
 .helpList li{float: left;width: 50%;color: #9B9B9B;font-size: 22px;line-height: 32px;font-family: 'Helvetica-Light',Arial;list-style:disc}
 
 .solBlock{width: 49%;float: left;position: relative;}
-.sBkImg{display: block;float: left;position: relative;top: 30px;}
+.sBkImg,.bkInner img{display: block;float: left;position: relative;top: 30px;}
 .bkInner{overflow: hidden;padding: 40px 35px 40px 30px;margin:0 auto;height: 160px;position: relative;}
 .solInfo{width: 65%;float: right;}
 	.sTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;color: #4a4a4a;line-height: 22px;padding-bottom: 10px;}
@@ -260,7 +261,7 @@
 	.solBlock{width: 100%;float: none;border: none;}
 	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
 	.solBlock.sb3 .bkInner, .solBlock.sb4 .bkInner{border-bottom: 2px solid #E5E5E5;}
-	.sBkImg{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
+	.sBkImg,.bkInner img{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
 	.solInfo{float: none;width: 100%;}
 
 	.soluionMenus{display: none;}
