@@ -228,14 +228,9 @@
 .helpList{overflow: hidden;padding-left: 30px;}
 .helpList li{float: left;width: 50%;color: #9B9B9B;font-size: 22px;line-height: 32px;font-family: 'Helvetica-Light',Arial;list-style:disc}
 
-.solBlock{width: 49%;float: left;border-left: 2px solid #E5E5E5;position: relative;top: -10px}
+.solBlock{width: 49%;float: left;position: relative;}
 .sBkImg{display: block;float: left;position: relative;top: 30px;}
-.bkInner{overflow: hidden;padding: 40px 35px 40px 30px;margin:0 auto;border-bottom: 2px solid #E5E5E5;height: 160px;position: relative;left:10px;top: 10px;}
-.sb1 .bkInner,.sb3 .bkInner{left: -10px;}
-.solBlock.sb3,.solBlock.sb4{top: 10px;}
-.solBlock.sb1,.solBlock.sb3{border-left: none;}
-.solBlock.sb1 .bkInner,.solBlock.sb2 .bkInner{padding-top: 10px;}
-.solBlock.sb3 .bkInner,.solBlock.sb4 .bkInner{border-bottom: none;padding-bottom: 10px;}
+.bkInner{overflow: hidden;padding: 40px 35px 40px 30px;margin:0 auto;height: 160px;position: relative;}
 .solInfo{width: 65%;float: right;}
 	.sTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;color: #4a4a4a;line-height: 22px;padding-bottom: 10px;}
 	.sOvs{color: #676767;}
