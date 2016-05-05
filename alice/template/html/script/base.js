@@ -112,7 +112,7 @@ function reSize(){
         var obj=$(this),
         url=obj.data("url"),
         vid=obj.data('id');
-        $.colorbox({href:url,width:"90%",height:"90%",
+        $.colorbox({href:url,width:"90%",height:"80%",
             onComplete:function(){
                 var video='<video id="VideoBox" controls="controls" autoplay="autoplay" width="100%" height="100%">'
                                 +'<source src="template/html/video/v'+vid+'.mp4" type="video/mp4" />'

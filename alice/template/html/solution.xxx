@@ -7,7 +7,7 @@
 <?php include_once 'menu_top.xxx'; ?>
 
 <!-- product page -->
-<div id="Sol_<?=$pid?>">
+<div id="Sol_<?=$_id?>">
 <?php 
 	if(!is_numeric($_id)){
     $page='solution/'.$_id.'.xxx';

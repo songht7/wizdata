@@ -8,7 +8,7 @@
 <?php include_once 'menu_top.xxx'; ?>
 
 <!-- product page -->
-<div id="Pro_<?=$pid?>">
+<div id="Pro_<?=$_id?>">
 <?php 
 	if(!is_numeric($_id)){
     $page='product/'.$_id.'.xxx';

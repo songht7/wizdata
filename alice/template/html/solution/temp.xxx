@@ -1,0 +1,73 @@
+<!-- page1 -->
+<div class="pageBlock pro_page1 pro_odd">
+
+    <div class="sliderContainer fullWidth clearfix">
+        <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
+            <div class="rsContent">
+                <img class="rsImg" src="template/html/images/solution_communica/Group8.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- page2 -->
+<div class="pageBlock pro_page2 pro_even">
+    <div class="pageCont inner">
+        <h1 id="ProTitle">大标题<span class="line"></span></h1>
+        <div class="cloud">内内内内内内内内内内内内内内1<br>
+        容容容容容容容容容容容容容容容容容容2<br>
+        内内内内内内内内内内内内内内3<br>
+        容容容容容容容容容容容容容容容容容容4<br>
+        &lt;br&gt;是换行</div>
+        <h3 class="canHelp">WIZ CAN HELP YOU</h3>
+        <ul class="helpList">
+            <li>Accelerate service provisioning and delivery.</li>
+            <li>Accelerate delivery of new products and services.</li>
+            <li>Improve customer experience.</li>
+            <li>Improve security posture and reduce fraud.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ************************ page3 ********************** -->
+<div class="pageBlock pro_page3 pro_odd">
+    <div class="pageCont inner ">
+        <div class="solBlock sb1">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Monitor.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">标题标题标题</div>
+                    <div class="sOvs">描述描述描述描述描述</div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb2">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Detect.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">标题标题标题<br>标题太长 &lt;br&gt;换行</div>
+                    <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb3">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Proactively.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">标题标题标题</div>
+                    <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+                </div>
+            </div>
+        </div>
+        <div class="solBlock sb4">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">标题标题标题<br>太长br换行标题</div>
+                    <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

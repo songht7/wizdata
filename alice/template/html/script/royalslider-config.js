@@ -25,13 +25,13 @@ var cfg={
     startSlideId: 0,
     //autoPlay: false,
     transitionType:'move',
-    globalCaption: true,
+    globalCaption: false,
     deeplinking: {
       enabled: true,
       change: false
-    },
-    imgWidth: 2000,
-    imgHeight: 545
+    }
+    // ,imgWidth: 2000
+    // ,imgHeight: 800
   }
 var slider="";
 $(function(){

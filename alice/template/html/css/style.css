@@ -35,7 +35,7 @@
 		.moblieImg{display: none;}
 .page3{background: #90C31F}
 	#KnowList{overflow: hidden;color: #fff;}
-	.listBlock{float: left;width: 320px;padding:0 10px 50px;height: 330px;}
+	.listBlock{float: left;width: 290px;padding:0 25px 50px;height: 330px;}
 		.jobIcon{display: block;margin: 0 auto;margin-bottom: 18px;}
 		.job{font-family:"Helvetica-Bold",Arial;text-align: center;font-size: 18px;line-height: 22px;margin-bottom: 18px;position: relative;height: 60px;}
 		.job .line{width:150px;height: 1px;background: #fff;position: absolute;bottom: 0;left: 70px;margin: auto;}
@@ -69,7 +69,7 @@
 	.mapBox{float: right;width: 445px;position: relative;}
 	.map{background: url("../images/CONTACT_map.png") no-repeat;width: 471px;height: 268px;position: relative;right: -30px;text-indent: -9999999px;margin: 40px 0 0}
 	.contactInfor{overflow: hidden;}
-	.contactInfor li{float: left;text-align: center;color: #fff;padding: 60px 12px 0;background: url("../images/CONTACT_location.png") no-repeat 50% 25px;font-size: 12px;}
+	.contactInfor li{float: left;text-align: center;color: #fff;padding: 60px 0 0;background: url("../images/CONTACT_location.png") no-repeat 50% 25px;font-size: 12px;width: 33%;}
 	.contactInfor li p{font-size: 12px;}
 	.contactInfor li a{color: #fff}
 	.contactInfor li.infor2{background-image:url("../images/CONTACT_phone.png");}
@@ -173,21 +173,27 @@
 .pro_odd{background: #F0F0F0}
 .pro_page2{}
 	#ProTitle{font-family: 'Helvetica-Bold',Arial;font-size: 58px;line-height: 60px;color: #4a4a4a;text-align: center;}
+	#ProTitle p{font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;}
 	.cloud{font-size: 28px;line-height: 42px;font-family: 'Helvetica-Light',Arial;text-align: center;}
-.proLeft{width: 540px;float: left;}
+.proLeft{width: 540px;float: left;position: relative;}
 	.proBlockTitle{font-family: 'Helvetica-Light',Arial;font-size: 45px;line-height: 54px;padding-bottom: 20px;}
 	.proOvs{font-size: 16px;line-height: 26px;}
 .proRight{width: 480px;float: right;position: relative;}
-	.proImg{width: 714px;height:376px;}
+.proRight.imgBlock{text-align: right;}
+	.proImg{width: 714px;height:484px;position: relative;}
 	.overWid{position: relative;right: 0;top: 0;}
 
+#Pro_pro1 .pro_page3 .proImg{height:388px;top: -50px;}
+#Pro_pro2 .pro_page3 .proLeft{padding-top: 80px;}
+#Pro_pro2 .pro_page3 .proRight.imgBlock img{position: relative;top: 50px;z-index: 1}
+
 /** About */
-.aboutPage .inner.isFull{padding: 0;}
+.aboutPage .inner.isFull{padding: 0;width: 100%}
 .abtBlock{overflow: hidden;}
 	.abtBlock img{width: 100%;}
 	.abtLeft,.abtRight{float: left;width: 50%;}
-	.txtBlock{padding: 35px 40px 0;}
-	.bkTitle{color: #90C31F;font-family: 'Helvetica-Light',Arial;line-height: 60px;font-size: 58px;padding-bottom: 10px;}
+	.txtBlock{padding:92px 92px 0;}
+	.bkTitle{color: #90C31F;font-family: 'Helvetica-Light',Arial;line-height: 60px;font-size: 58px;padding-bottom: 15px;}
 	.bkOvs{color: #4A4A4A;font-family: 'Helvetica-Light',Arial;line-height: 40px;font-size: 28px;}
 .abt_page3{background: #5C5C5C}
 	.abtRow{overflow: hidden;border-bottom: 1px solid #757575;padding-bottom: 60px;margin-bottom: 60px;}
@@ -215,6 +221,7 @@
 .clientList td{width: 20%;text-align: center;padding: 0 0 40px;}
 
 /** soluion **/
+.solutionPage #ProTitle{font-family:'Helvetica-Light',Arial;}
 .pageBlock.soluionMenus{background: #5C5C5C}
 .solChoose{font-size: 22px;font-family: 'Helvetica-Bold',Arial;line-height: 24px;padding-bottom: 15px;color: #fff}
 .canHelp{font-size: 20px;line-height: 42px;font-family: 'Helvetica-Bold',Arial;text-align: center;background: #EBEBEB;margin: 40px 0 20px;}
@@ -238,6 +245,7 @@
 	.abtLeft, .abtRight{width: 100%}
 	.aboutPage .moblieImg{max-width: 100%;}
 	.aboutPage .txtBlock{padding: 20px 0;}
+	.aboutPage .txtBlock .bkTitle,.aboutPage .txtBlock .bkOvs{padding: 0 10px;}
 	.bkTitle{font-size: 3em;line-height: 2em;padding-bottom: 0}
 	.bkOvs{font-size: 2em;line-height: 1.2em}
 	.motto{width: 100%;}

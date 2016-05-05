@@ -19,7 +19,7 @@
 </div>
 <!-- page3 -->
 <div class="pageBlock pro_page3 pro_odd">
-    <div class="pageCont inner">
+    <div class="pageCont inner isFull">
         <div class="proLeft">
             <img src="template/html/images/pro/Wiz-Enterprise.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Data Management <br>& Warehouse</h3>
