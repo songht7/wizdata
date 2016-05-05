@@ -33,6 +33,7 @@
 <!-- ************************ page3 ********************** -->
 <div class="pageBlock pro_page3 pro_odd">
     <div class="pageCont inner ">
+
         <div class="solBlock sb1">
             <div class="bkInner">
                 <img src="template/html/images/solution/Monitor.png" class="sBkImg" alt="">
@@ -42,6 +43,7 @@
                 </div>
             </div>
         </div>
+
         <div class="solBlock sb2">
             <div class="bkInner">
                 <img src="template/html/images/solution/Detect.png" class="sBkImg" alt="">
@@ -51,6 +53,7 @@
                 </div>
             </div>
         </div>
+
         <div class="solBlock sb3">
             <div class="bkInner">
                 <img src="template/html/images/solution/Proactively.png" class="sBkImg" alt="">
@@ -60,6 +63,7 @@
                 </div>
             </div>
         </div>
+
         <div class="solBlock sb4">
             <div class="bkInner">
                 <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
@@ -69,5 +73,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="solBlock sb5">
+            <div class="bkInner">
+                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solInfo">
+                    <div class="sTitle">标题标题标题<br>太长br换行标题</div>
+                    <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
