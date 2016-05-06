@@ -1,5 +1,6 @@
 .line{display: block;height: 2px;width: 285px;margin: 35px auto;overflow: hidden;background: #90C31F}
 .rsContent img{max-width: none;}
+.productPage #ProTitle .line,.solutionPage #ProTitle .line{background: #4a4a4a}
 /*** home page ***/
 .homePage{background: #9B9B9B}
 .pageBlock{min-height: 200px;position: relative;}
@@ -15,7 +16,7 @@
 	.royalSlider > .rsContent {visibility:hidden;}
 	.fullWidth {margin: 0 auto;}
 	.pageBlock .royalSlider .rsArrow{position: absolute;right: -9999999px}
-	.wizInfo{position: absolute;top: 140px;z-index: 5;width: 100%;left: 0}
+	.wizInfo{position: absolute;/* top: 140px; */top: 160px;z-index: 5;width: 100%;left: 0}
 	.wizInfo .inner{letter-spacing: 1.5px;text-align: center;font-family: 'Helvetica-Bold',Arial;font-size:48px;line-height: 60px; color: #fff}
 	.wizInfo .inner .ovs{font-family: 'Helvetica-Light',Arial}
 
@@ -213,7 +214,7 @@
 .clientTitle{text-align: center;font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;color: #90C31F;}
 .coopList{padding: 80px 0;width: 950px;margin: 0 auto;overflow: hidden;}
 	.coopList li{width: 300px;float: left;padding: 0 85px 75px;}
-		.cpImg .line{width: 200px;height: 1px;margin: 23px auto}
+		.cpImg .line{width: 200px;height: 1px;margin: 10px auto;background: none}
 		.cpImg img{display: block;width: auto;max-width:100%;margin: 0 auto}
 		.cpInfo{font-family: "Microsoft YaHei",微软雅黑;line-height: 26px;text-align: center;}
 			.cpInfo p{font-size: 12px;color: #ddd;}
