@@ -68,10 +68,10 @@ header.isFix menu li a em {bottom: -9px;}
 .subMenu ul.subDefault.subProNav li{float: left;width: 50%;overflow: hidden;}
 .subMenu ul.subDefault.subProNav li a{border: none;}
 .navImg,.navInfo{float: left;}
-.navImg{width: 180px;}
+.navImg{width: 175px;}
 .navInfo{width: 240px;padding-left: 20px;}
 menu li ul.subDefault.subProNav a.navTitle,menu li ul.subDefault.subProNav a.navTitle:hover{font-size: 32px;font-family: 'Helvetica-Light',Arial;line-height: 60px;position: relative;height: auto;border: none;}
-.navTitle .line{width: 145px;height: 1px;overflow: hidden;background: #90C31F;display: block;margin: 10px 0;}
+.navTitle .line{display: none;width: 145px;height: 1px;overflow: hidden;background: #90C31F;margin: 10px 0;}
 .subProNav .ovs{line-height: 20px;padding:0 0 20px;display: block;border: none;}
 menu li .subMenu ul.subDefault.subProNav a.navRmore,menu li .subMenu ul.subDefault.subProNav a.navRmore:hover{color: #90C31F;font-size: 12px;}
 
