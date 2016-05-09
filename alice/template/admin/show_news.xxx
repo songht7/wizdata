@@ -19,21 +19,21 @@ $pagesize = $this->temp['pagesize'];
                 var key = 0;
                 var type = "GET";
                 var url = "";
-                var data = {};
+                var data;
                 var id = $(obj).attr('data-value');
                 var processData=false;
                 var contentType=false;
-                if ($(obj).val() === "DELETE" && confirm('delete confirm?')) {
-                    url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=del_' . $action . '&id="+ id+"'); ?>";
                     key = 1;
+                    type = "POST";
+                    processData=true;
+                    contentType="application/x-www-form-urlencoded; charset=UTF-8";
+                if ($(obj).html() === "DELETE" && confirm('delete confirm?')) {
+                    url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=del_' . $action . '&id="+ id+"'); ?>";
+                    data={status:0};
                 } else {
                     url = "<?php echo $this->url_rewrite('index.php?a=' . $action . '&m=edit_' . $action . '&id="+ id+"'); ?>";
                     var order_by = $(obj).val();
                     data = {order_by: order_by};
-                    type = "POST";
-                    key = 1;
-                    processData=true;
-                    contentType="application/x-www-form-urlencoded; charset=UTF-8";
                 }
 
                 if (key === 1) {

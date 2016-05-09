@@ -38,7 +38,7 @@ class Home extends \CommonDAL\BaseDAL {
     //get list by category info 
     public function getList($cat_id) {
         $sql = "select * from " . $this->table_name("article") . " as a left join " . $this->table_name("article_i8n") . " as i on a.art_id=i.art_id"
-                . " where i.i8n='" . $this->i8n . "' and a.cat_id='" . $cat_id . "' order by a.order_by asc,a.add_time desc limit 0,20; ";
+                . " where i.i8n='" . $this->i8n . "' and a.cat_id='" . $cat_id . "' and a.status=1 order by a.order_by asc,a.add_time desc limit 0,20; ";
         $product = $this->getFetchAll($sql);
         return $product;
     }
@@ -46,7 +46,7 @@ class Home extends \CommonDAL\BaseDAL {
     //get news by id
     public function getNews($art_id) {
         $sql = "select a.art_id,i.art_name,i.art_detail from " . $this->table_name("article") . " as a left join " . $this->table_name("article_i8n") . " as i on a.art_id=i.art_id"
-                . " where i.i8n='" . $this->i8n . "' and a.art_id='" . $art_id . "'  limit 0,1; ";
+                . " where i.i8n='" . $this->i8n . "' and a.art_id='" . $art_id . "'  and a.status=1 limit 0,1; ";
         $product = $this->getFetchRow($sql);
         if($product){
             $product['detail']=  html_entity_decode($product['art_detail'], ENT_QUOTES, 'UTF-8');
