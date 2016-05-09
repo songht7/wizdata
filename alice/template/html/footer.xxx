@@ -7,7 +7,7 @@
 	<!-- footer -->
 		<footer style="<?=$bgColr?>">
 			<div class="inner">
-				<img src="template/html/images/gongshang.png" class="gs" alt="wizdata">
+				<a href="http://www.sgs.gov.cn/lz/etpsInfo.do?method=viewDetail" target="_blank"><img src="template/html/images/gongshang.png" class="gs" alt="wizdata"></a>
 				<div class="footRight">
 					<div class="fotMenu">
 						<a href="/index-a-home-m-about.htm">About</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;

@@ -31,6 +31,7 @@ input[type=submit], input[type=button], button {cursor:pointer}
 .hided{display: none}
 .inner{width:1024px;margin:0 auto;padding:0 10px;overflow: hidden;}
 
+
 .popBox{background: #000;}
 
 .icons{background: url('../images/icon.png') no-repeat;overflow: hidden;}
@@ -40,7 +41,7 @@ input[type=submit], input[type=button], button {cursor:pointer}
 #Wrapper{position: relative;}
 
 header{background: #90C31F;padding: 18px 0 27px;position: relative;}
-header .inner{overflow: visible;width: 1280px}
+header .inner{overflow: visible;width: 100%;max-width: 1280px;}
 #Logo{float: left;width: 156px;height: 44px;display: block;line-height: 65px;}
 #Logo img{width: 100%;}
 .menuBox{float:right;position: relative;height: 40px}

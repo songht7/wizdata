@@ -94,7 +94,7 @@
 
 
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
+@media screen and (min-width: 0px) and (max-width: 850px) {
   body{width: 100%;min-width: 100px;font-size: 62.5%;}
   .inner{width: 96%;padding: 0 2%}
 	header .inner{overflow: visible;width: 100%;padding: 0}
