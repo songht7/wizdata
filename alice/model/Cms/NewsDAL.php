@@ -24,12 +24,12 @@ class News extends \CommonDAL\BaseDAL {
     function getList($i8n, $currentpage, $pagesize) {
 
         $sql = "select count(1) as count from " . $this->table_name('article') . " as c left join " . $this->table_name('article_i8n') . " as i on c.art_id=i.art_id "
-                . " where i.i8n='" . $i8n . "';";
+                . " where i.i8n='" . $i8n . "' and c.status=1;";
         $count = $this->getFetchRow($sql);
         $orderby = " order by c.order_by asc,c.art_id desc ";
         $limit = " limit " . (($currentpage - 1) * $pagesize) . "," . $pagesize . " ";
         $sql = "select * from " . $this->table_name('article') . " as c left join " . $this->table_name('article_i8n') . " as i on c.art_id=i.art_id "
-                . " where i.i8n='" . $i8n . "' "
+                . " where i.i8n='" . $i8n . "' and c.status=1 "
                 . " " . $orderby . " " . $limit . ";";
         $product = $this->getFetchAll($sql);
         return array("list" => $product, "count" => $count['count']);
@@ -74,11 +74,15 @@ class News extends \CommonDAL\BaseDAL {
         $sql = "insert into " . $this->table_name('article') . "(cat_id,type,order_by,add_by ,add_time,edit_by) "
                 . "values('" . $model['cat_id'] . "','" . $model['type'] . "','" . $model['order_by'] . "','" . $model['h_id'] . "',NOW(),'" . $model['h_id'] . "')";
         $this->query($sql);
-        $id = mysql_insert_id();
+        $id = $this->get_last_id();
 
         foreach ($model['i8n'] as $k => $v) {
+            $name = isset($v['name']) ? $v['name'] : '';
+            $overview = isset($v['overview']) ? $v['overview'] : '';
+            $detail = isset($v['detail']) ? $v['detail'] : '';
+            $i8n = isset($v['i8n']) ? $v['i8n'] : '';
             $sql = "insert into " . $this->table_name('article_i8n') . "(art_id,art_name,art_overview,art_detail,i8n) "
-                    . "values('" . $id . "','" . $v['name'] . "','" . $v['overview'] . "','" . $v['detail'] . "','" . $v['i8n'] . "')";
+                    . "values('" . $id . "','" . $name . "','" . $overview . "','" . $detail . "','" . $i8n . "')";
             $this->query($sql);
         }
 
@@ -97,6 +101,9 @@ class News extends \CommonDAL\BaseDAL {
         }
         if (!empty($model['cat_id'])) {
             $_sql.=" ,cat_id='" . $model['cat_id'] . "' ";
+        }
+        if (isset($model['status'])) {
+            $_sql.=" ,status=" . $model['status'] . " ";
         }
         $sql = "update " . $this->table_name('article') . " set edit_by='" . $model['h_id'] . "' " . $_sql . "  where art_id='{$id}'";
         $this->query($sql);
@@ -139,13 +146,6 @@ class News extends \CommonDAL\BaseDAL {
             $Img = new \AliceDAL\Img('A');
             $Img->editImg($model['img'], $model['h_id']);
         }
-    }
-
-//delete category
-    function del($model) {
-        $id = $model['id'];
-        $sql = "delete from  " . $this->table_name('article') . "  where art_id='{$id}'";
-        $this->query($sql);
     }
 
 }

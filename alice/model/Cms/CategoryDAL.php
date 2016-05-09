@@ -63,7 +63,7 @@ class Category extends \CommonDAL\BaseDAL {
         $sql = "insert into " . $this->table_name('category') . "(parent_id,type,is_show,order_by,add_by ,add_time,edit_by) "
                 . "values('" . $model['parent_id'] . "','" . $model['type'] . "','" . $model['is_show'] . "','" . $model['order_by'] . "','" . $model['h_id'] . "',NOW(),'" . $model['h_id'] . "')";
         $this->query($sql);
-        $categoryid = mysql_insert_id();
+        $categoryid = $this->get_last_id();
 
         foreach ($model['i8n'] as $k => $v) {
             $sql = "insert into " . $this->table_name('category_i8n') . "(cat_id,cat_name,cat_overview,cat_detail,i8n) "

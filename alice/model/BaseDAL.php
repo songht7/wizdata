@@ -71,6 +71,14 @@ class BaseDAL {
         $result = mysqli_query($this->conn, $sql);
         return $result;
     }
+    
+    /*
+     * get last id
+     */
+    public function get_last_id() {
+        $result = mysqli_insert_id($this->conn);
+        return $result;
+    }
 
     //表名处理
     function table_name($name) {

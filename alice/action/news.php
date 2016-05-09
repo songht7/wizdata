@@ -67,7 +67,7 @@ class news extends \Common\init {
     function edit_news() {
         $this->isset_cookie();
         $res = array('error' => 1, 'error_info' => "id is null");
-        if (isset($_GET['id'])) {
+        if (!empty($_GET['id'])) {
             $model = $this->specifyChar($_REQUEST);
             $model['h_id'] = $_COOKIE[$this->shop_name]['h_id'];
             $News = new \AliceDAL\News();
@@ -83,7 +83,10 @@ class news extends \Common\init {
             exit;
         } else {
             $model = $this->specifyChar($_POST);
+            //pr($model);die;
             $model['h_id'] = $_COOKIE[$this->shop_name]['h_id'];
+            $model['type'] = "A";
+            $model['order_by'] = 0;
             $News = new \AliceDAL\News();
             try {
                 $News->add($model);
@@ -127,9 +130,11 @@ class news extends \Common\init {
         if (isset($_REQUEST['id'])) {
             $model = $this->specifyChar($_REQUEST);
             $model['h_id'] = $_COOKIE[$this->shop_name]['h_id'];
+            $model['status'] = 0;
             $News = new \AliceDAL\News();
             try {
-                $News->del($model);
+                //pr($model);die;
+                $News->edit($model);
             } catch (Exception $e) {
                 print $e->getMessage();
                 exit;
