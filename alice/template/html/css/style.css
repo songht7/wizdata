@@ -1,4 +1,6 @@
 .line{display: block;height: 2px;width: 285px;margin: 35px auto;overflow: hidden;background: #90C31F}
+.rsContent img{max-width: none;}
+.productPage #ProTitle .line,.solutionPage #ProTitle .line{background: #4a4a4a}
 /*** home page ***/
 .homePage{background: #9B9B9B}
 .pageBlock{min-height: 200px;position: relative;}
@@ -14,14 +16,14 @@
 	.royalSlider > .rsContent {visibility:hidden;}
 	.fullWidth {margin: 0 auto;}
 	.pageBlock .royalSlider .rsArrow{position: absolute;right: -9999999px}
-	.wizInfo{position: absolute;top: 140px;z-index: 5;width: 100%;left: 0}
+	.wizInfo{position: absolute;/* top: 140px; */top: 160px;z-index: 5;width: 100%;left: 0}
 	.wizInfo .inner{letter-spacing: 1.5px;text-align: center;font-family: 'Helvetica-Bold',Arial;font-size:48px;line-height: 60px; color: #fff}
 	.wizInfo .inner .ovs{font-family: 'Helvetica-Light',Arial}
 
 .page2{background: #FFFFFF}
 	.wizSay{width: 820px;margin: 0 auto;text-align: center;padding-bottom: 90px;}
 	h3.say{background: url("../images/quote.png") no-repeat 13px 0;width: 100%;font-family: "Helvetica-Bold",Arial;font-size: 32px;line-height: 25px;color:#5C5C5C;height: 55px}
-	.sayCont{font-family: "Helvetica-Light";font-size: 58px;line-height: 60px;color: #5C5C5C;}
+	.sayCont{font-family: "Helvetica-Light",Arial;font-size: 58px;line-height: 60px;color: #5C5C5C;}
 		.sayCont .quote{background: url("../images/quote_down.png") no-repeat right 65%;padding: 0 15px 0 25px;}
 		.sayCont .line{background: #5C5C5C;}
 	.wizSay .ovs{color: #90C31F;font-size: 16px;line-height: 24px;font-family: "Helvetica-Roman",Arial;font-style: italic;width: 490px;margin: 0 auto}
@@ -212,9 +214,9 @@
 .clientTitle{text-align: center;font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;color: #90C31F;}
 .coopList{padding: 80px 0;width: 950px;margin: 0 auto;overflow: hidden;}
 	.coopList li{width: 300px;float: left;padding: 0 85px 75px;}
-		.cpImg .line{width: 200px;height: 1px;margin: 23px auto}
+		.cpImg .line{width: 200px;height: 1px;margin: 10px auto;background: none}
 		.cpImg img{display: block;width: auto;max-width:100%;margin: 0 auto}
-		.cpInfo{font-family: 'STHeitiSC-Medium';line-height: 26px;text-align: center;}
+		.cpInfo{font-family: "Microsoft YaHei",微软雅黑;line-height: 26px;text-align: center;}
 			.cpInfo p{font-size: 12px;color: #ddd;}
 			.cpInfo p.cpName{font-size: 18px;color: #fff;}
 .clientList{width: 100%;margin-top:65px;}
@@ -224,16 +226,20 @@
 .solutionPage #ProTitle{font-family:'Helvetica-Light',Arial;}
 .pageBlock.soluionMenus{background: #5C5C5C}
 .solChoose{font-size: 22px;font-family: 'Helvetica-Bold',Arial;line-height: 24px;padding-bottom: 15px;color: #fff}
-.canHelp{font-size: 20px;line-height: 42px;font-family: 'Helvetica-Bold',Arial;text-align: center;background: #EBEBEB;margin: 40px 0 20px;}
+.canHelp{font-size: 20px;line-height: 42px;font-family: 'Helvetica',Arial;font-weight: bold; text-align: center;background: #EBEBEB;margin: 40px 0 20px;}
 .helpList{overflow: hidden;padding-left: 30px;}
-.helpList li{float: left;width: 50%;color: #9B9B9B;font-size: 22px;line-height: 32px;font-family: 'Helvetica-Light',Arial;list-style:disc}
+.helpList li{float: left;width: 48%;color: #5C5C5C;padding-bottom: 10px;font-size: 22px;line-height: 32px;font-family: 'Helvetica-Light',Arial;list-style:disc}
+.helpList li:nth-child(2n){float: right;}
 
-.solBlock{width: 49%;float: left;position: relative;}
-.sBkImg{display: block;float: left;position: relative;top: 30px;}
-.bkInner{overflow: hidden;padding: 40px 35px 40px 30px;margin:0 auto;height: 160px;position: relative;}
-.solInfo{width: 65%;float: right;}
+
+.solBlock{width: 45%;float: left;position: relative;}
+.sBkImg,.bkInner img{display: block;float: left;position: relative;top: 30px;}
+.bkInner{overflow: hidden;padding:0 0 30px 0;padding: 0 60px 30px\9;margin:0 auto;height: 160px;position: relative;}
+.solInfo{width: 65%;width: 60%\9;float: right;}
 	.sTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;color: #4a4a4a;line-height: 22px;padding-bottom: 10px;}
 	.sOvs{color: #676767;}
+.solutionPage .pro_page3 .pageCont{padding: 68px 0 38px}
+.solBlock:nth-child(2n){float: right;}
 
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
@@ -260,7 +266,7 @@
 	.solBlock{width: 100%;float: none;border: none;}
 	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
 	.solBlock.sb3 .bkInner, .solBlock.sb4 .bkInner{border-bottom: 2px solid #E5E5E5;}
-	.sBkImg{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
+	.sBkImg,.bkInner img{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
 	.solInfo{float: none;width: 100%;}
 
 	.soluionMenus{display: none;}
