@@ -223,15 +223,15 @@
 		.person strong{display: block;letter-spacing: 1px;font-family:'Helvetica-Bold',Arial;line-height: 24px}
 
 /** Client **/
-.clientPage{background: #5C5C5C}
+.clientPage{background: #fff}
 .clientTitle{text-align: center;font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;color: #90C31F;}
 .coopList{padding: 80px 0;width: 950px;margin: 0 auto;overflow: hidden;}
 	.coopList li{width: 300px;float: left;padding: 0 85px 75px;}
 		.cpImg .line{width: 200px;height: 1px;margin: 10px auto;background: none}
 		.cpImg img{display: block;width: auto;max-width:100%;margin: 0 auto}
 		.cpInfo{font-family: "Microsoft YaHei",微软雅黑;line-height: 26px;text-align: center;}
-			.cpInfo p{font-size: 12px;color: #ddd;}
-			.cpInfo p.cpName{font-size: 18px;color: #fff;}
+			.cpInfo p{font-size: 12px;color: #4A4A4A;}
+			.cpInfo p.cpName{font-size: 18px;color: #4A4A4A;}
 .clientList{width: 100%;margin-top:65px;}
 .clientList td{width: 20%;text-align: center;padding: 0 0 40px;}
 

@@ -29,6 +29,9 @@ $mod=strtolower($mod);
         <!--[if lt IE 9]>
         <script src="template/html/script/html5.js"></script>
         <![endif]-->
+      <!--   <link rel="apple-touch-icon" href="template/html/images/touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="template/html/images/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="template/html/images/touch-icon-iphone4.png" /> -->
     </head>
     <body>
         <div id="Wrapper" class="<?=$mod?>Page isSkrollr">

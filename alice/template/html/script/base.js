@@ -115,7 +115,8 @@ function reSize(){
             onComplete:function(){
                 var video='<video id="VideoBox" controls="controls" autoplay="autoplay" width="100%">'
                                 +'<source src="template/html/video/v'+vid+'.mp4" type="video/mp4" />'
-                                +'您的浏览器不支持 video 标签。'
+                                //+'<source src="http://ilightbox.net/assets/macbookpro-colors-cc-us-20121116_848x480.ipad.mp4" type="video/mp4" />'
+                                +'<track kind="captions" src="template/html/script/video-js/captions.vtt" srclang="en" label="English" />'
                             +'</video>';
                 $(".popBox").html(video);
             },
