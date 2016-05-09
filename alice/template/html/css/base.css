@@ -31,6 +31,8 @@ input[type=submit], input[type=button], button {cursor:pointer}
 .hided{display: none}
 .inner{width:1024px;margin:0 auto;padding:0 10px;overflow: hidden;}
 
+.popBox{background: #000;}
+
 .icons{background: url('../images/icon.png') no-repeat;overflow: hidden;}
 
 .formBox{position:relative}

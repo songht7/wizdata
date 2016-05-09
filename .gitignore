@@ -1,3 +1,5 @@
 alice/iso_databaseSitting.php
 alice/config.inc.php
 alice/lib/ckeditor/config.js
+alice/lib/ckeditor/config.js
+alice/api/lib/upload.php

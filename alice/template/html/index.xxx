@@ -13,8 +13,8 @@
                 <div class="wizInfo">
                     <div class="inner">
                         <div class="infos">
-                            <div class="infoHead">Analytics for Organizations</div>
-                            <div class="ovs">Write something about Wizdata`s service or anyother</div>
+                            <div class="infoHead">Data art</div>
+                            <div class="ovs">We are not given a short life <br>but we make it short...<br>Data is valuable if you know how to use it</div>
                             
                         </div>
                     </div>
@@ -176,7 +176,7 @@
 <div class="pageBlock page4">
     <div class="pageCont inner">
         <h3 id="Know" class="pageTitle work">LASTEST WORK
-            <p>Are you tired of using a huge amount of flat data to accomplish challenge job?<br>Do you have bad feelings because nobody can’t understand your purposes with boring data sheet?<br>Easy, easy, WizData always are your backup!</p>
+            <p>Wizdata as your global "Think Tank" backs you up all the time.</p>
         </h3>
         <div class="videoBox">
             <ul class="vdList">
@@ -189,7 +189,7 @@
                     <div class="vdTitle">Tableau China Launch Media Day.</div>
                 </li>
                 <li>
-                    <a href="javascript:;" data-url="index.php?a=home&m=video&id=3" data-id='3' class="vdImg"><img src="template/html/images/img1.jpg" alt=""><span></span></a>
+                    <a href="javascript:;" data-url="index.php?a=home&m=video&id=3" data-id='3' class="vdImg"><img src="template/html/video/v3photo.png" alt=""><span></span></a>
                     <div class="vdTitle">Tableau Data Rockstar in Shanghai</div>
                 </li>
             </ul>

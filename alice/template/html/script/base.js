@@ -51,7 +51,6 @@ $(function () {
             else { $("header").removeClass("isFix");}
         });
     }
-    
     /** set footer bgColor**/
         var bg=$(".pageBlock:last").css("background-color");
         $("footer").css({"background-color":bg});
@@ -114,14 +113,15 @@ function reSize(){
         vid=obj.data('id');
         $.colorbox({href:url,width:"90%",height:"80%",
             onComplete:function(){
-                var video='<video id="VideoBox" controls="controls" autoplay="autoplay" width="100%" height="100%">'
+                var video='<video id="VideoBox" controls="controls" autoplay="autoplay" width="100%">'
                                 +'<source src="template/html/video/v'+vid+'.mp4" type="video/mp4" />'
                                 +'您的浏览器不支持 video 标签。'
                             +'</video>';
                 $(".popBox").html(video);
-            }
+            },
+            onClosed:function(){$(".popBox").remove();}
         });
-    }); 
+    });
 }
 /**
 type:验证类型
