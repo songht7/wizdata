@@ -1,3 +1,4 @@
+<?php if(!empty($solution)){ ?>
 <!-- solution ctgs -->
 <div class="pageBlock soluionMenus">
     <div class="pageCont inner">
@@ -5,9 +6,9 @@
             CHOOSE OTHER SOLUTION
         </div>
         <ul class="solCtgs">
-             <?php if(!empty($solution)){foreach($solution as $key => $v) { ?>
+             <?php foreach($solution as $key => $v) { ?>
                  <li><a href="/index-a-home-m-solution-id-<?=$v['art_id']?>.htm" class="<?php echo $_id==$v['art_id']?'active':'';?>"><?=$v['art_name']?></a></li>
-             <?php }} ?>
+             <?php } ?>
             <!-- <li><a href="/index-a-home-m-solution-id-1.htm" class="">Application Delivery</a></li>
             <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
             <li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
@@ -23,3 +24,4 @@
         </ul>
     </div>
 </div>
+<?php } ?>

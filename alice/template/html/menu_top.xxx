@@ -17,7 +17,10 @@
                     <ul class="subDefault">
                     		<?php if(!empty($solution)){foreach($solution as $key => $v) { ?>
 														<li><a href="/index-a-home-m-solution-id-<?=$v['art_id']?>.htm" class="<?php echo $_id==$v['art_id']?'active':'';?>"><?=$v['art_name']?></a></li>
-													<?php }} ?>
+													<?php }} else{?>
+														<li><a href="/index-a-home-m-solution-id-sol1.htm" class="<?php echo $_id=='sol1'?'active':'';?>">Communications SP</a></li>
+														<li><a href="/index-a-home-m-solution-id-sol2.htm" class="<?php echo $_id=='sol2'?'active':'';?>">Simulation Technique</a></li>
+													<?php }?>
                         <!-- <li><a href="/index-a-home-m-solution-id-1.htm">Application Delivery</a></li>
                           <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
                           <li><a href="/index-a-home-m-solution-id-3.htm">Energy and Utilities</a></li>
