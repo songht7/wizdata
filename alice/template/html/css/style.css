@@ -101,7 +101,7 @@
 	header .inner #Logo{margin-left: 5px}
 
 	#MenuBtn{display: block;position: relative;padding: 21px 0 27px;top: -17px}
-	header.isFix #MenuBtn{padding: 5px 0;top: -5px}
+	header.isFix #MenuBtn{padding: 8px 0;top: -6px}
 	#MenuBtn.on{background:url("../images/mobile/Menu_press@2x.png") no-repeat 50% 50% #5C5C5C}
 	menu{position: absolute;z-index: 1000;width: 100%;top: 100%;left: 0;display: none}
 	menu li{float:none;background: #5C5C5C;padding: 0;border-bottom: 1px solid #90C31F}
@@ -125,7 +125,7 @@
 	.wizInfo .inner{font-size: 2.2em;line-height: 28px;}
 
 	.wizSay{width: auto;padding-bottom: 45px}
-	.say{font-size: 1.8em;line-height: 25px;}
+	h3.say{font-size: 2.8em;line-height: 2.2em;background-size: 45px auto;background-position: 15px 15px}
 	.sayCont{font-size: 3.8em;line-height: 42px}
 	.wizSay .ovs{width: auto;font-size: 1.4em;line-height: 20px}
 	.sayCont .line{margin: 15px auto}
@@ -134,7 +134,7 @@
 	.moblieImg{display: block;max-width: 70%;margin: 0 auto}
 	.imgBlock{display: none;}
 	.rTxt{padding: 20px 0 0}
-	.rTxt h4{padding: 0 0 15px;font-size: 2.4em;line-height: 22px;}
+	.rTxt h4{padding: 0 0 15px;font-size: 2.4em;line-height: 2em;}
 	.rInfo{font-size: 1.4em;line-height: 20px;}
 
 	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
@@ -142,6 +142,7 @@
 		.job{height: auto;font-size: 1.8em}
 		.jobIcon{width: 100px;}
 		.jobOvs{padding-left: 20px;font-size: 1.4em}
+		.jobOvs li{font-size: 1.4em;line-height: 1.3em;padding-bottom: 5px;}
 		.job .line{position: static;left: auto;margin: 18px auto 0;}
 		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
 	
@@ -283,4 +284,7 @@
 	.solInfo{float: none;width: 100%;}
 
 	.soluionMenus{display: none;}
+	
+	.coopList{width: 100%;padding: 30px 0;}
+	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}
 }

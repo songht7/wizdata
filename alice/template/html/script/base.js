@@ -66,12 +66,14 @@ var _innerWidth=1024;
 function reSize(){
     var winWidth = $(window).width();
     if ($("header").hasClass("isFix")) {
+        var sides=100;
+        sides=winWidth<=850?0:sides;
         if(winWidth>maxWidth){
             $("header.isFix").css({"width":winWidth});
-            $("header.isFix .inner").css({"width":winWidth-100});
+            $("header.isFix .inner").css({"width":winWidth-sides});
         }else{
             $("header.isFix").css({"width":"100%"});
-            $("header.isFix .inner").css({"width":winWidth-100});
+            $("header.isFix .inner").css({"width":winWidth-sides});
         }
     }else{
         if(winWidth>maxWidth){

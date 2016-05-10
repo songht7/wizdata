@@ -18,7 +18,10 @@ $mod=strtolower($mod);
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>wizdata</title>
         <meta name="Keywords" content="wizdata">
-        <meta name="Description" content="">
+        <meta name="Description" content="We are not given a short life but we make it short...Data is valuable if you know how to use it">
+        <link rel="apple-touch-icon" href="template/html/images/touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="template/html/images/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="template/html/images/touch-icon-iphone4.png" />
         <link rel="shortcut icon" href="favicon.ico">
         <link href="template/html/css/base.css" rel="stylesheet" />
         <link href="template/html/css/style.css" rel="stylesheet" />
@@ -29,9 +32,6 @@ $mod=strtolower($mod);
         <!--[if lt IE 9]>
         <script src="template/html/script/html5.js"></script>
         <![endif]-->
-      <!--   <link rel="apple-touch-icon" href="template/html/images/touch-icon-iphone.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="template/html/images/touch-icon-ipad.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="template/html/images/touch-icon-iphone4.png" /> -->
     </head>
     <body>
         <div id="Wrapper" class="<?=$mod?>Page isSkrollr">
