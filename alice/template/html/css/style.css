@@ -65,8 +65,8 @@
 		.fmRow{width: 100%;margin: 0 0 23px;}
 		.iptBlock{padding: 0 22px;background: #cdcdcd;border: 1px solid #cdcdcd;position: relative;}
 		.iptBlock.isError{border: 1px solid #f40}
-		.iptTxt{width: 100%;padding: 15px 0;color: #4a4a4a;background: none;border:none;outline: none;font-size: 15px;}
-		.iptTxt.msgIpt{resize: none;height: 175px;}
+		.iptTxt{width: 100%;padding: 15px 0;color: #4a4a4a;background: none;border:none;outline: none;font-size: 15px;font-family: "Helvetica",Arial;}
+		.iptTxt.msgIpt{resize: none;height: 175px;font-family: "Helvetica",Arial;}
 		.iptTxt.full{color: #4a4a4a;}
 		input:input-placeholder,
 		textarea:input-placeholder,

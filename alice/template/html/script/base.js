@@ -272,11 +272,11 @@ function formPost(obj, form) {
                         obj.find("span").html(tips);
                         if (data.Type) {
                             if (data.Type == "reload") {
-                                setTimeout(function () { window.location.reload(); }, 1500);
+                                setTimeout(function () { window.location.reload(); }, 2000);
                             } else if (data.Type == "goback") {
                                 setTimeout(function () { history.go(-1); }, 1500);
                             }else {
-                                setTimeout(function () { location.href = data.Type; }, 1500);
+                                setTimeout(function () { location.href = data.Type; }, 2000);
                             }
                         }
                         setTimeout(function () {
