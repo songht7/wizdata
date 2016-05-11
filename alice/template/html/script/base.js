@@ -6,6 +6,10 @@ if (browser && browser.is == "ie" && browser.vs <= 9) { ie9 = true; }
 
 $(function () {
     /** 菜单  */
+    $("menu li").each(function(index, el) {
+        var obj=$(el);
+        if(obj.find(".subMenu").length){obj.addClass('multi');}
+    });
     $(document).on("mouseover","menu li",function(){
         var obj=$(this);
         $("menu .subMenu,menu em").hide();
@@ -17,6 +21,12 @@ $(function () {
     $(document).on("mouseleave","header",function(){
         var obj=$(this);
         $("menu .subMenu,menu em").hide();
+    });
+    $(document).on('click', '.hasSub', function(event) {
+        var winWidth = $(window).width();
+        if(winWidth<=850){
+            event.preventDefault();
+        }
     });
     /* 回到顶部 */
     $(document).on("click","#ScrollTop",function(){
@@ -262,11 +272,11 @@ function formPost(obj, form) {
                         obj.find("span").html(tips);
                         if (data.Type) {
                             if (data.Type == "reload") {
-                                setTimeout(function () { window.location.reload(); }, 1500);
+                                setTimeout(function () { window.location.reload(); }, 2000);
                             } else if (data.Type == "goback") {
                                 setTimeout(function () { history.go(-1); }, 1500);
                             }else {
-                                setTimeout(function () { location.href = data.Type; }, 1500);
+                                setTimeout(function () { location.href = data.Type; }, 2000);
                             }
                         }
                         setTimeout(function () {

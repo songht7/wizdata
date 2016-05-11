@@ -60,7 +60,7 @@ header.isFix li a{height: 40px;line-height: 40px;}
 header.isFix menu li a em {bottom: -9px;}
 
 .subMenu{display: none; position: absolute;top: 100%;background: #4a4a4a;color: #fff;left: 0;z-index: 10;width: 100%;}
-.subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 20px 10px;}
+.subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 40px 10px 50px;}
 .subMenu ul.subDefault li,.solCtgs li{width: 25%;float: left;text-align: left;padding-left: 0}
 .subMenu ul.subDefault li a,.solCtgs li a{display: block;height: 40px;line-height: 40px; color: #fff;width: 95%;border-bottom: 1px solid #90C31F;padding-right: 0}
 .solCtgs a{font-size: 18px;font-family: 'Helvetica-Light',Arial;}

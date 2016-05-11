@@ -7,12 +7,12 @@
 	<!-- footer -->
 		<footer style="<?=$bgColr?>">
 			<div class="inner">
-				<a href="http://www.sgs.gov.cn/lz/etpsInfo.do?method=viewDetail" target="_blank"><img src="template/html/images/gongshang.png" class="gs" alt="wizdata"></a>
+				<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20160510113426139" target="_blank"><img src="template/html/images/gongshang.png" class="gs" alt="wizdata"></a>
 				<div class="footRight">
 					<div class="fotMenu">
 						<a href="/index-a-home-m-about.htm">About</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="/index-a-home-m-index.htm#Services">Service</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="/index-a-home-m-solution-id-<?=$solution[0]['art_id']?>.htm">Solution</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/index-a-home-m-solution-id-<?php $id=$solution[0]['art_id'];echo $id==null?'sol1':$id;?>.htm">Solution</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="/index-a-home-m-client.htm">Client</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="/index-a-home-m-product-id-pro1.htm">Product</a>
 					</div>
