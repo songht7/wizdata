@@ -151,17 +151,17 @@ if (!empty($this->dbconfig['lang_arr'])) {
                                 </script>
                             </div>
                         </div>
-                        <?php
-                        if ($this->dbconfig['img_system'] == 1) {
-                            include_once 'lib_img.xxx';
-                        }
-                        ?>
                     </div>
                     <?php
                     $il++;
                 }
             }
             ?>
+                        <?php
+                        if ($this->dbconfig['img_system'] == 1) {
+                            include('lib_img.xxx');
+                        }
+                        ?>
             <div class="pathB">
                 <div class="leftA">
                     <input name="" type="button" id="submit" onclick="post();" value="SUBMIT 提交" />

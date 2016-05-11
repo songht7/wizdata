@@ -73,7 +73,7 @@ class Category extends \CommonDAL\BaseDAL {
 
         if (!empty($model['img'])) {
             $Img = new \AliceDAL\Img('C');
-            $Img->addImg($model['img'], $categoryid, $model['h_id']);
+            $Img->addImg($model['add'], $categoryid, $model['h_id']);
         }
     }
 
@@ -117,9 +117,16 @@ class Category extends \CommonDAL\BaseDAL {
                 }
             }
         }
+        $Img = new \AliceDAL\Img('C');
+        //pr($model);die;
         if (!empty($model['img'])) {
-            $Img = new \AliceDAL\Img('C');
             $Img->editImg($model['img'], $model['h_id']);
+        }
+        if (!empty($model['add'])) {
+            $Img->addImg($model['add'], $id,$model['h_id']);
+        }
+        if (!empty($model['del'])) {
+            $Img->deleteImg($model['del'], $model['h_id']);
         }
     }
 

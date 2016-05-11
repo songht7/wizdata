@@ -12,16 +12,16 @@
         });
     };
     $(function () {
-        $('.show_show').on('click', function () {
-            alert(1);
-            var val = $(this).find('input').attr('value');
+        $(document).on('click', '.show_show', function () {
+            var obj = $(this);
+            var val = obj.find('input').attr('value');
             var val2 = 1;
             if (val === '1') {
                 val2 = 0;
             }
-            $(this).removeClass('show_show' + val);
-            $(this).addClass('show_show' + val2);
-            $(this).find('input').attr('value', val2).attr("data-set", "1");
+            obj.removeClass('show_show' + val);
+            obj.addClass('show_show' + val2);
+            obj.find('input').attr('value', val2).attr("data-set", "1");
         });
         /*图片的新增排序*/
         var k = 'a';
@@ -31,91 +31,107 @@
         var tempUrl = '<?php echo $tempUrl; ?>';
         /*图片新增*/
         $(".add").click(function () {
+            var obj = $(this);
             key = k + i;
-            lang = $(this).attr('key');
-            var addFile = '<div class="leftAlist r_detail" ><div class="show_show show_show1 r_show" ><input type="hidden" name="add[' + lang + '][' + key + '][is_show]" class="postElement"  value="1"></div><div class="r_row"><div class="r_title">Photo 图片</div><input class="uploadButton" type="button" value="Upload" onclick="javascript:uploadfile.select(\'' + key + '-' + lang + '\');" /><div class="info_msg">( Suggested size 建议尺寸: 1600 x 1600 )</div><div class="r_subTitle">Hidden 隐藏</div><input type="hidden" name="add[' + lang + '][' + key + '][original_src]" id="url' + key + '-' + lang + '" class="postElement" data-set="0"  value="./template/' + tempUrl + '/images/no_img.jpg" /><a href="javascript:void(0);" class="del Delv" data-value="del[' + lang + '][' + key + '][img_id]">DELETE 删除</a></div><div class="r_row"><div class="r_title">链接</div><input type="text" class="r_text postElement" name="add[' + lang + '][' + key + '][original_link]"  value=""><div class="r_title">&nbsp;</div><div class="r_title">&nbsp;</div><img id="img' + key + '-' + lang + '" src="./template/' + tempUrl + '/images/no_img.jpg" /></div>';
-            $(this).parent().parent().parent().append(addFile);
+            lang = obj.attr('key');
+            var addFile = '<div class="leftAlist r_detail" ><div class="show_show show_show1 r_show" ><input type="hidden" name="add[' + lang + '][' + key + '][is_show]" class="postElement" data-set="1"  value="1"></div><div class="r_row"><div class="r_title">Photo 图片</div><input class="uploadButton" type="button" value="Upload" onclick="javascript:uploadfile.select(\'' + key + '-' + lang + '\');" /><div class="info_msg">( Suggested size 建议尺寸: 1600 x 1600 )</div><div class="r_subTitle">Hidden 隐藏</div><input type="hidden" name="add[' + lang + '][' + key + '][original_src]" id="url' + key + '-' + lang + '" class="postElement" data-set="1"  value="./template/' + tempUrl + '/images/no_img.jpg" /><a href="javascript:void(0);" class="del Delv" data-value="del[' + lang + '][' + key + '][img_id]">DELETE 删除</a></div><div class="r_row"><div class="r_title">链接</div><input type="text" class="r_text postElement" data-set="1" name="add[' + lang + '][' + key + '][original_link]"  value=""><div class="r_title">&nbsp;</div><div class="r_title">&nbsp;</div><img id="img' + key + '-' + lang + '" src="./template/' + tempUrl + '/images/no_img.jpg" /></div></div>';
+            obj.parent().parent().parent().append(addFile);
             i++;
             reflashKey("photo");
         });
         /*新增图片的删除*/
-        $('.del').on('click', function () {
-            alert(1);
+        $(document).on('click', '.del', function () {
             $(this).parent().parent().detach();
             reflashKey("photo");
         });
         /*已存数据库的图片删除*/
         $('.delv').on('click', function () {
-            $(this).next().attr('name', $(this).attr("data-value"));
-            $(this).parent().parent().hide();
+            var obj = $(this);
+            obj.next().attr('name', obj.attr("data-value")).attr("data-set", "1");
+            obj.parent().parent().hide();
             reflashKey("photo");
         });
     });
 
 </script>
-<div class="leftA photo">
-    <div class="leftAlist" >
-        <span>IMAGES 图片&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="button" class="add" value="+ NEW 添加" key="<?php echo $lkey; ?>" /></span>
-    </div>
-    <?php if (!empty($imgs)) { ?>
-        <?php
-        $i = 1;
-        foreach ($imgs as $k => $v) {
-            if ($v['i8n'] == $lkey) {
-                ?>
-                <div class="leftAlist r_detail" >
-                    <div class="show_show show_show<?php
-                    if (isset($v['is_show'])) {
-                        echo $v['is_show'];
-                    } else {
-                        echo 1;
-                    }
-                    ?> r_show" >
-                        <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][is_show]" class="postElement"  value="<?php
-                        if (isset($v['is_show'])) {
-                            echo $v['is_show'];
-                        } else {
-                            echo 1;
-                        }
-                        ?>">
-                    </div>
-                    <div class="r_row">
-                        <div class="r_title">[<?php echo $i; ?>] Photo 图片</div>
-                        <input class="uploadButton" type="button" value="Upload" onclick="javascript:uploadfile.select('<?php echo $v["img_id"]; ?>-<?php echo $lkey; ?>');" />
-                        <div class="info_msg">( Suggested size 建议尺寸: 1600 x 1600 )</div>
-                        <div class="r_subTitle">Hidden 隐藏</div>
-                        <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_src]" id="url<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" class="postElement" data-set="0"  value="<?php
-                        if (!empty($v['original_src'])) {
-                            echo $v['original_src'];
-                        } else {
-                            echo './template/' . $tempUrl . '/images/no_img.jpg';
-                        }
-                        ?>" />
-                        <a href="javascript:void(0);" class="delv Delv" data-value="del[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][img_id]">DELETE 删除</a>
-                        <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][img_id]" class="postElement" data-set="1" value="<?php echo $v['img_id']; ?>" />
-                    </div>
-                    <div class="r_row">
-                        <div class="r_title">链接</div>
-                        <input type="text" class="r_text postElement" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_link]"  value="<?php echo $v['original_link']; ?>">
-                        <div class="r_title">&nbsp;</div>
-                        <div class="r_title">&nbsp;</div>
-                        <img id="img<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" src="<?php
-                        if (!empty($v['original_src'])) {
-                            echo $v['original_src'];
-                        } else {
-                            echo './template/' . $tempUrl . '/images/no_img.jpg';
-                        }
-                        ?>" />
-                    </div>
-                </div>
-                <?php
-                $i++;
-            }
-        }
+<?php
+$il = 1;
+if (!empty($this->dbconfig['lang_arr'])) {
+    foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
         ?>
-    <?php } ?>
-</div>
-
+        <div class="pathA <?php echo $lkey; ?> <?php
+        if ($il != 1) {
+            echo 'hide';
+        }
+        ?>">
+            <div class="leftA photo">
+                <div class="leftAlist" >
+                    <span>IMAGES 图片&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="button" class="add" value="+ NEW 添加" key="<?php echo $lkey; ?>" /></span>
+                </div>
+                <?php if (!empty($imgs)) { ?>
+                    <?php
+                    $i = 1;
+                    foreach ($imgs as $k => $v) {
+                        if ($v['i8n'] == $lkey) {
+                            ?>
+                            <div class="leftAlist r_detail" >
+                                <div class="show_show show_show<?php
+                                if (isset($v['is_show'])) {
+                                    echo $v['is_show'];
+                                } else {
+                                    echo 1;
+                                }
+                                ?> r_show" >
+                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][is_show]" class="postElement"  value="<?php
+                                    if (isset($v['is_show'])) {
+                                        echo $v['is_show'];
+                                    } else {
+                                        echo 1;
+                                    }
+                                    ?>">
+                                </div>
+                                <div class="r_row">
+                                    <div class="r_title">[<?php echo $i; ?>] Photo 图片</div>
+                                    <input class="uploadButton" type="button" value="Upload" onclick="javascript:uploadfile.select('<?php echo $v["img_id"]; ?>-<?php echo $lkey; ?>');" />
+                                    <div class="info_msg">( Suggested size 建议尺寸: 1600 x 1600 )</div>
+                                    <div class="r_subTitle">Hidden 隐藏</div>
+                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_src]" id="url<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" class="postElement" data-set="0"  value="<?php
+                                    if (!empty($v['original_src'])) {
+                                        echo $v['original_src'];
+                                    } else {
+                                        echo './template/' . $tempUrl . '/images/no_img.jpg';
+                                    }
+                                    ?>" />
+                                    <a href="javascript:void(0);" class="delv Delv" data-value="del[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][img_id]">DELETE 删除</a>
+                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][img_id]" class="postElement" value="<?php echo $v['img_id']; ?>" />
+                                </div>
+                                <div class="r_row">
+                                    <div class="r_title">链接</div>
+                                    <input type="text" class="r_text postElement" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_link]"  value="<?php echo $v['original_link']; ?>">
+                                    <div class="r_title">&nbsp;</div>
+                                    <div class="r_title">&nbsp;</div>
+                                    <img id="img<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" src="<?php
+                                    if (!empty($v['original_src'])) {
+                                        echo $v['original_src'];
+                                    } else {
+                                        echo './template/' . $tempUrl . '/images/no_img.jpg';
+                                    }
+                                    ?>" />
+                                </div>
+                            </div>
+                            <?php
+                            $i++;
+                        }
+                    }
+                    ?>
+                <?php } ?>
+            </div>
+        </div>
+        <?php
+        $il++;
+    }
+}
+?>
 
 <!-- upload  -->
 <form id="uploadForm" action="Upload" method="post" enctype="multipart/form-data">

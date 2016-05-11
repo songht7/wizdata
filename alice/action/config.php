@@ -14,7 +14,7 @@ class config extends \Common\init {
     function getList() {
         $this->isset_cookie();
         $currentpage = isset($_GET['currentpage']) ? $this->specifyChar($_GET['currentpage']) : 1;
-        $pagesize = isset($_GET['pagesize']) ? $this->specifyChar($_GET['pagesize']) : 10;
+        $pagesize = isset($_GET['pagesize']) ? $this->specifyChar($_GET['pagesize']) : 100;
         $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "category";
 
         $SetConfigDAL = new \AliceDAL\SetConfigDAL();
