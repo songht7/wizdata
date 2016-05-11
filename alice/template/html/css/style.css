@@ -95,31 +95,7 @@
 
 
 @media screen and (min-width: 0px) and (max-width: 850px) {
-  body{width: 100%;min-width: 100px;font-size: 62.5%;}
-  .inner{width: 96%;padding: 0 2%}
-	header .inner{overflow: visible;width: 100%;padding: 0}
-	header .inner #Logo{margin-left: 5px}
-
-	#MenuBtn{display: block;position: relative;padding: 21px 0 27px;top: -17px}
-	header.isFix #MenuBtn{padding: 8px 0;top: -6px}
-	#MenuBtn.on{background:url("../images/mobile/Menu_press@2x.png") no-repeat 50% 50% #5C5C5C}
-	menu{position: absolute;z-index: 1000;width: 100%;top: 100%;left: 0;display: none}
-	menu li{float:none;background: #5C5C5C;padding: 0;border-bottom: 1px solid #90C31F}
-	menu li a{font-size: 1.6em}
-	menu li a:hover,menu li a.active{color: #90C31F}
-	menu li a em{bottom: 0;left: 999999px;}
-	menu .subMenu{position: static}
-	.subMenu ul.subDefault li, .solCtgs li{width: 100%;}
-	.subMenu ul.subDefault li a, .solCtgs li a{float: none;}
-
-	.subMenu ul{width: 100%;padding:0;max-height: 180px;overflow: auto;}
-	.subMenu ul.subDefault li,.subMenu ul.subDefault.subProNav li{width: 100%;border: none;text-align: center;}
-	.subMenu ul.subDefault li a, .solCtgs li a{border: none;font-size: 1.6em;}
-	menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{font-size: 1.4em;line-height: 2em}
-	.subProNav .navInfo{width: 100%;}
-	.subProNav .navImg,.subProNav .navInfo .ovs,.subProNav .navInfo .navRmore,.subProNav .line{display: none;}
-
-	.pageCont{padding: 20px 0;}
+ 	.pageCont{padding: 20px 0;}
 	
 	.wizInfo{top: 50px;}
 	.wizInfo .inner{font-size: 2.2em;line-height: 28px;}
@@ -138,13 +114,14 @@
 	.rInfo{font-size: 1.4em;line-height: 20px;}
 
 	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
-		.listBlock{float: none;width: 100%;padding: 0 0 30px;height: auto;}
+		.listBlock{float: none;width: 90%;padding: 0 0 30px;height: auto;margin: 0 auto}
 		.job{height: auto;font-size: 1.8em}
 		.jobIcon{width: 100px;}
 		.jobOvs{padding-left: 20px;font-size: 1.4em}
 		.jobOvs li{font-size: 1.4em;line-height: 1.3em;padding-bottom: 5px;}
 		.job .line{position: static;left: auto;margin: 18px auto 0;}
 		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
+		.lb6 .jobOvs{margin-left: 0}
 	
 	.pageTitle.work p{width: 100%;}
 	.vdList li{float: none;padding: 0 0 20px;width: 100%}
@@ -239,6 +216,7 @@
 /** soluion **/
 .solutionPage #ProTitle{font-family:'Helvetica-Light',Arial;}
 .pageBlock.soluionMenus{background: #5C5C5C}
+.soluionMenus .solCtgs{overflow: hidden;}
 .solChoose{font-size: 22px;font-family: 'Helvetica-Bold',Arial;line-height: 24px;padding-bottom: 15px;color: #fff}
 .canHelp{font-size: 20px;line-height: 42px;font-family: 'Helvetica',Arial;font-weight: bold; text-align: center;background: #EBEBEB;margin: 40px 0 20px;}
 .helpList{overflow: hidden;padding-left: 30px;}
@@ -247,7 +225,8 @@
 
 
 .solBlock{width: 45%;float: left;position: relative;}
-.sBkImg,.bkInner img{display: block;float: left;position: relative;top: 30px;}
+.solImg{float: left;text-align: center;width: 33%;}
+.sBkImg,.bkInner img{position: relative;top: 5px;max-width: 100%;}
 .bkInner{overflow: hidden;padding:0 0 30px 0;padding: 0 60px 30px\9;margin:0 auto;height: 160px;position: relative;}
 .solInfo{width: 65%;width: 60%\9;float: right;}
 	.sTitle{font-family: 'Helvetica-Bold',Arial;font-size: 18px;color: #4a4a4a;line-height: 22px;padding-bottom: 10px;}
@@ -282,11 +261,15 @@
 	.solBlock:nth-child(2n){float: none;}
 	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
 	.solBlock.sb3 .bkInner, .solBlock.sb4 .bkInner{border-bottom: 2px solid #E5E5E5;}
-	.sBkImg,.bkInner img{float: none;top: 0;margin: 0 auto;margin-bottom: 15px;}
+	.solImg{float: none;width: 100%}
+	.sBkImg,.bkInner img{top: 0;margin: 0 auto 15px;}
 	.solInfo{float: none;width: 100%;}
-
-	.soluionMenus{display: none;}
 	
+	.solChoose{font-size: 1.8em;text-align: center;padding-bottom: 10px;}
+	.soluionMenus .solCtgs{width: 100%;padding-bottom: 50px;}
+	.soluionMenus .solCtgs li{float: none;width: 100%;margin: 0 auto;text-align: center;}
+	.soluionMenus .solCtgs li a{border-bottom: 1px solid #90C31F;width: 100%;font-size: 1.8em}
+
 	.coopList{width: 100%;padding: 30px 0;}
 	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}
 }

@@ -35,7 +35,7 @@
     <div class="pageCont inner ">
         <div class="solBlock sb1">
             <div class="bkInner">
-                <img src="template/html/images/solution/Monitor.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Monitor.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">Monitor Activations in Real Time</div>
                     <div class="sOvs">CSPs can effectively monitor their network infrastructures to proactively resolve problems, ensure consistent delivery of services and accelerate the introduction of new products. </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="solBlock sb2">
             <div class="bkInner">
-                <img src="template/html/images/solution/Detect.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Detect.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">Detect Network Abusers <br>and Prevent Fraud</div>
                     <div class="sOvs">Detect fraudulent activity as it occurs by correlating information across different types of machine data such as firewall, intrusion detection systems (IDS) and IP addresses, network traffic data, content delivery and network data. </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="solBlock sb3">
             <div class="bkInner">
-                <img src="template/html/images/solution/Proactively.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Proactively.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">Proactively Resolve Customer Issues</div>
                     <div class="sOvs">Correlate structured, unstructured and semi-structured data to gain new insights and proactively monitor and resolve customer issues across Internet, voice and data services. </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="solBlock sb4">
             <div class="bkInner">
-                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">Strengthen Your Security Posture</div>
                     <div class="sOvs">Secure subscriber information across devices and services. Collect and index machine data to support ad hoc reporting and the real-time monitoring of incidents to give security teams new levels of visibility and intelligence.  </div>
