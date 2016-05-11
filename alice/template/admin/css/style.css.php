@@ -6,6 +6,7 @@
 body{-webkit-text-size-adjust:none;background:#fff;color:#000;font-family:'Noto Sans',SimHei, sans-serif;font-size:12px;}
 body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{border:0 none;margin:0;padding:0}
 a{ color:#000;}
+a:hover{color: #099ce0;}
 .wrapper{ margin:0 auto; width:800px; border:solid #D4D0C7 1px;}
 .hide{display:none;}
 .clear{clear:both;}
@@ -19,7 +20,8 @@ a{ color:#000;}
 .menu_right{font-size: 90px;line-height: 480px;margin: 0 auto;text-align: center;width: 99%;}
 
 /* top */
-.top{  height:134px;border-bottom:10px solid ;-moz-border-bottom-colors:#a0a #909 #808 #707 #606 #505 #404 #303;}
+/*.top{  height:134px;border-bottom:10px solid ;-moz-border-bottom-colors:#a0a #909 #808 #707 #606 #505 #404 #303;}*/
+.top{  height:134px;border-bottom:10px solid ;-moz-border-bottom-colors:#a6d6f3 #5b98b8 #21abbf #26b6e1 #249dd9 #187bc1 #1461ae #143866;}
 .logo{ position:absolute; font-size:16px; color:#FFFFFF; margin-left:10px; margin-top:1px;}
 .logo1{ float:left;}
 .logo1 img{width:100px;}
@@ -31,7 +33,6 @@ a{ color:#000;}
 /* left */
 .title{ margin:0 0 0 15px;}
 .title a{font-size:12px;text-decoration: none;line-height: 24px;}
-.title a:hover{color:#099ce0;}
 .title .mainRed{color:#099ce0;}
 .second{color:#808080;}
 .sub_title{display:none;}
@@ -49,7 +50,7 @@ a{ color:#000;}
 .r_top{margin:0 0 10px 0 ;}
 
 .leftA{margin:0 0 20px 0;}
-.leftAlist{padding:0 0 10px;}
+.leftAlist{padding:0 0 10px;position: relative;}
 .r_detail{background:#ebebeb;padding:15px;margin: 0 0 20px;}
 .PPrice{position:relative;}
 .PDelv{position:relative;}
@@ -60,7 +61,7 @@ a{ color:#000;}
 .r_detail .r_row_down{margin:20px 0 10px 0;}
 .r_detail .r_row input{float:left;}
 .r_detail .r_row a{float:right;}
-.r_detail .r_row .Delv{float:none;right:20px;bottom:20px;position:absolute;}
+.r_detail .r_row .Delv{float:none;right:20px;bottom:16px;position:absolute;}
 .r_detail .r_row .Delf{float:none;right:20px;bottom:20px;position:absolute;}
 .r_detail .r_row .r_row_img{margin:0 0 0 210px;}
 .r_detail .r_title{width:120px;margin:0 10px 0 0;float:left;line-height:22px;}

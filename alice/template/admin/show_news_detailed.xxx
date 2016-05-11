@@ -12,10 +12,7 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <?php include_once "./template/" . $tempUrl . "/css/style.css.php"; ?>
         <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript" src="./template/<?php echo $tempUrl; ?>/script/upload.js"></script>
         <script src="./lib/ckeditor/ckeditor.js"></script>
-         <!-- <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script>
-         <script src="//cdn.ckeditor.com/4.5.8/full/ckeditor.js"></script>-->
         <script type="text/javascript">
             function post() {
                 $("#shadow").show();
@@ -24,16 +21,16 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                 $('.postElement[data-set=1]').each(function (obj) {
                     formData.append($(this).attr('name'), $(this).val());
                 });
-                <?php
-            if (!empty($this->dbconfig['lang_arr'])) {
-                foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
-                    ?>
-                    formData.append("i8n[<?php echo $lkey; ?>][detail]",CKEDITOR.instances.TextArea<?php echo $lkey; ?>.getData());
-                    <?php
-                }
-            }
-            ?>
-                var url = $("#demo").attr('action');
+<?php
+if (!empty($this->dbconfig['lang_arr'])) {
+    foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
+        ?>
+                        formData.append("i8n[<?php echo $lkey; ?>][detail]", CKEDITOR.instances.TextArea<?php echo $lkey; ?>.getData());
+        <?php
+    }
+}
+?>
+                var url = '<?php echo $this->url_rewrite("./index.php?a=" . $action . "&m=edit_" . $action . "&id=" . $product["art_id"]); ?>';
                 $.ajax({
                     type: "POST",
                     data: formData,
@@ -64,19 +61,10 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
                     $(this).addClass('active');
                     $('.' + $(this).attr('value')).removeClass('hide');
                 });
-                $('.show_show').click(function () {
-                    var val = $(this).find('input').attr('value');
-                    var val2 = 1;
-                    if (val === '1') {
-                        val2 = 0;
-                    }
-                    $(this).removeClass('show_show' + val);
-                    $(this).addClass('show_show' + val2);
-                    $(this).find('input').attr('value', val2).attr("data-set", "1");
-                });
                 $(".postElement").change(function () {
                     $(this).attr("data-set", "1");
                 });
+
             });
         </script>
         <title>无标题文档</title>
@@ -98,149 +86,87 @@ $imgs = isset($this->temp['imgs']) ? $this->temp['imgs'] : null;
             ?>
         </div>
         <div class="content">
-            <form name="theForm" id="demo" action="<?php echo $this->url_rewrite("./index.php?a=" . $action . "&m=edit_" . $action . "&id=" . $product['art_id']); ?>" method="post" enctype='multipart/form-data' onsubmit="post();
-                    return false;">
-                      <?php if (!empty($category)) { ?>
-                    <div class="leftA">
-                        <div class="leftAlist" >
-                            <span>CATEGORY</span>
-                        </div>
-                        <div class="leftAlist" >
-                            <select id="cat_id" name="cat_id" class="postElement" data-set="1"  >
-                                <?php foreach ($category as $k => $v) { ?>
-                                    <option <?php
-                                    if ($v['cat_id'] == $product['cat_id']) {
-                                        echo "selected";
-                                    }
-                                    ?> value="<?php echo $v["cat_id"]; ?>" ><?php echo $v["cat_name"]; ?></option>
-                                    <?php } ?>
-                            </select>
-                        </div>
+            <?php if (!empty($category)) { ?>
+                <div class="leftA">
+                    <div class="leftAlist" >
+                        <span>CATEGORY</span>
                     </div>
-                <?php } ?>
-                <?php
-                $il = 1;
-                if (!empty($this->dbconfig['lang_arr'])) {
-                    foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
-                        ?>
-                        <div class="pathA <?php echo $lkey; ?> <?php
-                        if ($il != 1) {
-                            echo 'hide';
-                        }
-                        ?>">
-                            <div class="leftA">
-                                <div class="leftAlist" >
-                                    <span>NAME</span>
-                                </div>
-                                <div class="leftAlist" >
-                                    <input type="text" name="i8n[<?php echo $lkey; ?>][name]" class="postElement" value="<?php
-                                    if (!empty($pro[$lkey]['art_name'])) {
-                                        echo $pro[$lkey]['art_name'];
-                                    }
-                                    ?>" />
-                                    <input type="hidden" name="i8n[<?php echo $lkey; ?>][sid]" class="postElement" data-set="1" value="<?php echo $pro[$lkey]['art_i8n_id']; ?>">
-                                    <input type="hidden" name="i8n[<?php echo $lkey; ?>][i8n]" class="postElement" data-set="1" value="<?php echo $lkey; ?>">
-                                </div>
-                                <div class="leftAlist" >
-                                    <span>OVERVIEW</span>
-                                </div>
-                                <div class="leftAlist" >
-                                    <textarea id="<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][overview]" class="postElement" ><?php
-                                        if (!empty($pro[$lkey]['art_overview'])) {
-                                            echo $pro[$lkey]['art_overview'];
-                                        }
-                                        ?></textarea>
-                                </div>
-                                <div class="leftAlist" >
-                                    <span>DETAIL</span>
-                                </div>
-                                <div class="leftAlist" >
-                                    <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]"  class="postElement" ><?php
-                                        if (!empty($pro[$lkey]['detail'])) {
-                                            echo $pro[$lkey]['detail'];
-                                        }
-                                        ?></textarea>
-                                    <script type="text/javascript">
-                                        CKEDITOR.replace('i8n[<?php echo $lkey; ?>][detail]');
-                                    </script>
-                                </div>
-                                <?php if (!empty($imgs)) { ?>
-                                    <div class="leftAlist" >
-                                        <span>BACKGROUND IMAGES 背景图片</span>
-                                    </div>
-                                    <?php
-                                    $i = 1;
-                                    foreach ($imgs as $k => $v) {
-                                        if ($v['i8n'] == $lkey && $v['point'] == 1) {
-                                            ?>
-                                            <div class="leftAlist r_detail" >
-                                                <div class="show_show show_show<?php
-                                                if (isset($v['is_show'])) {
-                                                    echo $v['is_show'];
-                                                } else {
-                                                    echo 1;
-                                                }
-                                                ?> r_show" >
-                                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][is_show]" class="postElement"  value="<?php
-                                                    if (isset($v['is_show'])) {
-                                                        echo $v['is_show'];
-                                                    } else {
-                                                        echo 1;
-                                                    }
-                                                    ?>">
-                                                </div>
-                                                <div class="r_row">
-                                                    <div class="r_title">[<?php echo $i; ?>] Photo 图片</div>
-                                                    <input class="uploadButton" type="button" value="Upload" onclick="javascript:uploadfile.select('<?php echo $v["img_id"]; ?>-<?php echo $lkey; ?>');" />
-                                                    <div class="info_msg">( Suggested size 建议尺寸: 1600 x 1600 )</div>
-                                                    <div class="r_subTitle">Hidden 隐藏</div>
-                                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_src]" id="url<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" class="postElement" data-set="0"  value="<?php
-                                                    if (!empty($v['original_src'])) {
-                                                        echo $v['original_src'];
-                                                    } else {
-                                                        echo './template/' . $tempUrl . '/images/no_img.jpg';
-                                                    }
-                                                    ?>" />
-                                                    <input type="hidden" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][img_id]" class="postElement" data-set="1" value="<?php echo $v['img_id']; ?>" />
-                                                </div>
-                                                <div class="r_row">
-                                                    <div class="r_title">链接</div>
-                                                    <input type="text" class="r_text postElement" name="img[<?php echo $lkey; ?>][<?php echo $v['img_id']; ?>][original_link]"  value="<?php echo $v['original_link']; ?>">
-                                                    <div class="r_title">&nbsp;</div>
-                                                    <div class="r_title">&nbsp;</div>
-                                                    <img id="img<?php echo $v['img_id']; ?>-<?php echo $lkey; ?>" src="<?php
-                                                    if (!empty($v['original_src'])) {
-                                                        echo $v['original_src'];
-                                                    } else {
-                                                        echo './template/' . $tempUrl . '/images/no_img.jpg';
-                                                    }
-                                                    ?>" />
-                                                </div>
-                                            </div>
-                                            <?php
-                                            $i++;
-                                        }
-                                    }
-                                    ?>
+                    <div class="leftAlist" >
+                        <select id="cat_id" name="cat_id" class="postElement" data-set="1"  >
+                            <?php foreach ($category as $k => $v) { ?>
+                                <option <?php
+                                if ($v['cat_id'] == $product['cat_id']) {
+                                    echo "selected";
+                                }
+                                ?> value="<?php echo $v["cat_id"]; ?>" ><?php echo $v["cat_name"]; ?></option>
                                 <?php } ?>
+                        </select>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php
+            $il = 1;
+            if (!empty($this->dbconfig['lang_arr'])) {
+                foreach ($this->dbconfig['lang_arr'] as $lkey => $lval) {
+                    ?>
+                    <div class="pathA <?php echo $lkey; ?> <?php
+                    if ($il != 1) {
+                        echo 'hide';
+                    }
+                    ?>">
+                        <div class="leftA">
+                            <div class="leftAlist" >
+                                <span>NAME</span>
+                            </div>
+                            <div class="leftAlist" >
+                                <input type="text" name="i8n[<?php echo $lkey; ?>][name]" class="postElement" value="<?php
+                                if (!empty($pro[$lkey]['art_name'])) {
+                                    echo $pro[$lkey]['art_name'];
+                                }
+                                ?>" />
+                                <input type="hidden" name="i8n[<?php echo $lkey; ?>][sid]" class="postElement" data-set="1" value="<?php echo $pro[$lkey]['art_i8n_id']; ?>">
+                                <input type="hidden" name="i8n[<?php echo $lkey; ?>][i8n]" class="postElement" data-set="1" value="<?php echo $lkey; ?>">
+                            </div>
+                            <div class="leftAlist" >
+                                <span>OVERVIEW</span>
+                            </div>
+                            <div class="leftAlist" >
+                                <textarea id="<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][overview]" class="postElement" ><?php
+                                    if (!empty($pro[$lkey]['art_overview'])) {
+                                        echo $pro[$lkey]['art_overview'];
+                                    }
+                                    ?></textarea>
+                            </div>
+                            <div class="leftAlist" >
+                                <span>DETAIL</span>
+                            </div>
+                            <div class="leftAlist" >
+                                <textarea id="TextArea<?php echo $lkey; ?>" name="i8n[<?php echo $lkey; ?>][detail]"  class="postElement" ><?php
+                                    if (!empty($pro[$lkey]['detail'])) {
+                                        echo $pro[$lkey]['detail'];
+                                    }
+                                    ?></textarea>
+                                <script type="text/javascript">
+                                    CKEDITOR.replace('i8n[<?php echo $lkey; ?>][detail]');
+                                </script>
                             </div>
                         </div>
                         <?php
-                        $il++;
-                    }
-                }
-                ?>
-                <div class="pathB">
-                    <div class="leftA">
-                        <input name="" type="submit" id="submit" value="SUBMIT 提交" />
+                        if ($this->dbconfig['img_system'] == 1) {
+                            include_once 'lib_img.xxx';
+                        }
+                        ?>
                     </div>
+                    <?php
+                    $il++;
+                }
+            }
+            ?>
+            <div class="pathB">
+                <div class="leftA">
+                    <input name="" type="button" id="submit" onclick="post();" value="SUBMIT 提交" />
                 </div>
-            </form>	
+            </div>
         </div>
-        <!-- upload  -->
-        <form id="uploadForm" action="Upload" method="post" enctype="multipart/form-data">
-            <input type="file" id="fileupload" name="fileupload" onchange="javascript:uploadfile.up($(this).attr('data-value'), '<?php echo $this->imguploadlink; ?>');" accept="image/gif, image/jpeg,image/png" multiple="multiple" class="hide" data-value=""/>
-        </form>
-        <!--   end  -->
     </body>
 </html>

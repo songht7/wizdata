@@ -70,5 +70,13 @@ class Img extends \CommonDAL\BaseDAL {
             }
         }
     }
+    //delete
+    function deleteImg($model, $h_id){
+        foreach ($model as $v) {
+            $img_id = $v['img_id'] ;
+            $sql = "delete from " . $this->table_name('img') . " where img_id=".$img_id."; ";
+            $this->query($sql);
+        }
+    }
 
 }

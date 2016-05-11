@@ -5,19 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <?php include_once "./template/".$tempUrl."/css/style.css.php";?>
         <script type="text/javascript" src="./template/<?php echo $tempUrl;?>/script/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                $(".first").click(function () {
-                    $(".first").removeClass('mainRed').next().hide();
-                    $(this).addClass('mainRed').next().show();
-                    $(".second").removeClass('mainRed');
-                });
-                $(".second").click(function () {
-                    $(".second").removeClass('mainRed');
-                    $(this).addClass('mainRed');
-                });
-            });
-        </script>
+        <script type="text/javascript" src="./template/<?php echo $tempUrl;?>/script/stylePublic.js"></script>
         <title>left</title>
     </head>
     <body>

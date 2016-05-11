@@ -58,7 +58,7 @@ class News extends \CommonDAL\BaseDAL {
 
 //img
     function getDetailImg($id) {
-        $sql = "select * from " . $this->table_name('img') . " where type_id='{$id}' and type='C' order by i8n asc";
+        $sql = "select * from " . $this->table_name('img') . " where type_id='{$id}' and type='A' order by i8n asc";
         $img = $this->getFetchAll($sql);
         $imgs = array();
         if (!empty($img)) {

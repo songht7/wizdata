@@ -43,19 +43,21 @@ class news extends \Common\init {
             $News = new \AliceDAL\News();
             $product = $News->getDetail($id);
             $pro = $News->getDetailI8n($id);
-            $imgs = $News->getDetailImg($id);
+            if ($this->dbconfig['img_system'] == 1) {
+                $imgs = $News->getDetailImg($id);
+                $this->temp['imgs'] = $imgs;
+            }
 
             $this->temp['category'] = $category['list'];
             $this->temp['product'] = $product;
             $this->temp['pro'] = $pro;
-            $this->temp['imgs'] = $imgs;
             $this->temp['action'] = $action;
-            //pr($pro);
+
             $this->getTemplate($this->tempUrl, 'show_news_detailed');
         } else {
             $action = isset($_GET['a']) ? $this->specifyChar($_GET['a']) : "news";
             $this->temp['action'] = $action;
-            
+
             $Category = new \AliceDAL\Category();
             $category = $Category->getList($_COOKIE[$this->shop_name]["b_lang"], 1, 100);
 
@@ -145,4 +147,5 @@ class news extends \Common\init {
         print json_encode($res);
         exit;
     }
+
 }
