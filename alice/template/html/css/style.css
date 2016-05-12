@@ -80,7 +80,7 @@
 		textarea::-moz-placeholder{
 		    color: #9B9B9B;
 		}
-		.btns.sbmt{width: 167px;line-height: 43px;height: 43px;margin:0;}
+		.btns.sbmt{width: 167px;line-height: 44px;height: 44px;margin:0;}
 	.mapBox{float: right;width: 445px;position: relative;}
 	.map{background: url("../images/CONTACT_map.png") no-repeat;width: 471px;height: 268px;position: relative;right: -30px;text-indent: -9999999px;margin: 40px 0 0}
 	.contactInfor{overflow: hidden;}
@@ -95,41 +95,42 @@
 
 
 @media screen and (min-width: 0px) and (max-width: 850px) {
- 	.pageCont{padding: 20px 0;}
+ 	.pageCont{padding: 30px 0;}
 	
-	.wizInfo{top: 50px;}
+	.wizInfo{top: 33px;}
 	.wizInfo .inner{font-size: 2.2em;line-height: 28px;}
 
 	.wizSay{width: auto;padding-bottom: 45px}
-	h3.say{font-size: 2.8em;line-height: 2.2em;background-size: 45px auto;background-position: 15px 15px}
+	h3.say{font-size: 1.8em;line-height: 2.2em;background-size: 45px auto;background-position: 15px 15px}
 	.sayCont{font-size: 3.8em;line-height: 42px}
 	.wizSay .ovs{width: auto;font-size: 1.4em;line-height: 20px}
-	.sayCont .line{margin: 15px auto}
+	.sayCont .line{margin: 15px auto;width: 120px;}
 
 	.rbLeft,.rbRight{width: 100%;float: none;}
 	.moblieImg{display: block;max-width: 70%;margin: 0 auto}
 	.imgBlock{display: none;}
 	.rTxt{padding: 20px 0 0}
-	.rTxt h4{padding: 0 0 15px;font-size: 2.4em;line-height: 2em;}
+	.rTxt h4{padding: 0 0 10px;font-size: 2.4em;line-height: 1.8em;}
 	.rInfo{font-size: 1.4em;line-height: 20px;}
 
 	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
+	.pageTitle.pd305{padding: 30px 0 50px;}
 		.listBlock{float: none;width: 90%;padding: 0 0 30px;height: auto;margin: 0 auto}
-		.job{height: auto;font-size: 1.8em}
+		.job{height: auto;font-size: 1.8em;margin-bottom: 16px;}
 		.jobIcon{width: 100px;}
 		.jobOvs{padding-left: 20px;font-size: 1.4em}
 		.jobOvs li{font-size: 1.4em;line-height: 1.3em;padding-bottom: 5px;}
-		.job .line{position: static;left: auto;margin: 18px auto 0;}
+		.job .line{position: static;left: auto;margin: 16px auto 0;}
 		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
 		.lb6 .jobOvs{margin-left: 0}
 	
-	.pageTitle.work p{width: 100%;}
-	.vdList li{float: none;padding: 0 0 20px;width: 100%}
+	.pageTitle.work p{width: 100%;padding-top: 22px;}
+	.vdList li{float: none;padding: 0 0 40px;width: 100%}
 	.videoBox .moreBtn{margin-top: 20px;width: 100%;line-height:44px;height: 44px;font-size: 1.4em }
 	
 	.contactBox,.mapBox{float: none;}
-	.contactBox{width: 100%;}
-	.pageTitle.contactTitle{width: 100%;font-size: 2.2em;line-height: 21px;padding-bottom:15px;}
+	.contactBox{width: 100%;padding-top: 20px;}
+	.pageTitle.contactTitle{width: 100%;font-size: 2.2em;line-height: 21px;padding-bottom:28px;}
 	.btns.sbmt{width: 100%;}
 	.mapBox {width: 100%;}
 	.mapBox .map{background-size: 100% auto;width: 100%;background-position: 50% 50%;right:0;margin-top: 20px;}
@@ -138,7 +139,7 @@
 	footer .inner{padding: 10px 0}
 	.gs{display: none;}
 	.footRight{float: none;width: 100%;text-align: center;}
-	#ScrollTop{right: 0;-webkit-transform: scale(0.6);-ms-transform: scale(0.6);transform: scale(0.6);}
+	#ScrollTop{right: 0;-webkit-transform: scale(0.9);-ms-transform: scale(0.9);transform: scale(0.9);}
 }
 @media screen and (min-width:960px) and (min-height:660px) {
   .heroSlider .rsOverflow,
@@ -155,7 +156,7 @@
 @media screen and (min-width: 0px) and (max-width: 800px) {
   .royalSlider.heroSlider,
   .royalSlider.heroSlider .rsOverflow {
-    height: 300px !important;
+    height: 208px !important;
   }
 }
 
@@ -177,7 +178,7 @@
 	.overWid{position: relative;right: 0;top: 0;}
 
 #Pro_pro1 .pro_page3 .proImg{height:388px;top: -50px;}
-#Pro_pro2 .pro_page3 .proLeft{padding-top: 80px;}
+#Pro_pro2 .pro_page3 .proLeft,#Pro_pro1 .pro_page3 .proLeft{padding-top: 80px;}
 #Pro_pro2 .pro_page3 .proRight.imgBlock img{position: relative;top: 50px;z-index: 1}
 
 /** About */
@@ -197,7 +198,8 @@
 		.portrait img{width: 100%;}
 	.motto{width: 745px;color: #fff;font-family:'Helvetica-Light',Arial;}
 		.mts{font-size: 26px;line-height: 40px;background: url("../images/about/quote.png") no-repeat right 0;padding-top:45px;}
-		.person{font-size: 18px;font-family: 'Helvetica-Light',Arial;line-height: 34px;text-align: right;}
+		.person{font-family: 'Helvetica-Light',Arial;line-height: 34px;text-align: right;}
+		.person strong,.person span{font-size: 18px;}
 		.person strong{display: block;letter-spacing: 1px;font-family:'Helvetica-Bold',Arial;line-height: 24px}
 
 /** Client **/
@@ -236,41 +238,53 @@
 
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
+	.abt_page3 .pageCont{padding: 10px 0 30px}
 	.abtLeft, .abtRight{width: 100%}
 	.aboutPage .moblieImg{max-width: 100%;}
-	.aboutPage .txtBlock{padding: 20px 0;}
-	.aboutPage .txtBlock .bkTitle,.aboutPage .txtBlock .bkOvs{padding: 0 10px;}
-	.bkTitle{font-size: 3.2em;line-height: 2em;padding-bottom: 0}
+	.aboutPage .motto .moblieImg{margin: 50px auto 12px}
+	.aboutPage .txtBlock{padding: 0 0 32px;}
+	.aboutPage .txtBlock .bkOvs{padding: 0 10px;}
+	.bkTitle{font-size: 3.2em;line-height: 2em;padding: 22px 0 0;text-align: center;}
 	.bkOvs{font-size: 1.8em;line-height: 1.8em}
 	.motto{width: 100%;}
 	.aboutPage .rowLeft,.aboutPage .rowRight{float: none;}
-	.abtRow{padding-bottom: 20px;margin-bottom: 20px;}
+	.abtRow{padding-bottom: 50px;margin-bottom: 0;}
 	.mts{font-size: 1.8em;line-height: 1.4em;background-size: 40px auto;padding-top: 30px;}
-	.person{font-size: 1.4em;line-height: 1em;padding-top: 10px;}
+	.person{padding-top: 10px;}
+	.person span{font-size: 1.4em;line-height: 1em;}
+	.person strong{font-size: 1.8em;line-height: 1.2em}
 
 	#ProTitle{font-size: 3.2em;line-height: 1.4em}
-	#ProTitle p{font-size: 0.99em}
+	#ProTitle p{font-size: 0.99em;line-height: 1.2em;padding: 8px 0 0;}
+	.productPage #ProTitle .line{margin:28px auto}
 	.cloud{font-size: 1.8em;line-height: 1.5em}
 	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
-	.proBlockTitle{font-size: 2.4em;line-height: 1.4em}
-	.productPage .inner.isFull{padding-bottom: 50px;}
-	.productPage .pro_page3 .moblieImg,.productPage .pro_page5 .moblieImg{margin-bottom: 30px;}
+	.proBlockTitle{padding:40px 0 24px;font-size: 2.4em;line-height: 1.4em}
+	.productPage .pageBlock .inner{padding-bottom: 50px;}
+	#Pro_pro2 .pro_page3 .moblieImg,#Pro_pro1 .pro_page3 .moblieImg{position: relative;top: -28px;z-index: 1}
+	#Pro_pro1 .pro_page3 .moblieImg{top: -10px}
+	#Pro_pro2 .pro_page3 .proLeft,#Pro_pro1 .pro_page3 .proLeft{padding-top: 0;}
+	#Pro_pro2 .pro_page3 .proBlockTitle{padding-top: 20px}
+	#Pro_pro1 .pro_page3 .proBlockTitle{padding-top: 30px}
 
-	.canHelp{font-size: 1.6em;line-height: 2.4em}
+	.solutionPage .pro_page3 .pageCont{padding: 50px 0 30px}
+	.canHelp{font-size: 1.6em;line-height: 2.4em;margin: 50px 0 28px;}
+	.helpList{padding-bottom: 20px}
 	.helpList li,.helpList li:nth-child(2n){float: none;width: 100%;font-size:1.8em;line-height: 1em}
 	.solBlock{width: 100%;float: none;border: none;}
 	.solBlock:nth-child(2n){float: none;}
-	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
+	.bkInner{padding-bottom: 40px;margin-bottom: 40px;border-bottom: 2px solid #E5E5E5;height: auto;}
 	.solBlock.sb3 .bkInner, .solBlock.sb4 .bkInner{border-bottom: 2px solid #E5E5E5;}
 	/*.solImg{float: none;width: 100%}*/
 	.sBkImg,.bkInner img{top: 0;margin: 0 auto 15px;}
-	.solInfo{float: none;width: 100%;}
+	.solInfo{width: 64%;}
 	
-	.solChoose{font-size: 1.6em;text-align: center;padding-bottom: 10px;}
+	.soluionMenus .pageCont{padding: 28px 0 30px;width: 100%;}
+	.solChoose{font-size: 1.6em;text-align: center;padding-bottom: 28px;border-bottom: 1px solid #757575;}
 	.soluionMenus .solCtgs{width: 100%;padding-bottom: 50px;}
 	.soluionMenus .solCtgs li{float: none;width: 100%;margin: 0 auto;text-align: center;}
-	.soluionMenus .solCtgs li a{border-bottom: 1px solid #90C31F;width: 100%;font-size: 1.4em;line-height: 48px;height: 48px;}
+	.soluionMenus .solCtgs li a{border-bottom: 1px solid #757575;width: 100%;font-size: 1.4em;line-height: 48px;height: 48px;}
 
 	.coopList{width: 100%;padding: 30px 0;}
 	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}

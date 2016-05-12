@@ -112,7 +112,7 @@
 <!-- page3 -->
 <div class="pageBlock page3">
     <div class="pageCont inner">
-        <h3 id="Know" class="pageTitle wizKnow">WIZ LET LEADERS KNOW</h3>
+        <h3 id="Know" class="pageTitle pd305 wizKnow">WIZ LET LEADERS KNOW</h3>
         <div id="KnowList">
 
             <div class="listBlock lb1">
@@ -175,7 +175,7 @@
 <!-- page4 -->
 <div class="pageBlock page4">
     <div class="pageCont inner">
-        <h3 id="Know" class="pageTitle work">LASTEST WORK
+        <h3 id="Work" class="pageTitle pd305 work">LASTEST WORK
             <p>Wizdata as your global "Think Tank" backs you up all the time.</p>
         </h3>
         <div class="videoBox">
