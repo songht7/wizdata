@@ -240,35 +240,37 @@
 	.aboutPage .moblieImg{max-width: 100%;}
 	.aboutPage .txtBlock{padding: 20px 0;}
 	.aboutPage .txtBlock .bkTitle,.aboutPage .txtBlock .bkOvs{padding: 0 10px;}
-	.bkTitle{font-size: 3em;line-height: 2em;padding-bottom: 0}
-	.bkOvs{font-size: 2em;line-height: 1.2em}
+	.bkTitle{font-size: 3.2em;line-height: 2em;padding-bottom: 0}
+	.bkOvs{font-size: 1.8em;line-height: 1.8em}
 	.motto{width: 100%;}
 	.aboutPage .rowLeft,.aboutPage .rowRight{float: none;}
 	.abtRow{padding-bottom: 20px;margin-bottom: 20px;}
-	.mts{font-size: 1.8em;line-height: 1.2em;background-size: 40px auto;padding-top: 30px;}
-	.person{font-size: 1.6em;line-height: 1em;padding-top: 10px;}
+	.mts{font-size: 1.8em;line-height: 1.4em;background-size: 40px auto;padding-top: 30px;}
+	.person{font-size: 1.4em;line-height: 1em;padding-top: 10px;}
 
-	#ProTitle{font-size: 2.4em;line-height: 1.2em}
-	.cloud{font-size: 1.8em;line-height: 1.3em}
+	#ProTitle{font-size: 3.2em;line-height: 1.4em}
+	#ProTitle p{font-size: 0.99em}
+	.cloud{font-size: 1.8em;line-height: 1.5em}
+	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
-	.proBlockTitle{font-size: 3em;line-height: 1em}
+	.proBlockTitle{font-size: 2.4em;line-height: 1.4em}
 	.productPage .inner.isFull{padding-bottom: 50px;}
 	.productPage .pro_page3 .moblieImg,.productPage .pro_page5 .moblieImg{margin-bottom: 30px;}
 
-	.helpList{font-size: 1.4em;line-height: 1em}
-	.helpList li,.helpList li:nth-child(2n){float: none;width: 100%;}
+	.canHelp{font-size: 1.6em;line-height: 2.4em}
+	.helpList li,.helpList li:nth-child(2n){float: none;width: 100%;font-size:1.8em;line-height: 1em}
 	.solBlock{width: 100%;float: none;border: none;}
 	.solBlock:nth-child(2n){float: none;}
 	.bkInner{padding-bottom: 20px;margin-bottom: 20px;border-bottom: 2px solid #E5E5E5;height: auto;}
 	.solBlock.sb3 .bkInner, .solBlock.sb4 .bkInner{border-bottom: 2px solid #E5E5E5;}
-	.solImg{float: none;width: 100%}
+	/*.solImg{float: none;width: 100%}*/
 	.sBkImg,.bkInner img{top: 0;margin: 0 auto 15px;}
 	.solInfo{float: none;width: 100%;}
 	
-	.solChoose{font-size: 1.8em;text-align: center;padding-bottom: 10px;}
+	.solChoose{font-size: 1.6em;text-align: center;padding-bottom: 10px;}
 	.soluionMenus .solCtgs{width: 100%;padding-bottom: 50px;}
 	.soluionMenus .solCtgs li{float: none;width: 100%;margin: 0 auto;text-align: center;}
-	.soluionMenus .solCtgs li a{border-bottom: 1px solid #90C31F;width: 100%;font-size: 1.8em}
+	.soluionMenus .solCtgs li a{border-bottom: 1px solid #90C31F;width: 100%;font-size: 1.4em;line-height: 48px;height: 48px;}
 
 	.coopList{width: 100%;padding: 30px 0;}
 	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}

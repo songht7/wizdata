@@ -114,7 +114,7 @@ footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflo
   header.isFix #Logo{width: 100px;}
   header.isFix #MenuBtn{background-size: 20px auto}
   header.isFix #MenuBtn.on{background-size: 20px auto}
-  header.isFix li a{height: 58px;line-height: 58px;}
+  header li a,header.isFix li a{height: 58px;line-height: 58px;}
 
   #MenuBtn{display: block;position: relative;padding: 22px 0 27px;top: -18px}
   header.isFix #MenuBtn{padding: 8px 0;top: -6px}
@@ -133,10 +133,13 @@ footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflo
   .subMenu ul{width: 100%;padding:0;max-height: 185px;overflow: auto;}
   .subMenu ul.subDefault li,.subMenu ul.subDefault.subProNav li{width: 100%;border: none;text-align: center;}
   .subMenu ul.subDefault li a, .solCtgs li a{border: none;font-size: 1.6em;}
+  .subMenu ul.subDefault li a.active,.subMenu ul.subDefault li a:hover{font-size: 1.6em;}
   .subMenu ul.subDefault li a
-  ,.subMenu ul.subDefault.subProNav li a,menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{color: #fff;border-bottom: 1px solid #767676;width: 100%}
-  .subMenu ul.subDefault li:last-child a,.subMenu ul.subDefault.subProNav li:last-child a{border-bottom:none;}
-  menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{font-size: 1.6em;line-height: 2.4em}
+  ,.subMenu ul.subDefault.subProNav li a,menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{color: #fff;border-bottom: 1px solid #767676;width: 100%;height: 58px;line-height: 58px;}
+  menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{font-size: 1.6em;}
+  .subMenu ul.subDefault li:last-child a,.subMenu ul.subDefault.subProNav li:last-child a,menu li ul.subDefault.subProNav li:last-child a.navTitle:hover{border-bottom:none;}
   .subProNav .navInfo{width: 100%;padding-left: 0}
   .subProNav .navImg,.subProNav .navInfo .ovs,.subProNav .navInfo .navRmore,.subProNav .line{display: none;}
+
+  .fotMenu{font-size: 1.2em}
 }
