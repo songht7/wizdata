@@ -58,7 +58,7 @@ menu li a.active,menu li a:hover{color: #4a4a4a;}
 
 header.isFix{z-index:100;width:100%;top:0;left:0;position:fixed;border-bottom: 1px solid #fff;padding: 5px 0;}
 header.isFix #Logo{width: 98px;}
-header.isFix li a{height: 40px;line-height: 40px;}
+header.isFix li a{height: 58px;line-height: 58px;}
 header.isFix menu li a em {bottom: -9px;}
 
 .subMenu{display: none; position: absolute;top: 100%;background: #4a4a4a;color: #fff;left: 0;z-index: 10;width: 100%;}
