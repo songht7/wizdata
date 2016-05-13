@@ -118,7 +118,7 @@
 		.listBlock{float: none;width: 90%;padding: 0 0 30px;height: auto;margin: 0 auto}
 		.job{height: auto;font-size: 1.8em;margin-bottom: 16px;}
 		.jobIcon{width: 100px;}
-		.jobOvs{padding-left: 20px;font-size: 1.4em}
+		.jobOvs{padding-left: 20px;}
 		.jobOvs li{font-size: 1.4em;line-height: 1.3em;padding-bottom: 5px;}
 		.job .line{position: static;left: auto;margin: 16px auto 0;}
 		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
@@ -254,10 +254,11 @@
 	.person span{font-size: 1.4em;line-height: 1em;}
 	.person strong{font-size: 1.8em;line-height: 1.2em}
 
+	.productPage #ProTitle .line, .solutionPage #ProTitle .line{width: 120px;}
 	#ProTitle{font-size: 3.2em;line-height: 1.4em}
-	#ProTitle p{font-size: 0.99em;line-height: 1.2em;padding: 8px 0 0;}
-	.productPage #ProTitle .line{margin:28px auto}
-	.cloud{font-size: 1.8em;line-height: 1.5em}
+	#ProTitle p{font-size: 0.99em;line-height: 1em;;}
+	.productPage #ProTitle .line{margin:28px auto;}
+	.cloud{font-size: 1.8em;line-height: 1.2em}
 	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
 	.proBlockTitle{padding:40px 0 24px;font-size: 2.4em;line-height: 1.4em}
@@ -271,7 +272,7 @@
 	.solutionPage .pro_page3 .pageCont{padding: 50px 0 30px}
 	.canHelp{font-size: 1.6em;line-height: 2.4em;margin: 50px 0 28px;}
 	.helpList{padding-bottom: 20px}
-	.helpList li,.helpList li:nth-child(2n){float: none;width: 100%;font-size:1.8em;line-height: 1em}
+	.helpList li,.helpList li:nth-child(2n){float: none;width: 100%;font-size:1.8em;line-height: 1.2em}
 	.solBlock{width: 100%;float: none;border: none;}
 	.solBlock:nth-child(2n){float: none;}
 	.bkInner{padding-bottom: 40px;margin-bottom: 40px;border-bottom: 2px solid #E5E5E5;height: auto;}
@@ -286,6 +287,7 @@
 	.soluionMenus .solCtgs li{float: none;width: 100%;margin: 0 auto;text-align: center;}
 	.soluionMenus .solCtgs li a{border-bottom: 1px solid #757575;width: 100%;font-size: 1.4em;line-height: 48px;height: 48px;}
 
+	.clientTitle{font-size: 3.2em;line-height: 1em;}
 	.coopList{width: 100%;padding: 30px 0;}
 	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}
 }

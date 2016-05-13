@@ -113,11 +113,11 @@ footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflo
   header .inner{overflow: visible;width: 100%;padding: 0}
   header .inner #Logo{margin-left: 20px}
   header #Logo{width: 98px;}
-  header #MenuBtn{background-size: 18px auto}
+  header #MenuBtn{position: relative;background-size: 18px auto;padding: 8px 0;top: -6px}
   header #MenuBtn.on{background-size: 18px auto}
   header li a,header li a{height: 58px;line-height: 58px;}
 
-  #MenuBtn{display: block;position: relative;}
+  #MenuBtn{display: block;}
   header.isFix #MenuBtn{padding: 8px 0;top: -6px}
   menu{position: absolute;z-index: 1000;width: 100%;top: 100%;left: 0;display: none}
   menu li{float:none;background: #fff;padding: 0;border-bottom: 1px solid #90C31F}
