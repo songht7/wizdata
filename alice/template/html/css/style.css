@@ -110,7 +110,7 @@
 	.moblieImg{display: block;max-width: 70%;margin: 0 auto}
 	.imgBlock{display: none;}
 	.rTxt{padding: 20px 0 0}
-	.rTxt h4{padding: 0 0 10px;font-size: 2.4em;line-height: 1.8em;}
+	.rTxt h4{padding: 0 0 5px;font-size: 2.4em;line-height: 1.8em;}
 	.rInfo{font-size: 1.4em;line-height: 20px;}
 
 	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
@@ -252,16 +252,16 @@
 	.mts{font-size: 1.8em;line-height: 1.4em;background-size: 40px auto;padding-top: 30px;}
 	.person{padding-top: 10px;}
 	.person span{font-size: 1.4em;line-height: 1em;}
-	.person strong{font-size: 1.8em;line-height: 1.2em}
+	.person strong{font-size: 1.8em;line-height: 1.2em;letter-spacing: 0;}
 
 	.productPage #ProTitle .line, .solutionPage #ProTitle .line{width: 120px;}
 	#ProTitle{font-size: 3.2em;line-height: 1.4em}
 	#ProTitle p{font-size: 0.99em;line-height: 1em;;}
 	.productPage #ProTitle .line{margin:28px auto;}
-	.cloud{font-size: 1.8em;line-height: 1.2em}
+	.cloud{font-size: 1.8em;line-height: 1.2em;text-align: left;}
 	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
-	.proBlockTitle{padding:40px 0 24px;font-size: 2.4em;line-height: 1.4em}
+	.proBlockTitle{padding:40px 0 10px;font-size: 2.4em;line-height: 1.4em}
 	.productPage .pageBlock .inner{padding-bottom: 50px;}
 	#Pro_pro2 .pro_page3 .moblieImg,#Pro_pro1 .pro_page3 .moblieImg{position: relative;top: -28px;z-index: 1}
 	#Pro_pro1 .pro_page3 .moblieImg{top: -10px}
@@ -289,5 +289,8 @@
 
 	.clientTitle{font-size: 3.2em;line-height: 1em;}
 	.coopList{width: 100%;padding: 30px 0;}
-	.coopList li{float: none;width: 100%;padding: 0 0 20px;margin-bottom: 20px;border-bottom: 1px solid #ddd}
+	.coopList li{float: none;width: 100%;padding: 0 0 40px;margin-bottom: 40px;border-bottom: 1px solid #ddd}
+	.cpImg{width: 80%;margin: 0 auto}
+	.cpImg .line{margin: 5px auto;}
+	.cpInfo p{line-height: 1.6em;}
 }
