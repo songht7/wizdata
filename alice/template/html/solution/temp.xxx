@@ -4,7 +4,16 @@
     <div class="sliderContainer fullWidth clearfix">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
             <div class="rsContent">
-                <img class="rsImg" src="template/html/images/solution_communica/Group8.png" alt="" />
+                <img class="rsImg" src="http://www.wizdata.com.cn/temp/imgckeditor/20165111205437918.jpg" alt="" />
+                <div class="wizInfo">
+                    <div class="inner">
+                        <div class="infos">
+                            <div class="infoHead">Bold</div>
+                            <div class="ovs">Light( line one )<br>Light( line two )</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

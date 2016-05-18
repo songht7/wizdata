@@ -16,8 +16,9 @@
 	.royalSlider > .rsContent {visibility:hidden;}
 	.fullWidth {margin: 0 auto;}
 	.pageBlock .royalSlider .rsArrow{position: absolute;right: -9999999px}
-	.wizInfo{position: absolute;top: 145px;z-index: 5;width: 100%;left: 0}
-	.wizInfo .inner{letter-spacing: 1.5px;text-align: center;font-family: 'Helvetica-Bold',Arial;font-size:48px;line-height: 60px; color: #fff}
+	.wizInfo{position: absolute;z-index: 5;width: 100%;height: 100%;left: 0;display:table;top: 0;*top: 145px;}
+	.wizInfo .inner{letter-spacing: 1.5px;text-align: center;font-family: 'Helvetica-Bold',Arial;font-size:48px;line-height: 60px; color: #fff;display: table-cell;vertical-align: middle;text-shadow: 0px 0px 4px rgba(0, 0, 0,0.5);-webkit-text-shadow: 0px 0px 4px rgba(0, 0, 0,0.5);-ms-text-shadow: 0px 0px 4px rgba(0, 0, 0,0.5);}
+	.solutionPage .wizInfo .inner{text-align: left;padding-left:5%}
 	.wizInfo .inner .ovs{font-family: 'Helvetica-Light',Arial}
 
 .page2{background: #FFFFFF}
@@ -97,7 +98,7 @@
 @media screen and (min-width: 0px) and (max-width: 850px) {
  	.pageCont{padding: 30px 0;}
 	
-	.wizInfo{top: 33px;}
+	.wizInfo{*top: 33px;}
 	.wizInfo .inner{font-size: 2.2em;line-height: 28px;}
 
 	.wizSay{width: auto;padding-bottom: 45px}
