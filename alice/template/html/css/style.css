@@ -107,13 +107,14 @@
 	.wizSay .ovs{width: auto;font-size: 1.4em;line-height: 20px}
 	.sayCont .line{margin: 15px auto;width: 120px;}
 
+	.rowBlock{padding-bottom: 60px;}
 	.rbLeft,.rbRight{width: 100%;float: none;}
 	.moblieImg{display: block;max-width: 70%;margin: 0 auto}
 	#Pro_pro1 .moblieImg{max-width: 80%;}
 	.imgBlock{display: none;}
 	.rTxt{padding: 20px 0 0}
 	.rTxt h4{padding: 0 0 5px;font-size: 2.4em;line-height: 1.8em;}
-	.rInfo{font-size: 1.4em;line-height: 20px;}
+	.rInfo{font-size: 1.4em;line-height: 1.4em;}
 
 	.pageTitle{font-size: 3.2em;line-height:38px;width: 90%;padding-bottom: 30px;}
 	.pageTitle.pd305{padding: 30px 0 50px;}
@@ -126,7 +127,7 @@
 		.lb1 .job,.lb2 .job,.lb5 .job{line-height: 22px;}
 		.lb6 .jobOvs{margin-left: 0}
 	
-	.pageTitle.work p{width: 100%;padding-top: 22px;}
+	.pageTitle.work p{width: 100%;padding-top: 22px;font-size: 14px;letter-spacing: 0;}
 	.vdList li{float: none;padding: 0 0 40px;width: 100%}
 	.videoBox .moreBtn{margin-top: 20px;width: 100%;line-height:44px;height: 44px;font-size: 1.4em }
 	
@@ -134,7 +135,7 @@
 	.contactBox{width: 100%;padding-top: 20px;}
 	.pageTitle.contactTitle{width: 100%;font-size: 2.2em;line-height: 21px;padding-bottom:28px;}
 	.btns.sbmt{width: 100%;}
-	.mapBox {width: 100%;}
+	.mapBox {width: 100%;padding-bottom: 60px;}
 	.mapBox .map{background-size: 100% auto;width: 100%;background-position: 50% 50%;right:0;margin-top: 20px;}
 	.contactInfor li{float: none;width: 80%;margin: 0 auto}
 
@@ -247,7 +248,7 @@
 	.aboutPage .txtBlock{padding: 0 0 32px;}
 	.aboutPage .txtBlock .bkOvs{padding: 0 10px;}
 	.bkTitle{font-size: 3.2em;line-height: 2em;padding: 22px 0 0;text-align: center;}
-	.bkOvs{font-size: 1.8em;line-height: 1.8em}
+	.bkOvs{font-size: 1.8em;line-height: 1.4em}
 	.motto{width: 100%;}
 	.aboutPage .rowLeft,.aboutPage .rowRight{float: none;}
 	.abtRow{padding-bottom: 50px;margin-bottom: 0;}
@@ -260,12 +261,13 @@
 	#ProTitle{font-size: 3.2em;line-height: 1.4em}
 	#ProTitle p{font-size: 0.99em;line-height: 1em;;}
 	.productPage #ProTitle .line{margin:28px auto;}
-	.cloud{font-size: 1.8em;line-height: 1.2em;text-align: left;}
+	.cloud{font-size: 1.8em;line-height: 1.4em;text-align: left;}
 	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
-	.proBlockTitle{padding:40px 0 10px;font-size: 2.4em;line-height: 1.4em}
+	.proBlockTitle{padding:20px 0 10px;font-size: 2.4em;line-height: 1.4em}
 	.productPage .pageBlock .inner{padding-bottom: 50px;}
-	#Pro_pro2 .pro_page3 .moblieImg,#Pro_pro1 .pro_page3 .moblieImg{position: relative;top: -28px;z-index: 1}
+	.productPage .moblieImg{margin-top: 30px;}
+	#Pro_pro2 .pro_page3 .moblieImg,#Pro_pro1 .pro_page3 .moblieImg{position: relative;top: -28px;z-index: 1;margin-top: 0;}
 	#Pro_pro1 .pro_page3 .moblieImg{top: -10px}
 	#Pro_pro2 .pro_page3 .proLeft,#Pro_pro1 .pro_page3 .proLeft{padding-top: 0;}
 	#Pro_pro2 .pro_page3 .proBlockTitle{padding-top: 20px}
@@ -282,7 +284,8 @@
 	/*.solImg{float: none;width: 100%}*/
 	.sBkImg,.bkInner img{top: 0;margin: 0 auto 15px;}
 	.solInfo{width: 64%;}
-	
+	.sOvs{line-height: 1.4em;font-size: 1.4em}
+
 	.soluionMenus .pageCont{padding: 28px 0 30px;width: 100%;}
 	.solChoose{font-size: 1.6em;text-align: center;padding-bottom: 28px;border-bottom: 1px solid #757575;}
 	.soluionMenus .solCtgs{width: 100%;padding-bottom: 50px;}
