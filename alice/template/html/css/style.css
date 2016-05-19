@@ -1,6 +1,6 @@
 .line{display: block;height: 2px;width: 285px;margin: 35px auto;overflow: hidden;background: #90C31F}
 .rsContent img{max-width: none;}
-.productPage #ProTitle .line,.solutionPage #ProTitle .line{background: #4a4a4a;display: none;}
+.productPage #ProTitle .line,.solutionPage #ProTitle .line{background: #4a4a4a;margin: 35px auto 0;display: none;}
 /*** home page ***/
 .homePage{background: #9B9B9B}
 .pageBlock{min-height: 200px;position: relative;}
@@ -171,8 +171,7 @@
 .pro_page2{}
 	#ProTitle{font-family: 'Helvetica-Bold',Arial;font-size: 58px;line-height: 60px;color: #4a4a4a;text-align: center;}
 	#ProTitle p{font-family: 'Helvetica-Light',Arial;font-size: 58px;line-height: 60px;}
-	.cloud{font-size: 28px;line-height: 42px;font-family: 'Helvetica-Light',Arial;text-align: center;}
-	.productPage .cloud{padding-top: 40px;}
+	.cloud{font-size: 28px;line-height: 42px;font-family: 'Helvetica-Light',Arial;text-align: center;padding-top: 40px;}
 .proLeft{width: 540px;float: left;position: relative;}
 	.proBlockTitle{font-family: 'Helvetica-Light',Arial;font-size: 45px;line-height: 54px;padding-bottom: 20px;}
 	.proOvs{font-size: 15px;line-height: 26px;}
@@ -261,9 +260,8 @@
 	.productPage #ProTitle .line, .solutionPage #ProTitle .line{width: 120px;}
 	#ProTitle{font-size: 3.2em;line-height: 1.4em}
 	#ProTitle p{font-size: 0.99em;line-height: 1em;;}
-	.productPage #ProTitle .line{margin:28px auto;}
-	.cloud{font-size: 1.8em;line-height: 1.4em;text-align: left;}
-	.productPage .cloud{padding-top: 30px;}
+	.productPage #ProTitle .line{margin:28px auto 0;}
+	.cloud{font-size: 1.8em;line-height: 1.4em;text-align: left;padding-top: 30px;}
 	.proOvs{font-size: 1.4em;line-height: 1.4em}
 	.proRight,.proLeft{width: 100%}
 	.proBlockTitle{padding:20px 0 10px;font-size: 2.4em;line-height: 1.4em}
