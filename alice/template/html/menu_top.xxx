@@ -41,7 +41,7 @@
                 <div class="subMenu">
                     <ul class="subDefault subProNav">
                         <li>
-                            <img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="">
+                            <img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="" style="width:145px;">
                             <div class="navInfo">
                                 <a href="/index-a-home-m-product-id-pro2.htm" class="navTitle">Wiz Enterprise<span class="line"></span></a>
                                 <p class="ovs">On Premises Deployment</p>
@@ -49,7 +49,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 25px;">
+                            <img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 15px;">
                             <div class="navInfo">
                                 <a href="/index-a-home-m-product-id-pro1.htm" class="navTitle">Wiz Cloud<span class="line"></span></a>
                                 <p class="ovs">Minimal-Risk strategy that <br>produces results quickly.</p>
