@@ -9,4 +9,5 @@ CKEDITOR.editorConfig = function (config) {
     // config.uiColor = '#AADC6E';
     //img upload url
     config.filebrowserUploadUrl = "http://wizdata.local.org/api/apickeditor.php";
+    config.allowedContent = true;
 };
