@@ -1,0 +1,122 @@
+<meta charset="UTF-8">
+<script src="script/jquery-2.2.3.min.js" ></script>
+<style>
+    .green{color:#00FF33;}
+    .yellow{color:#FFCC00;}
+    .red{color:#FF0000;}
+    .border_red{border:1px solid #f00;}
+    .outputarea{width:220px;height:300px;overflow-y:scroll;}
+    .outputareasub{overflow-y:auto; };
+    .inputarea{width:220px;height:30px;}
+</style>
+<script type="text/javascript">
+    var ws;
+    var wsUrl = "ws://192.168.3.140:12345";
+    function link() {
+        //判断该使用哪种WebSocket对象
+        if ("WebSocket" in window) {
+            if (ws === undefined) {
+                ws = new WebSocket(wsUrl);
+            } else {
+                if (ws.readyState === 3) {
+                    //重新连接
+                    ws = new WebSocket(wsUrl);
+                }
+            }
+        } else if ("MozWebSocket" in window) {
+            if (ws === undefined) {
+                ws = new MozWebSocket(wsUrl);
+            }
+        } else {
+            alert("当前浏览器不支持WebSocket");
+        }
+
+        ws.onopen = function () {
+            if (ws.readyState === 1) {
+                $("#linkstart").addClass("green").removeClass("red").removeClass("yellow");
+            }
+        };
+
+        ws.onclose = function () {
+            $("#linkstart").addClass("red").removeClass("green").removeClass("yellow");
+        };
+        ws.onerror = function () {
+            $("#linkstart").addClass("yellow").removeClass("green").removeClass("red");
+        };
+        ws.onmessage = function (e) {
+            console.log("message:" + e.data);
+            $("#outputarea").append(e.data);
+        };
+    }
+    function send() {
+        var value = getInfo();
+        if (value !== null) {
+            if (ws === undefined) {
+                $("#linkstart").addClass("red");
+                return;
+            }
+            ws.send(value);
+        }
+        $(".outputarea").scrollTop($("#outputarea").height());
+    }
+    function linkstop() {
+        if (ws !== null) {
+            ws.close();
+            //ws = null;
+            $("#linkstart").addClass("red").removeClass("green").removeClass("yellow");
+        }
+    }
+    function getInfo() {
+
+        var id = $("#id").val();
+        var inputarea = $("#inputarea").val();
+        var idRegExp = new RegExp("^[A-Za-z]+$");
+
+        if (id == "" || !idRegExp.test(id)) {
+            $("#id").addClass("border_red");
+            return null;
+        }
+        $("#id").removeClass("border_red");
+        if (inputarea == "") {
+            $("#inputarea").addClass("border_red");
+            return null;
+        }
+        $("#inputarea").removeClass("border_red");
+        $("#inputarea").val(null);
+
+        var res = JSON.stringify({
+                       id: id,
+                       inputarea: inputarea
+               });
+
+        return res;
+    }
+    $(function () {
+        $("#linkstart").on("click", function () {
+            link();
+        });
+        $("#send").click(function () {
+            send();
+        });
+        $("#linkstop").click(function () {
+            linkstop();
+        });
+        $(document).keyup(function (event) {
+            if (event.keyCode === 13) {
+                send();
+            }
+        });
+    });
+</script>
+<a href="javascript:void(0);" id="linkstart"  >linkstart</a>
+<a href="javascript:void(0);" id="linkstop"  >linkstop</a>
+<br />
+<input type="text" id="id" placeholder="用户id">
+<br />
+<div class="outputarea"  >
+    <div  id="outputarea" class="outputareasub">
+    </div>
+</div>
+<br />
+<textarea id="inputarea" class="inputarea" ></textarea>
+<a href="javascript:void(0);" id="send"  >send</a>
