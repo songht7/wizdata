@@ -9,17 +9,17 @@
             <a href="javascript:;" id="MenuBtn">menu</a>
         </div>
         <menu class="clearfix">
-            <li><a href="/index-a-home-m-about.htm" class="<?php echo $mod == 'about' ? 'active' : '' ?>">ABOUT<em><i></i></em></a></li>
-            <li><a href="/index-a-home-m-index.htm#Services" class="" data-page="Services">SERVICES<em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-about.htm" class="menuLink <?php echo $mod == 'about' ? 'active' : '' ?>"><span>ABOUT</span><em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-index.htm#Services" class="menuLink" data-page="Services"><span>SERVICES</span><em><i></i></em></a></li>
             <li>
-                <a href="/index-a-home-m-solution-id-<?php $id=$solution[0]['art_id'];echo $id==null?'sol1':$id;?>.htm" class="hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>">SOLUTION<em><i></i></em></a>
+                <a href="/index-a-home-m-solution-id-<?php $id=$solution[0]['art_id'];echo $id==null?'sol1':$id;?>.htm" class="menuLink hasSub <?php echo $mod == 'solution' ? 'active' : '' ?>"><span>SOLUTION</span><em><i></i></em></a>
                 <div class="subMenu">
                     <ul class="subDefault">
                     		<?php if(!empty($solution)){foreach($solution as $key => $v) { ?>
-														<li><a href="/index-a-home-m-solution-id-<?=$v['art_id']?>.htm" class="<?php echo $_id==$v['art_id']?'active':'';?>"><?=$v['art_name']?></a></li>
+														<li><a href="/index-a-home-m-solution-id-<?=$v['art_id']?>.htm" class="<?php echo $_id==$v['art_id']?'active':'';?>"><span><?=$v['art_name']?></span></a></li>
 													<?php }} else{?>
-														<li><a href="/index-a-home-m-solution-id-sol1.htm" class="<?php echo $_id=='sol1'?'active':'';?>">Communications SP</a></li>
-														<li><a href="/index-a-home-m-solution-id-sol2.htm" class="<?php echo $_id=='sol2'?'active':'';?>">Simulation Technique</a></li>
+														<li><a href="/index-a-home-m-solution-id-sol1.htm" class="<?php echo $_id=='sol1'?'active':'';?>"><span>Communications SP</span></a></li>
+														<li><a href="/index-a-home-m-solution-id-sol2.htm" class="<?php echo $_id=='sol2'?'active':'';?>"><span>Simulation Technique</span></a></li>
 													<?php }?>
                         <!-- <li><a href="/index-a-home-m-solution-id-1.htm">Application Delivery</a></li>
                           <li><a href="/index-a-home-m-solution-id-2.htm">Log Management</a></li>
@@ -37,11 +37,11 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="/index-a-home-m-product-id-pro1.htm" class="hasSub <?php echo $mod == 'product' ? 'active' : '' ?>">PRODUCT<em><i></i></em></a>
+            <li><a href="/index-a-home-m-product-id-pro1.htm" class="menuLink hasSub <?php echo $mod == 'product' ? 'active' : '' ?>"><span>PRODUCT</span><em><i></i></em></a>
                 <div class="subMenu">
                     <ul class="subDefault subProNav">
                         <li>
-                            <img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="">
+                            <img src="template/html/images/product_nav/WizEnterprise.png" class="navImg" alt="" style="width:145px;">
                             <div class="navInfo">
                                 <a href="/index-a-home-m-product-id-pro2.htm" class="navTitle">Wiz Enterprise<span class="line"></span></a>
                                 <p class="ovs">On Premises Deployment</p>
@@ -49,7 +49,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 25px;">
+                            <img src="template/html/images/product_nav/Group-0.png" class="navImg" alt="" style="margin-top: 15px;">
                             <div class="navInfo">
                                 <a href="/index-a-home-m-product-id-pro1.htm" class="navTitle">Wiz Cloud<span class="line"></span></a>
                                 <p class="ovs">Minimal-Risk strategy that <br>produces results quickly.</p>
@@ -58,8 +58,8 @@
                         </li>
                     </ul>
                 </div></li>
-            <li><a href="/index-a-home-m-client.htm" class="<?php echo $mod == 'client' ? 'active' : '' ?>">CLIENT<em><i></i></em></a></li>
-            <li><a href="/index-a-home-m-index.htm#Contact" data-page="Contact">CONTACT<em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-client.htm" class="menuLink <?php echo $mod == 'client' ? 'active' : '' ?>"><span>CLIENT</span><em><i></i></em></a></li>
+            <li><a href="/index-a-home-m-index.htm#Contact" class="menuLink " data-page="Contact"><span>CONTACT</span><em><i></i></em></a></li>
         </menu>
         <div class="clearn"></div>
     </div>

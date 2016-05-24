@@ -4,7 +4,16 @@
     <div class="sliderContainer fullWidth clearfix">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW justOne">
             <div class="rsContent">
-                <img class="rsImg" src="template/html/images/solution_communica/Group8.png" alt="" />
+                <img class="rsImg" src="http://www.wizdata.com.cn/temp/imgckeditor/20165111205437918.jpg" alt="" />
+                <div class="wizInfo">
+                    <div class="inner">
+                        <div class="infos">
+                            <div class="infoHead">Bold</div>
+                            <div class="ovs">Light( line one )<br>Light( line two )</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -36,7 +45,7 @@
 
         <div class="solBlock sb1">
             <div class="bkInner">
-                <img src="template/html/images/solution/Monitor.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Monitor.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">标题标题标题</div>
                     <div class="sOvs">描述描述描述描述描述</div>
@@ -46,7 +55,7 @@
 
         <div class="solBlock sb2">
             <div class="bkInner">
-                <img src="template/html/images/solution/Detect.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Detect.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">标题标题标题<br>标题太长 &lt;br&gt;换行</div>
                     <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
@@ -56,7 +65,7 @@
 
         <div class="solBlock sb3">
             <div class="bkInner">
-                <img src="template/html/images/solution/Proactively.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Proactively.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">标题标题标题</div>
                     <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
@@ -66,7 +75,7 @@
 
         <div class="solBlock sb4">
             <div class="bkInner">
-                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">标题标题标题<br>太长br换行标题</div>
                     <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
@@ -76,7 +85,7 @@
 
         <div class="solBlock sb5">
             <div class="bkInner">
-                <img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt="">
+                <div class="solImg"><img src="template/html/images/solution/Strengthen.png" class="sBkImg" alt=""></div>
                 <div class="solInfo">
                     <div class="sTitle">标题标题标题<br>太长br换行标题</div>
                     <div class="sOvs">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>

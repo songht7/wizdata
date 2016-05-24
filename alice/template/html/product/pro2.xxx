@@ -47,15 +47,15 @@
 </div>
 <!-- page5 -->
 <div class="pageBlock pro_page5 pro_odd">
-    <div class="pageCont inner isFull">
-        <div class="proLeft" style="padding-top: 100px">
-            <img src="template/html/images/pro/Group.png" alt="" class="moblieImg">
+    <div class="pageCont inner">
+        <div class="proLeft ">
+            <img src="template/html/images/pro/ContentManagement2.png" alt="" class="moblieImg">
             <h3 class="proBlockTitle">Content Management</h3>
             <div class="proOvs">Enable comprehensive content lifecycle and document management with cost-effective control of existing and new types of content with scale, security and stability.</div>
         </div>
         <div class="proRight imgBlock">
-            <div class="proImg" style="background: url('template/html/images/pro/Group.png') no-repeat 0 0;"></div>
-            <!-- <img src="template/html/images/pro/Group-7.png" alt="" class="rImg overWid"> -->
+            <!-- <div class="proImg" style="background: url('template/html/images/pro/Group.png') no-repeat 0 0;"></div> -->
+            <img src="template/html/images/pro/ContentManagement2.png" alt="">
         </div>
         <div class="clearn"></div>
     </div>

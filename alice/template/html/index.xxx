@@ -13,7 +13,7 @@
                 <div class="wizInfo">
                     <div class="inner">
                         <div class="infos">
-                            <div class="infoHead">Data art</div>
+                            <div class="infoHead">DATA ART</div>
                             <div class="ovs">We are not given a short life <br>but we make it short...<br>Data is valuable if you know how to use it</div>
                             
                         </div>
@@ -112,7 +112,7 @@
 <!-- page3 -->
 <div class="pageBlock page3">
     <div class="pageCont inner">
-        <h3 id="Know" class="pageTitle wizKnow">WIZ LET LEADERS KNOW</h3>
+        <h3 id="Know" class="pageTitle pd305 wizKnow">WIZ LET LEADERS KNOW</h3>
         <div id="KnowList">
 
             <div class="listBlock lb1">
@@ -175,7 +175,7 @@
 <!-- page4 -->
 <div class="pageBlock page4">
     <div class="pageCont inner">
-        <h3 id="Know" class="pageTitle work">LASTEST WORK
+        <h3 id="Work" class="pageTitle pd305 work">LASTEST WORK
             <p>Wizdata as your global "Think Tank" backs you up all the time.</p>
         </h3>
         <div class="videoBox">
@@ -233,7 +233,7 @@
                     <p>Shanghai, China</p>
                 </li>
                 <li class="infor2">
-                    <p>T:021-61539561</p>
+                    <p>T:021-60530661</p>
                 </li>
                 <li class="infor3">
                     <p><a href="mailto:admin@wizdata.com.cn">admin@wizdata.com.cn</a></p>

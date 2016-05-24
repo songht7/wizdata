@@ -45,7 +45,8 @@ header .inner{overflow: visible;width: 100%;max-width: 1280px;}
 #Logo{float: left;width: 156px;height: 44px;display: block;line-height: 65px;}
 #Logo img{width: 100%;}
 .menuBox{float:right;position: relative;height: 40px}
-#MenuBtn{display: none;background: url("../images/mobile/Menu_normal@2x.png") no-repeat 50% 50%;width: 50px;height: 100%;text-indent: -99999px;}
+#MenuBtn{display: none;background: url("../images/mobile/Menu_normal@2x.png") no-repeat 50% 50%;width: 50px;height: 100%;text-indent: -99999px;background-size: 70% auto}
+#MenuBtn.on{background:url("../images/mobile/Menu_press@2x.png") no-repeat 50% 50% #fff;background-size: 70% auto}
 menu {float: right;display: block;}
 menu li{float:left;text-align: center;padding-left: 43px;line-height: 44px;}
 menu li a{font-family:'Helvetica-Bold',Arial;font-weight: bold; color: #fff;position: relative;display: block;height: 44px;}
@@ -54,13 +55,14 @@ menu li a em{display: none;position: absolute;bottom:-27px;left: 0;width: 100%;}
 menu li a em i{height: 0;width: 0;overflow: hidden;display: block;margin: 0 auto;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 12px solid #4a4a4a;}
 menu li a.active,menu li a:hover{color: #4a4a4a;}
 .hasSub.active,.hasSub:hover{background-image: url("../images/arrow_02.png");}
-header.isFix{z-index:100;width:100%;top:0;left:0;position:fixed;padding: 5px 0;border-bottom: 1px solid #fff;}
-header.isFix #Logo{width: 105px;}
-header.isFix li a{height: 40px;line-height: 40px;}
+
+header.isFix{z-index:100;width:100%;top:0;left:0;position:fixed;border-bottom: 1px solid #fff;padding: 5px 0;}
+header.isFix #Logo{width: 98px;}
+header.isFix li a{height: 58px;line-height: 58px;}
 header.isFix menu li a em {bottom: -9px;}
 
 .subMenu{display: none; position: absolute;top: 100%;background: #4a4a4a;color: #fff;left: 0;z-index: 10;width: 100%;}
-.subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 40px 10px 50px;}
+.subMenu ul{width: 935px;margin: 0 auto;overflow: hidden;padding: 45px 10px 50px;}
 .subMenu ul.subDefault li,.solCtgs li{width: 25%;float: left;text-align: left;padding-left: 0}
 .subMenu ul.subDefault li a,.solCtgs li a{display: block;height: 40px;line-height: 40px; color: #fff;width: 95%;border-bottom: 1px solid #90C31F;padding-right: 0}
 .solCtgs a{font-size: 18px;font-family: 'Helvetica-Light',Arial;}
@@ -101,3 +103,44 @@ footer .inner{padding:30px 0;color:#CDCDCD;border-top: 1px solid #CDCDCD;overflo
 
 #ScrollTop{display: block;width: 48px;height: 48px;text-indent: -99999px;background-position: 0 0;position: fixed;right: 20px;bottom: 20px;z-index: 50px;}
 #ScrollTop:hover{background-position: 0 -68px;}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  body{width: 100%;min-width: 100px;font-size: 62.5%;}
+  .inner{width: 95%;width:-moz-calc(100%-32px);width:-webkit-calc(100%-32px);width:calc(100%-32px);margin: 0 auto}
+  header,header.isFix{padding: 4px 0}
+  header .inner{overflow: visible;width: 100%;padding: 0}
+  header .inner #Logo{margin-left: 20px}
+  header #Logo{width: 98px;}
+  header #MenuBtn{position: relative;background-size: 18px auto;padding: 8px 0;top: -6px}
+  header #MenuBtn.on{background-size: 18px auto}
+  header li a,header li a{height: 58px;line-height: 58px;}
+
+  #MenuBtn{display: block;}
+  header.isFix #MenuBtn{padding: 8px 0;top: -6px}
+  menu{position: absolute;z-index: 1000;width: 100%;top: 100%;left: 0;display: none}
+  menu li{float:none;background: #fff;padding: 0;border-bottom: 1px solid #90C31F}
+  menu li a{font-size: 1.6em;color: #5C5C5C;}
+  menu li a:hover,menu li a.active{color: #90C31F}
+  menu li a em{bottom: 0;left: 999999px;}
+  .hasSub,.hasSub.active, .hasSub:hover{background: none;padding-right: 0;}
+  .hasSub span{background: url("../images/arrow_03.png") no-repeat right 50%;padding-right: 18px;}
+  .hasSub.active span, .hasSub:hover span{background-image: url("../images/arrow_04.png");}
+  menu .subMenu{position: static;padding: 5px 0;background: #5C5C5C}
+  .subMenu ul.subDefault li, .solCtgs li{width: 100%;background: #5C5C5C}
+  .subMenu ul.subDefault li a, .solCtgs li a{float: none;}
+
+  .subMenu ul{width: 100%;padding:0;max-height: 185px;overflow: auto;}
+  .subMenu ul.subDefault li,.subMenu ul.subDefault.subProNav li{width: 100%;border: none;text-align: center;}
+  .subMenu ul.subDefault li a, .solCtgs li a{border: none;font-size: 1.6em;}
+  .subMenu ul.subDefault li a.active,.subMenu ul.subDefault li a:hover{font-size: 1.6em;}
+  .subMenu ul.subDefault li a
+  ,.subMenu ul.subDefault.subProNav li a,menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{color: #fff;border-bottom: 1px solid #767676;width: 100%;height: 58px;line-height: 58px;}
+  menu li ul.subDefault.subProNav a.navTitle, menu li ul.subDefault.subProNav a.navTitle:hover{font-size: 1.6em;}
+  .subMenu ul.subDefault li:last-child a,.subMenu ul.subDefault.subProNav li:last-child a,menu li ul.subDefault.subProNav li:last-child a.navTitle:hover{border-bottom:none;}
+  .subProNav .navInfo{width: 100%;padding-left: 0}
+  .subProNav .navImg,.subProNav .navInfo .ovs,.subProNav .navInfo .navRmore,.subProNav .line{display: none;}
+
+  .fotMenu{font-size: 1.2em}
+}
