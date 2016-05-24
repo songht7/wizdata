@@ -8,5 +8,7 @@ CKEDITOR.editorConfig = function (config) {
     // config.language = 'fr';
     // config.uiColor = '#AADC6E';
     //img upload url
-    config.filebrowserUploadUrl = "http://wizdata.local.org/api/apickeditor.php";
+    config.filebrowserUploadUrl = "http://local.wizdata:8080/api/apickeditor.php";
+    //config.filebrowserUploadUrl = "http://www.wizdata.com.cn/api/apickeditor.php";
+    config.allowedContent = true;
 };

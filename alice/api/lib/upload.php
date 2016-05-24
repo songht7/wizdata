@@ -35,7 +35,8 @@
 					$name=date("Yndhis").rand(1000,9999).$ext;
 					$full_path=$path.$name;
 					move_uploaded_file($_FILES[$filename]['tmp_name'],$_SERVER['DOCUMENT_ROOT'].$full_path);
-					$res['url']="http://".$_SERVER['HTTP_HOST'].$full_path;
+					//$res['url']="http://".$_SERVER['HTTP_HOST'].$full_path;
+					$res['url']=$full_path;
 				}
 				}
 				return $res;

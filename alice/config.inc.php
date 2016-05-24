@@ -28,7 +28,9 @@ define('MANAGE_MOD','mod/');
  * 网站信息 
  * 
  */
-define('DOMAIN_NAME','spacehu.local.org');
+//define('DOMAIN_NAME','spacehu.local.org');
+
+define('DOMAIN_NAME','local.wizdata');
 
 
 //define('DOMAIN_NAME','10.0.1.40');
