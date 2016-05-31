@@ -40,7 +40,7 @@
     </div>
 
 </div>
-<!-- page3 -->
+<!-- page3 --
 <div class="pageBlock abt_page3">
     <div class="pageCont inner">
 
@@ -119,6 +119,6 @@
 
     </div>
 </div>
-<!-- /about page -->
+!-- /about page -->
 
 <?php include_once 'footer.xxx'; ?>
